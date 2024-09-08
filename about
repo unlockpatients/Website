@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Bootstrap, Landing page, Template, Registration, Landing">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="canonical" href="https://unlockpatients.com">
+    <meta name="description" content="We help pediatric practices connect with families searching for trusted care through social media, websites, and increased reviews. Our expertise lies in finding these families and ensuring they discover the doctors we work with. By focusing on these digital channels, we help practices attract more young patients, allowing them to grow while ensuring more kids get the care they need." />
+    <meta name="author" content="" />
+    <title>The Mission | Unlock Patients</title>
+    <link rel="icon" type="image/x-icon" href="img/faviconCircle.webp" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/line-icons.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/nivo-lightbox.css">
+    <link rel="stylesheet" href="css/main.css">    
+    <link rel="stylesheet" href="css/responsive.css">
+
+  </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XW6JLW79MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XW6JLW79MV');
+</script>
+  <body>
+
+    <!-- Header Section Start -->
+    <header id="home" class="hero-area-2">    
+      <div class="overlay"></div>
+      <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+        <div class="container">
+          <a href="/" class="navbar-brand"><img id="logo" src="img/logo.webp" alt=""></a>  
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="lni-menu"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="/about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="/services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="/case-studies">Case Studies</a>
+              </li>                            
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="/articles">Articles</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="" id="contactLink">Contact</a>
+              </li> 
+            </ul>
+          </div>
+        </div>
+      </nav>  
+      <div class="container">      
+        <div class="row space-100">
+          <div class="col-lg-7 col-md-12 col-xs-12 content-center">
+            <div class="contents">
+              <h2 class="head-title">The Mission</h2>
+              <p class="sub-title-hero">To help pediatric practices worldwide connect with families, inspire healthier futures, and build a thriving community through social media.</p>
+              <div class="header-button-container">
+                <a href="#" style="text-transform: none;" id="showContactFormButton" class="btn btn-border-filled">Join The Mission</a>
+                <p class="no-cc-required-title">We Never Share Your Data.</p>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="col-lg-5 col-md-12 col-xs-12">
+            <div class="intro-img">
+                <picture>
+                    <source srcset="img/about-desktop.png" media="(min-width: 992px)">
+                    <source srcset="img/about-mobile.png" media="(min-width: 768px) and (max-width: 991px)">
+                    <source srcset="img/about-mobile.png" media="(max-width: 767px)">
+                    <img src="img/intro.png" alt="Intro Image" class="responsive-img">
+                </picture>
+            </div>
+          </div>
+        
+        
+        </div> 
+      </div>             
+    </header>
+    <!-- Header Section End --> 
+    <!-- Popup container for the contact form -->
+    <div id="contactPopupContainer" class="popup-container blur-background" >
+      <!-- Your contact form HTML goes here -->
+      <section class="centered-half">
+          <div class="">
+              <div class="gx-5 justify-content-center" style="margin-top: 3rem;">
+                  <div class="col-lg-6>
+                      <script type="text/javascript"></script>
+                      <iframe name="hiddenConfirm1" id="hiddenConfirm1" style="display: none;" onload="if(submitted){window.location='confirmation';}"></iframe>
+                  <form action="#" id="contactForm1" method="post" target="hiddenConfirm1" onsubmit="validateFormAndSubmit();">
+                      <h3 class="text-center form-title" style="font-size: 42px; text-transform: uppercase;">FREE Month of Social Media Marketing</h3>
+
+                      <!-- First Name input -->
+                      <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                          <input class="form-control cta-input-background" id="firstName" type="text" placeholder="" data-sb-validations="required" name="entry.720938598"/>
+                          <label for="firstName">First Name</label>
+                          <div class="invalid-feedback" data-sb-feedback="firstName:required">A first name is required.</div>
+                      </div>
+
+                      <!-- Last Name input -->
+                      <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                          <input class="form-control cta-input-background" id="lastName" type="text" placeholder="" data-sb-validations="required" name="entry.1103759101" />
+                          <label for="lastName">Last Name</label>
+                          <div class="invalid-feedback" data-sb-feedback="lastName:required">A last name is required.</div>
+                      </div>
+
+                      <!-- Email address input -->
+                      <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                          <input class="form-control cta-input-background" id="email" type="email" placeholder="" data-sb-validations="required,email" name="entry.460222799"/>
+                          <label for="email">Email</label>
+                          <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                          <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                      </div>
+
+                      <!-- Phone number input -->
+                      <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                          <input class="form-control cta-input-background" id="phone" type="tel" placeholder="" data-sb-validations="required" name="entry.1487472415" />
+                          <label for="phone">Enter Mobile Number</label>
+                          <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                      </div>
+
+                      <!-- Submit Button -->
+                      <div class="d-grid"><button class="btn btn-primary btn-lg cta-button" id="submitButton1" type="submit">Join The Mission</button></div>
+                  </form>         
+                  </div>
+              </div>
+          </div>
+      </section>
+  </div>
+
+<!-- Team section Start -->
+<section id="team" class="section">
+  <div class="container">
+    <div class="section-header">   
+      <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">Team</p>       
+      <h2 class="section-title">Our Growing Team</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-xs-12">
+        <div class="single-team wow fadeInUp" data-wow-delay="0.2s">
+          <div class="team-thumb">
+            <img src="img/team/Alex Langone.JPEG" alt="">
+          </div>
+          <div class="team-details">
+            <div class="team-inner">
+              <h4 class="team-title">Alex Langone</h4>
+              <p>Founder and Account Manager</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- New Content Section -->
+      <div class="col-lg-9 col-md-12 col-xs-12" style="display: flex; align-items: center;">
+        <div class="team-info wow fadeInUp" data-wow-delay="0.2s" style="text-align: left;">
+          <p>As a University of Miami student with 9 years of experience working in social media, including with prominent brands, I noticed my mother’s pediatric practice needed help with its online presence. With the office manager’s busy schedule and doctors focused on patient care, I stepped in to improve the practice's visibility. This led to more patient reviews, increased website traffic, new patients, and a stronger community where families felt more connected with the practice.</p>
+          <br>
+          <p>Inspired by these results, I founded a social media management company for pediatric offices. I help practices create and maintain a strong online presence that attracts and retains patients, allowing them to focus on patient care while I handle their industry-leading digital visibility.</p>
+          <br>
+          <p>-Alex</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Team section End -->
+  
+  <section class="success-section">
+    <div class="container">
+      <h2 class="success-text" style="text-align: center; margin: 50px; margin-bottom: 115px;">
+        We will have achieved success when every pediatric practice we partner with can abundantly support their team, enjoy ample time for personal life, and consistently deliver transformative care to their communities. Ultimately, it’s not about us; it’s about you, your practice, and your patients.
+      </h2>
+    </div>
+  </section>
+
+
+
+    <!-- Footer Section Start -->
+    <footer>
+      <!-- Footer Area Start -->
+      <section class="footer-Content">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Logo and Slogan -->
+            <div class="col-lg-12 text-center">
+              <img style="width: 22rem;" src="img/logo.webp" alt="Unlock Patients Logo">
+              <div class="textwidget" style="font-size: 40px; margin-top: 10px;">
+                <p>Connect With Care</p>
+              </div>
+            </div>
+            <!-- Copyright -->
+            <div class="col-lg-12 text-center mt-3">
+              <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                  const yearSpan = document.getElementById("currentYear");
+                  const currentYear = new Date().getFullYear();
+                  yearSpan.textContent = currentYear;
+                });
+              </script>
+              <div style="font-size: 14px;" class="site-info">
+                Unlock Patients - a Branch of &copy; Unlock Prospects LLC <span id="currentYear"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer Area End -->
+    </footer>
+    <!-- Footer Section End --> 
+
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="lni-chevron-up"></i>
+    </a> 
+
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader" id="loader-1"></div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="js/jquery-min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.js"></script> 
+    <script src="js/jquery.mixitup.js"></script>       
+    <script src="js/jquery.nav.js"></script>    
+    <script src="js/scrolling-nav.js"></script>    
+    <script src="js/jquery.easing.min.js"></script>     
+    <script src="js/wow.js"></script>   
+    <script src="js/jquery.counterup.min.js"></script>     
+    <script src="js/nivo-lightbox.js"></script>     
+    <script src="js/jquery.magnific-popup.min.js"></script>     
+    <script src="js/waypoints.min.js"></script>      
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>   
+    <script src="js/main.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/formValidationAndSubmission.js"></script>
+    <script src="js/menuToPopup.js"></script>
+    
+  </body>
+</html>
