@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Bootstrap, Landing page, Template, Registration, Landing">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="canonical" href="https://unlockpatients.com">
+    <meta name="description" content="We help pediatric practices connect with families searching for trusted care through social media, websites, and increased reviews. Our expertise lies in finding these families and ensuring they discover the doctors we work with. By focusing on these digital channels, we help practices attract more young patients, allowing them to grow while ensuring more kids get the care they need." />
+    <meta name="author" content="" />
+    <title>Our Services | Unlock Patients</title>
+    <link rel="icon" type="image/x-icon" href="img/faviconCircle.webp" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/line-icons.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/nivo-lightbox.css">
+    <link rel="stylesheet" href="css/main.css">    
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    
+  </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XW6JLW79MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XW6JLW79MV');
+</script>
+  <body>
+
+    <!-- Header Section Start -->
+    <header id="home" class="hero-area-2">    
+      <div class="overlay"></div>
+      <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+        <div class="container">
+          <a href="/" class="navbar-brand"><img id="logo" src="img/logo.webp" alt=""></a>  
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="lni-menu"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="/about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="/services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="/case-studies">Case Studies</a>
+              </li>                            
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="/articles">Articles</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="" id="contactLink">Contact</a>
+              </li> 
+            </ul>
+          </div>
+        </div>
+      </nav>  
+      <div class="container">      
+        <div class="row space-100">
+          <div class="col-lg-7 col-md-12 col-xs-12 content-center">
+            <div class="contents">
+              <h2 class="head-title">Our Services</h2>
+              <p class="sub-title-hero">Prioritize Patient Care, Leave Social Media to Us.</p>
+              <p class="sub-title-hero">Enjoy a <b style="font-weight: 900;">FREE</b> Month of Social Media Marketing below.</p>
+              <div class="header-button-container">
+                <a href="#" style="text-transform: none;" id="showContactFormButton" class="btn btn-border-filled">Yes! Get Me Patients!</a>
+                <p class="no-cc-required-title">We Never Share Your Data.</p>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="col-lg-5 col-md-12 col-xs-12">
+            <div class="intro-img">
+                <picture>
+                    <source srcset="img/services-desktop.png" media="(min-width: 992px)">
+                    <source srcset="img/services-mobile.png" media="(min-width: 768px) and (max-width: 991px)">
+                    <source srcset="img/services-mobile.png" media="(max-width: 767px)">
+                    <img src="img/services-desktop.png" alt="Intro Image" class="responsive-img">
+                </picture>
+            </div>
+          </div>
+        
+        
+        </div> 
+      </div>             
+    </header>
+    <!-- Header Section End --> 
+    <!-- Popup container for the contact form -->
+    <div id="contactPopupContainer" class="popup-container blur-background" >
+      <!-- Your contact form HTML goes here -->
+      <section class="centered-half">
+          <div class="">
+              <div class="gx-5 justify-content-center" style="margin-top: 3rem;">
+                  <div class="col-lg-6>
+                      <script type="text/javascript"></script>
+                      <iframe name="hiddenConfirm1" id="hiddenConfirm1" style="display: none;" onload="if(submitted){window.location='confirmation';}"></iframe>
+                  <form action="#" id="contactForm1" method="post" target="hiddenConfirm1" onsubmit="validateFormAndSubmit();">
+                      <h3 class="text-center form-title" style="font-size: 42px; text-transform: uppercase;">FREE Month of Social Media Marketing</h3>
+
+                      <!-- First Name input -->
+                      <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                          <input class="form-control cta-input-background" id="firstName" type="text" placeholder="" data-sb-validations="required" name="entry.720938598"/>
+                          <label for="firstName">First Name</label>
+                          <div class="invalid-feedback" data-sb-feedback="firstName:required">A first name is required.</div>
+                      </div>
+
+                      <!-- Last Name input -->
+                      <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                          <input class="form-control cta-input-background" id="lastName" type="text" placeholder="" data-sb-validations="required" name="entry.1103759101" />
+                          <label for="lastName">Last Name</label>
+                          <div class="invalid-feedback" data-sb-feedback="lastName:required">A last name is required.</div>
+                      </div>
+
+                      <!-- Email address input -->
+                      <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                          <input class="form-control cta-input-background" id="email" type="email" placeholder="" data-sb-validations="required,email" name="entry.460222799"/>
+                          <label for="email">Email</label>
+                          <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                          <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                      </div>
+
+                      <!-- Phone number input -->
+                      <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                          <input class="form-control cta-input-background" id="phone" type="tel" placeholder="" data-sb-validations="required" name="entry.1487472415" />
+                          <label for="phone">Enter Mobile Number</label>
+                          <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                      </div>
+
+                      <!-- Submit Button -->
+                      <div class="d-grid"><button class="btn btn-primary btn-lg cta-button" id="submitButton1" type="submit">Join The Mission</button></div>
+                  </form>         
+                  </div>
+              </div>
+          </div>
+      </section>
+  </div>
+
+<!-- Services Section Start -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">   
+      <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">Services</p>       
+      <h2 class="section-title-services">What We Offer</h2>
+    </div>
+    <div class="row">
+      <!-- Social Media Management Service -->
+      <div class="col-lg-4 col-md-6 col-xs-12">
+        <div class="service-item wow fadeInDown" data-wow-delay="0.2s">
+          <div class="service-icon">
+            <img src="img/Icons/bullhorn.png" alt="Social Media Management" class="img-responsive"> <!-- Custom image for Social Media Management -->
+          </div>
+          <div class="service-content">
+            <h3>Social Media Management</h3>
+            <p>Establishing a top online presence in pediatrics requires expertise. Our team removes the guesswork with tailored social media strategies that boost engagement, enhance visibility, and drive meaningful interactions. We help drive patients to your practice and build lasting bonds, enhancing retention by connecting with patients outside of appointments.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Reputation Management Service -->
+      <div class="col-lg-4 col-md-6 col-xs-12">
+        <div class="service-item wow fadeInDown" data-wow-delay="0.4s">
+          <div class="service-icon">
+            <img src="img/Icons/rating.png" alt="Social Media Management" class="img-responsive"> <!-- Custom image for Social Media Management -->
+          </div>
+          <div class="service-content">
+            <h3>Review Management</h3>
+            <p>We monitor and manage your practice's online reputation to ensure your brand remains positive. All ratings of 3 stars and below are handled internally to address and fix any issues promptly. Meanwhile, ratings of 4 and 5 stars are sent to Google to enhance your practice's rating and visibility.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Web Design Service -->
+      <div class="col-lg-4 col-md-6 col-xs-12 center3rd">
+        <div class="service-item wow fadeInDown" data-wow-delay="0.6s">
+          <div class="service-icon">
+            <img src="img/Icons/web-design.png" alt="Social Media Management" class="img-responsive"> <!-- Custom image for Social Media Management -->
+          </div>
+          <div class="service-content">
+            <h3>Pediatric Website Design</h3>
+            <p>We create engaging and user-friendly websites tailored to the unique needs of pediatric practices. Our designs not only captivate visitors but are also optimized for search engines to help your practice rank higher on Google.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Services Section End -->
+
+<!-- Final Call-to-Action Button -->
+<section id="final-cta" class="section-services">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center cta-button-container">
+        <button onclick="document.getElementById('contactPopupContainer').style.display = 'block';" id="showContactFormButtonFinal" class="btn btn-primary btn-lg">Yes! Get Me An Industry Leading Presence!</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial Section Start-->
+<div class="block-61 space-between-blocks">
+  <div class="container">
+    <div class="block__header col-lg-8 col-xl-7 mx-auto text-center px-0">
+      <h1 class="block__title" style="padding-top: 40px;">Loved by Pediatric Practices Like Yours</h1>
+    </div>
+    <div class="row px-2 pt-4">
+      <div class="col-lg-6 pb-5">
+        <div class="testimonial-card-1">
+          <span class="testimonial-card-1__quote-symbol"><i class="fas fa-quote-left"></i></span>
+          <p class="testimonial-card-1__paragraph blackText">Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <div class="block-61-person">
+            <div><img class="block-61-person__avatar" src="img/Testimonial Photo.png"></div>
+            <div class="px-2"></div>
+            <div class="flex-grow-1 d-flex flex-column">
+              <span class="block-61-person__rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </span>
+              <span class="block-61-person__name my-1">Dr. Bottoms</span>
+              <span class="block-61-person__info">Pediatrician & Owner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 pb-5">
+        <div class="testimonial-card-1">
+          <span class="testimonial-card-1__quote-symbol"><i class="fas fa-quote-left"></i></span>
+          <p class="testimonial-card-1__paragraph blackText">Lorem Ipsum&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          <div class="block-61-person">
+            <div><img class="block-61-person__avatar" src="img/Testimonial Photo 2.png"></div>
+            <div class="px-2"></div>
+            <div class="flex-grow-1 d-flex flex-column">
+              <span class="block-61-person__rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </span>
+              <span class="block-61-person__name my-1">Jenna S.</span>
+              <span class="block-61-person__info">Office Manager</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="final-cta" class="section-home" style="margin-bottom: 70px; margin-top: 5px;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12 text-center">
+          <button onclick="document.getElementById('contactPopupContainer').style.display = 'block';" id="showContactFormButtonFinal" class="btn btn-primary btn-lg">Help Me Become a Success Story!</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- testimonial Section End-->
+
+    <!-- Footer Section Start -->
+    <footer>
+      <!-- Footer Area Start -->
+      <section class="footer-Content">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Logo and Slogan -->
+            <div class="col-lg-12 text-center">
+              <img style="width: 22rem;" src="img/logo.webp" alt="Unlock Patients Logo">
+              <div class="textwidget" style="font-size: 40px; margin-top: 10px;">
+                <p>Connect With Care</p>
+              </div>
+            </div>
+            <!-- Copyright -->
+            <div class="col-lg-12 text-center mt-3">
+              <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                  const yearSpan = document.getElementById("currentYear");
+                  const currentYear = new Date().getFullYear();
+                  yearSpan.textContent = currentYear;
+                });
+              </script>
+              <div style="font-size: 14px;" class="site-info">
+                Unlock Patients - a Branch of &copy; Unlock Prospects LLC <span id="currentYear"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer Area End -->
+    </footer>
+    <!-- Footer Section End --> 
+
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="lni-chevron-up"></i>
+    </a> 
+
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader" id="loader-1"></div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="js/jquery-min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.js"></script> 
+    <script src="js/jquery.mixitup.js"></script>       
+    <script src="js/jquery.nav.js"></script>    
+    <script src="js/scrolling-nav.js"></script>    
+    <script src="js/jquery.easing.min.js"></script>     
+    <script src="js/wow.js"></script>   
+    <script src="js/jquery.counterup.min.js"></script>     
+    <script src="js/nivo-lightbox.js"></script>     
+    <script src="js/jquery.magnific-popup.min.js"></script>     
+    <script src="js/waypoints.min.js"></script>      
+    <script src="js/form-validator.min.js"></script>
+    <script src="js/contact-form-script.js"></script>   
+    <script src="js/main.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/formValidationAndSubmission.js"></script>
+    <script src="js/menuToPopup.js"></script>
+    
+  </body>
+</html>
