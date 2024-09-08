@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | Unlock Patients</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+      body {
+          font-family: 'Arial', sans-serif;
+          background-color: #f9f9f9;
+          margin: 0;
+          padding: 0;
+      }
+      
+      .section-header {
+          text-align: center;
+          margin-bottom: 40px;
+      }
+      
+      .section-header .btn-subtitle {
+          background-color: #e8f2fe;
+          color: #007BFF;
+          padding: 10px 20px;
+          border-radius: 20px;
+          font-size: 14px;
+          text-transform: uppercase;
+      }
+      
+      .section-title {
+          font-size: 2.5em;
+          margin: 10px 0;
+          color: #333;
+      }
+      
+      .content {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around; /* Adjusted for even spacing */
+          margin-right: -10px; /* Adjusted to counteract margin-right in .case-study-item */
+      }
+      
+      .case-study-item {
+          width: 48%; /* Set the width to 48% */
+          max-width: 600px; /* Set a maximum width */
+          margin-bottom: 40px; /* Adjust margin for spacing between items */
+          flex: 1 1 auto; /* Allow the box to shrink if necessary */
+      }
+  
+      @media (max-width: 768px) {
+          .case-study-item {
+              width: 100%;
+              margin-bottom: 50px; /* Adjusted margin for spacing between items on mobile */
+              flex: 0 0 calc(100% - 20px); /* Adjusted to account for margin */
+              max-width: calc(100% - 20px); /* Adjusted to account for margin */
+          }
+      }
+  
+      .case-study-item-wrapper {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 10px; /* Decreased padding for a more compact box */
+          background-color: #f7f7f7; /* Background color for the box */
+          border-radius: 10px; /* Rounded corners */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+      }
+      
+      .case-study-item-wrapper:hover {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+      
+      .case-study-item-img img {
+          max-width: 100%; /* Ensure the image fills the width of the container */
+          height: auto; /* Maintain aspect ratio */
+          border-radius: 10px; /* Rounded corners for the image */
+      }
+      
+      .case-study-item-text h3 a{
+          font-size: 1.2rem; /* Slightly decreased font size */
+          text-align: center !important;
+          margin-top: 10px; /* Adjusted margin to separate the text from the image */
+          color: black !important; /* Set text color to black */
+          display: inline-block;
+      }
+      
+      .case-study-item-text .author {
+          font-size: 0.9em;
+          color: #777;
+      }
+      
+      .pagination {
+          text-align: center;
+          margin-top: 20px;
+      }
+      
+      .pagination .page-link {
+          margin: 0 5px;
+          padding: 10px 15px;
+          background-color: #007BFF;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      
+      .pagination .page-link:hover {
+          background-color: #0056b3;
+      }
+  
+      @media (max-width: 768px) {
+          .case-study-item {
+              width: 100%;
+              margin-right: 0;
+          }
+      }
+  </style>
+  
+    
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/line-icons.css">
+    <link rel="stylesheet" href="../css/owl.carousel.css">
+    <link rel="stylesheet" href="../css/owl.theme.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/magnific-popup.css">
+    <link rel="stylesheet" href="../css/nivo-lightbox.css">
+    <link rel="stylesheet" href="../css/main.css">    
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XW6JLW79MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XW6JLW79MV');
+</script>
+<body>
+    <header id="home" class="hero-area-2">    
+        <div class="overlay"></div>
+        <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+          <div class="container">
+            <a href="../" class="navbar-brand"><img id="logo" src="../img/logo.webp" alt=""></a>  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="lni-menu"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="../">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="/services">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="/case-studies">Case Studies</a>
+                </li>                            
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="/articles">Articles</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="contactLink">Contact</a>
+                </li> 
+              </ul>
+            </div>
+          </div>
+        </nav>  
+        <div class="container">      
+          <div class="row space-100">
+            <div class="col-lg-7 col-md-12 col-xs-12 content-center">
+              <div class="contents">
+                <h2 class="head-title">Real Practice Owners,<br>Real Results</h2>
+                <p class="sub-title-hero">We Specialize in Helping Pediatricians<BR> Grow Their Online Presence.</p>
+                <div class="header-button-container">
+                    <button href="#contact" style="text-transform: none;" id="showContactFormButton" class="btn btn-border-filled">Become the Next Success Story!</button>
+                    <p class="no-cc-required-title">We Never Share Your Data.</p>
+                  </div>
+              </div>
+            </div>
+            
+            
+            <div class="col-lg-5 col-md-12 col-xs-12">
+                <div class="intro-img">
+                    <picture>
+                        <!-- Spaces in name don't work for src  -->
+                        <source srcset="../img/CaseStudies-desktop.png" media="(min-width: 992px)">
+                        <source srcset="../img/CaseStudies-mobile.png" media="(min-width: 768px) and (max-width: 991px)">
+                        <source srcset="../img/CaseStudies-mobile.png" media="(max-width: 767px)">
+                        <img src="../img/intro.png" alt="Intro Image" class="responsive-img">
+                    </picture>
+                </div>
+              </div>
+            
+            
+          
+          
+          </div> 
+        </div>             
+      </header>
+    <!-- Header Section End --> 
+    <!-- Popup container for the contact form -->
+    <div id="contactPopupContainer" class="popup-container blur-background" >
+        <!-- Your contact form HTML goes here -->
+        <section class="centered-half">
+            <div class="">
+                <div class="gx-5 justify-content-center" style="margin-top: 3rem;">
+                    <div class="col-lg-6>
+                        <script type="text/javascript"></script>
+                        <iframe name="hiddenConfirm1" id="hiddenConfirm1" style="display: none;" onload="if(submitted){window.location='confirmation.html';}"></iframe>
+                    <form action="#" id="contactForm1" method="post" target="hiddenConfirm1" onsubmit="validateFormAndSubmit();">
+                        <h3 class="text-center form-title" style="font-size: 42px; text-transform: uppercase;">FREE Month of Social Media Marketing</h3>
+  
+                        <!-- First Name input -->
+                        <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                            <input class="form-control cta-input-background" id="firstName" type="text" placeholder="" data-sb-validations="required" name="entry.720938598"/>
+                            <label for="firstName">First Name</label>
+                            <div class="invalid-feedback" data-sb-feedback="firstName:required">A first name is required.</div>
+                        </div>
+  
+                        <!-- Last Name input -->
+                        <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                            <input class="form-control cta-input-background" id="lastName" type="text" placeholder="" data-sb-validations="required" name="entry.1103759101" />
+                            <label for="lastName">Last Name</label>
+                            <div class="invalid-feedback" data-sb-feedback="lastName:required">A last name is required.</div>
+                        </div>
+  
+                        <!-- Email address input -->
+                        <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                            <input class="form-control cta-input-background" id="email" type="email" placeholder="" data-sb-validations="required,email" name="entry.460222799"/>
+                            <label for="email">Email</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        </div>
+  
+                        <!-- Phone number input -->
+                        <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                            <input class="form-control cta-input-background" id="phone" type="tel" placeholder="" data-sb-validations="required" name="entry.1487472415" />
+                            <label for="phone">Enter Mobile Number</label>
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                        </div>
+  
+                        <!-- Submit Button -->
+                        <div class="d-grid"><button class="btn btn-primary btn-lg cta-button" id="submitButton1" type="submit">Yes! Get Me Patients!</button></div>
+                    </form>         
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section id="blog" class="section">
+        <div class="container">
+            <div class="section-header">
+                <!-- <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">Articles</p> -->
+                <h2 class="section-title section-title wow fadeIn" data-wow-delay="0.2s">Case Studies</h2>
+            </div>
+
+            <div class="content" id="articleList">
+                <!-- First Blog Item -->
+                <div class="case-study-item">
+                    <div class="case-study-item-wrapper">
+                        <div class="case-study-item-img">
+                            <a href="/case-studies/Nurture-Pediatrics">
+                                <img src="../img/CheckOutCaseStudies-Desktop.jpg" alt="Nurture Pediatrics Office Opening">
+                            </a>
+                        </div>
+                        <div class="case-study-item-text">
+                            <h3 style="color: black;"><a href="/case-studies/Nurture-Pediatrics">Nurture Pediatrics: Achieved 85 Five-Star Reviews in Under 3 Months</a></h3>
+                            <p>Dr. Bottoms, owner of Nurture Pediatrics in Smyrna and Nolensville, Tennessee, signed up with us in May 2024. Within 3 months, she gained over 85 five-star reviews, completely transforming her practice's online reputation.</p>
+                            <a class="btn btn-rm" href="/case-studies/Nurture-Pediatrics">Read More <i class="lni-arrow-right"></i></a>
+                            <!-- <div class="author">
+                                <span class="date float-right">10 July, 2024</span>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
+    </section>
+
+    <section id="final-cta" class="section-home" style="margin-bottom: 70px; margin-top: 5px;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-12 text-center">
+              <button onclick="document.getElementById('contactPopupContainer').style.display = 'block';" id="showContactFormButtonFinal" class="btn btn-primary btn-lg">Help Me Become a Success Story!</button>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <footer>
+        <!-- Footer Area Start -->
+        <section class="footer-Content">
+          <div class="container">
+            <div class="row align-items-center">
+              <!-- Logo and Slogan -->
+              <div class="col-lg-12 text-center">
+                <img style="width: 22rem;" src="../img/logo.webp" alt="Unlock Patients Logo">
+                <div class="textwidget" style="font-size: 40px; margin-top: 10px;">
+                  <p>Connect With Care</p>
+                </div>
+              </div>
+              <!-- Copyright -->
+              <div class="col-lg-12 text-center mt-3">
+                <script>
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const yearSpan = document.getElementById("currentYear");
+                    const currentYear = new Date().getFullYear();
+                    yearSpan.textContent = currentYear;
+                  });
+                </script>
+                <div style="font-size: 14px;" class="site-info">
+                  Unlock Patients - a Branch of &copy; Unlock Prospects LLC <span id="currentYear"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Footer Area End -->
+      </footer>
+
+    <!-- JavaScript and other scripts -->
+    <script>
+        let currentPage = 1;
+        const itemsPerPage = 6;
+
+        function paginateArticles() {
+            const articles = document.querySelectorAll('.case-study-item');
+            let visibleArticles = Array.from(articles);
+
+            visibleArticles.forEach((article, index) => {
+                article.style.display = (index >= (currentPage - 1) * itemsPerPage && index < currentPage * itemsPerPage) ? 'block' : 'none';
+            });
+
+            updatePagination(visibleArticles.length);
+        }
+
+        function changePage(page) {
+            if (page === 'prev') {
+                if (currentPage > 1) currentPage--;
+            } else if (page === 'next') {
+                if (currentPage * itemsPerPage < document.querySelectorAll('.case-study-item').length) currentPage++;
+            } else {
+                currentPage = page;
+            }
+
+            paginateArticles();
+        }
+
+        function updatePagination(totalItems) {
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+            const pagination = document.querySelector('.pagination');
+            pagination.innerHTML = '<button class="page-link" onclick="changePage(\'prev\')">Previous</button>';
+
+            for (let i = 1; i <= totalPages; i++) {
+                pagination.innerHTML += `<button class="page-link" onclick="changePage(${i})">${i}</button>`;
+            }
+
+            pagination.innerHTML += '<button class="page-link" onclick="changePage(\'next\')">Next</button>';
+        }
+
+        window.onload = () => {
+            paginateArticles();
+        };
+    </script>
+    <script src="../js/jquery-min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/owl.carousel.js"></script> 
+    <script src="../js/jquery.mixitup.js"></script>       
+    <script src="../js/jquery.nav.js"></script>    
+    <script src="../js/scrolling-nav.js"></script>    
+    <script src="../js/jquery.easing.min.js"></script>     
+    <script src="../js/wow.js"></script>   
+    <script src="../js/jquery.counterup.min.js"></script>     
+    <script src="../js/nivo-lightbox.js"></script>     
+    <script src="../js/jquery.magnific-popup.min.js"></script>     
+    <script src="../js/waypoints.min.js"></script>      
+    <script src="../js/form-validator.min.js"></script>
+    <script src="../js/contact-form-script.js"></script>   
+    <script src="../js/main.js"></script>
+    <script src="../js/popup.js"></script>
+    <script src="../js/formValidationAndSubmission.js"></script>
+    <script src="../js/menuToPopup.js"></script>
+</body>
+</html>
