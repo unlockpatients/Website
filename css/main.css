@@ -892,7 +892,7 @@ button:focus {
 
 @media (min-width: 992px) and (max-width: 1024px){
   .hero-area-2 .contents {
-    padding: 240px 0 140px !important;
+    padding: 240px 0 90px !important;
   }
 }
 
@@ -904,7 +904,7 @@ button:focus {
 }
 
 .hero-area-2 .contents {
-  padding: 170px 0 140px;
+  padding: 170px 0 70px;
 }
 
 
