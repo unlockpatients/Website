@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies | Unlock Patients</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <style>
+
+.cta-button-container {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    text-align: center; /* Center the button horizontally */
+    padding: 0 15px; /* Add padding to ensure the button does not touch the screen edges */
+    box-sizing: border-box; /* Include padding in the element's width */
+}
+
+.cta-button-container a {
+    display: inline-block; /* Allows for padding and margin adjustments */
+    padding: 10px 20px; /* Adjust padding for better responsiveness */
+    max-width: 100%; /* Ensure the button doesn't exceed the screen width */
+    width: auto; /* Adjusts button width based on its content */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    white-space: normal; /* Allow text to wrap if needed */
+    overflow: hidden; /* Prevent any text from overflowing */
+    text-align: center; /* Center text inside the button */
+}
+
+.cta-button-container a:hover {
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .cta-button-container {
+        padding: 0 10px; /* Reduce padding on smaller screens */
+    }
+
+    .cta-button-container a {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+        font-size: 0.9em; /* Reduce font size for better fit */
+    }
+}
+
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-header .btn-subtitle {
+            background-color: #e8f2fe;
+            color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        
+        .section-title {
+            font-size: 2.5em;
+            margin: 10px 0;
+            color: #333;
+        }
+        
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-right: -10px; /* Adjusted to counteract margin-right in .case-study-item */
+        }
+        
+        .case-study-item {
+            width: 48%; /* Increase the width to make the box larger */
+            margin-bottom: 40px; /* Adjust margin for spacing between items */
+        }
+    
+        @media (max-width: 768px) {
+            .case-study-item {
+                width: 100%;
+                margin-bottom: 50px; /* Adjusted margin for spacing between items on mobile */
+                flex: 0 0 calc(100% - 20px); /* Adjusted to account for margin and provide space between items on mobile */
+                max-width: calc(100% - 20px); /* Adjusted to account for margin and provide space between items on mobile */
+                
+            }
+        }
+    
+        .case-study-item-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px; /* Increase padding for a larger box */
+            background-color: #f7f7f7; /* Optional: background color for the box */
+            border-radius: 10px; /* Optional: rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: box shadow for depth */
+            
+        }
+        
+        .case-study-item-wrapper:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .case-study-item-img img {
+            max-width: 100%; /* Ensure the image fills the width of the container */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Optional: rounded corners for the image */
+        }
+        
+        .case-study-item-text h3 a{
+            font-size: 1.5rem; /* Increase font size */
+            text-align: center !important;
+            margin-top: 20px; /* Add margin to separate the text from the image */
+            color: black !important; /* Set text color to black */
+            display: inline-block;
+        }
+
+        @media (max-width: 768px){
+            .case-study-item-text{
+                max-width: 100%;
+            }
+        }
+        
+        .case-study-item-text .author {
+            font-size: 0.9em;
+            color: #777;
+        }
+        
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .pagination .page-link {
+            margin: 0 5px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .pagination .page-link:hover {
+            background-color: #0056b3;
+        }
+        
+        @media (max-width: 768px) {
+            .case-study-item {
+                width: 100%;
+                margin-bottom: 50px; /* Adjusted margin for spacing between items on mobile */
+                flex: 0 0 calc(100% - 20px); /* Adjusted to account for margin and provide space between items on mobile */
+                max-width: calc(100% - 20px); /* Adjusted to account for margin and provide space between items on mobile */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .intro-img {
+                margin-bottom: 45px;
+            }
+        }
+
+    </style>
+    
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/line-icons.css">
+    <link rel="stylesheet" href="../../css/owl.carousel.css">
+    <link rel="stylesheet" href="../../css/owl.theme.css">
+    <link rel="stylesheet" href="../../css/animate.css">
+    <link rel="stylesheet" href="../../css/magnific-popup.css">
+    <link rel="stylesheet" href="../../css/nivo-lightbox.css">
+    <link rel="stylesheet" href="../../css/main.css">    
+    <link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XW6JLW79MV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XW6JLW79MV');
+</script>
+<body>
+    <header id="home" class="hero-area-2">    
+        <div class="overlay"></div>
+        <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+          <div class="container">
+            <a href="../" class="navbar-brand"><img id="logo" src="../../img/logo.webp" alt=""></a>  
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="lni-menu"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="../">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="/about">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="/services">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="/case-studies">Case Studies</a>
+                </li>                            
+                <li class="nav-item">
+                  <a class="nav-link page-scroll" href="/articles">Articles</a>
+                </li> 
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="showContactFormButton">Contact</a>
+                </li> 
+              </ul>
+            </div>
+          </div>
+        </nav>  
+        <div class="container">      
+          <div class="row space-100">
+            <div class="col-lg-7 col-md-12 col-xs-12 content-center">
+              <div class="contents">
+                <h2 class="head-title">Wonderkidz Pediatrics: Expanded Digital Presence with a 949% Increase in Views.</h2>
+                <p style="font-size:16px !important" class="sub-title-hero">Dr. Bhattacharyya, owner of WonderKidz Pediatrics in Hollywood, Florida, partnered with us in November 2024. In a short time, she achieved a 949% increase in Instagram views and a 55% email open rate, greatly enhancing her practice's online presence.</p>
+              </div>
+            </div>
+            
+            
+            <div class="col-lg-5 col-md-12 col-xs-12">
+                <div class="intro-img">
+                    <picture>
+                        <!-- Spaces in name don't work for src  -->
+                        <source srcset="../../img/WKP-Desktop.webp" media="(min-width: 992px)">
+                        <source srcset="../../img/WKP-Mobile.webp" media="(min-width: 768px) and (max-width: 991px)">
+                        <source srcset="../../img/WKP-Mobile.webp" media="(max-width: 767px)">
+                        <img src="../../img/intro.webp" alt="Intro Image" class="responsive-img">
+                    </picture>
+                </div>
+              </div>
+            
+            
+          
+          
+          </div> 
+        </div>             
+      </header>
+    <!-- Header Section End --> 
+    <!-- Popup container for the contact form -->
+    <div id="contactPopupContainer" class="popup-container blur-background" >
+        <!-- Your contact form HTML goes here -->
+        <section class="centered-half">
+            <div class="">
+                <div class="gx-5 justify-content-center" style="margin-top: 3rem;">
+                    <div class="col-lg-6>
+                        <script type="text/javascript"></script>
+                        <iframe name="hiddenConfirm1" id="hiddenConfirm1" style="display: none;" onload="if(submitted){window.location='../../confirmation.html';}"></iframe>
+                    <form action="#" id="contactForm1" method="post" target="hiddenConfirm1" onsubmit="validateFormAndSubmit();">
+                        <h3 class="text-center form-title" style="font-size: 42px; text-transform: uppercase;">FREE Month of Social Media Marketing</h3>
+  
+                        <!-- First Name input -->
+                        <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                            <input class="form-control cta-input-background" id="firstName" type="text" placeholder="" data-sb-validations="required" name="entry.720938598"/>
+                            <label for="firstName">First Name</label>
+                            <div class="invalid-feedback" data-sb-feedback="firstName:required">A first name is required.</div>
+                        </div>
+  
+                        <!-- Last Name input -->
+                        <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                            <input class="form-control cta-input-background" id="lastName" type="text" placeholder="" data-sb-validations="required" name="entry.1103759101" />
+                            <label for="lastName">Last Name</label>
+                            <div class="invalid-feedback" data-sb-feedback="lastName:required">A last name is required.</div>
+                        </div>
+  
+                        <!-- Email address input -->
+                        <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                            <input class="form-control cta-input-background" id="email" type="email" placeholder="" data-sb-validations="required,email" name="entry.460222799"/>
+                            <label for="email">Email</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        </div>
+  
+                        <!-- Phone number input -->
+                        <div class="form-floating mb-3 cta-input-background" style="font-weight: 600;">
+                            <input class="form-control cta-input-background" id="phone" type="tel" placeholder="" data-sb-validations="required" name="entry.1487472415" />
+                            <label for="phone">Enter Mobile Number</label>
+                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                        </div>
+  
+                        <!-- Submit Button -->
+                        <div class="d-grid"><button class="btn btn-primary btn-lg cta-button" id="submitButton1" type="submit">Yes! Get Me Patients!</button></div>
+                    </form>         
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section id="blog" class="section">
+        <div class="container">
+            <div class="content" id="articleList">
+                <!-- First Blog Item -->
+                <div class="case-study-item">
+                    <div class="case-study-item-wrapper">
+                        <div class="case-study-item-img">
+                            <a href="/case-studies/WonderKidz-Pediatrics/">
+                                <img src="../../img/WKP-CaseStudy.webp" alt="WonderKidz Office">
+                            </a>
+                        </div>
+                        <div class="case-study-item-text">
+                            <h3 style="color: black;">
+                                <a href="/case-studies/Wonderkidz-Pediatrics">Wonderkidz Pediatrics: Expanded Digital Presence with a 949% Increase in Views</a>
+                            </h3>
+                            
+                            <p style="margin-bottom: 20px;">
+                                Dr. Bhattacharyya, the owner of Wonderkidz Pediatrics in Hollywood, Florida, partnered with us in November 2024. As an accomplished and compassionate doctor, her priority was always her patients, but her busy schedule left little time to dedicate to consistent social media, email marketing, and other digital efforts.
+                            </p>
+                            
+                            <p style="margin-bottom: 20px;">
+                                In just a short time, we're helping Wonderkidz Pediatrics build a strong and engaging online presence through high-quality, tailored content designed specifically for parents of young patients. The results were transformative:
+                            </p>
+                            
+                            <p style="margin-bottom: 20px;">
+                                <strong>Instagram Highlights:</strong><br>
+                                - 949% increase in impressions/views, dramatically improving visibility among prospective families.<br>
+                                - 2,900% increase in engagements (likes, comments, and shares), creating meaningful interactions with parents and the community.<br>
+                                - 25% increase in profile views, helping more families discover the practice and learn about their services.
+                            </p>
+                            
+                            <p style="margin-bottom: 20px;">
+                                <strong>Facebook Achievements:</strong><br>
+                                - 820% increase in views, amplifying reach and awareness within local communities.<br>
+                                - 1,000% increase in engagements, strengthening connections with families.<br>
+                                - 67.6% increase in profile visits, showcasing the practice as a trusted resource for pediatric care.<br>
+                                - 970% increase in non-follower reach, drawing new families to Wonderkidz Pediatrics.
+                            </p>
+                            
+                            <p style="margin-bottom: 20px;">
+                                <strong>Email Engagement:</strong><br>
+                                Achieved an industry leading 55% open rate, signaling a strong connection with patients and ensuring they remain informed and engaged with the practice.
+                            </p>
+
+                            <p style="margin-bottom: 20px;">
+                                <strong>Practice Reviews:</strong><br>
+                                *Review results to be updated soon.*
+                            </p>
+                            
+                            <p style="margin-bottom: 20px;">
+                                By delivering content tailored to parents’ needs and interests, we effectively captured the attention of both current and prospective patients. These results demonstrate the power of consistent, parent-focused digital marketing strategies.
+                            </p>
+                            
+                            <p style="margin-bottom: 20px;">
+                                Our partnership with Wonderkidz Pediatrics is just beginning. As we continue to refine and expand their digital presence, we look forward to updating this case study with even more exciting results in the future.
+                            </p>
+                            
+                            <div style="margin-top: 40px; margin-bottom: 30px;" class="col-lg-12 text-center cta-button-container">
+                                <a href="/services" class="btn btn-primary btn-lg">Learn More About Unlock Patients</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                
+                
+    
+                <!-- Testimonial Section -->
+                <!-- <div class="testimonial-section">
+                    <div class="testimonial-card-1">
+                        <span class="testimonial-card-1__quote-symbol"><i class="fas fa-quote-left"></i></span>
+                        <p class="testimonial-card-1__paragraph blackText">As a busy pediatric practice owner, I didn’t have the time to focus on growing our reviews or keeping up with consistent social media posts. Alex and Unlock Patients stepped in and completely transformed our online presence. Thanks to their efforts, we now have an industry-leading digital presence, with consistent, engaging posts and over 90 five-star patient reviews in just a few months. Alex made the entire process effortless, allowing us to focus on patient care while they handled everything. If you're looking to elevate your practice’s digital presence, I highly recommend Unlock Patients.</p>
+                        <div class="block-61-person">
+                            <div><img class="block-61-person__avatar" src="../../img/Testimonial Photo.webp" alt="Dr. Bottoms"></div>
+                            <div class="px-2"></div>
+                            <div class="flex-grow-1 d-flex flex-column">
+                                <span class="block-61-person__rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                                <span class="block-61-person__name my-1">Dr. Bottoms</span>
+                                <span class="block-61-person__info">Pediatrician & Owner</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <section id="final-cta" class="section-home" style="margin-bottom: 70px; margin-top: 5px;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-12 text-center cta-button-container">
+              <a onclick="document.getElementById('contactPopupContainer').style.display = 'block';" id="showContactFormButtonFinal" class="btn btn-primary btn-lg ">Contact Us and Become a Success Story!</a>
+            </div>
+        
+          </div>
+        </div>
+      </section>
+
+    <footer>
+        <!-- Footer Area Start -->
+        <section class="footer-Content">
+          <div class="container">
+            <div class="row align-items-center">
+              <!-- Logo and Slogan -->
+              <div class="col-lg-12 text-center">
+                <img style="width: 22rem;" src="../../img/logo.webp" alt="Unlock Patients Logo">
+                <div class="textwidget" style="font-size: 40px; margin-top: 10px;">
+                  <p>Connect With Care</p>
+                </div>
+              </div>
+              <!-- Copyright -->
+              <div class="col-lg-12 text-center mt-3">
+                <script>
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const yearSpan = document.getElementById("currentYear");
+                    const currentYear = new Date().getFullYear();
+                    yearSpan.textContent = currentYear;
+                  });
+                </script>
+                <div style="font-size: 14px;" class="site-info">
+                  Unlock Patients - a Branch of &copy; Unlock Prospects LLC <span id="currentYear"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Footer Area End -->
+      </footer>
+
+    <!-- JavaScript and other scripts -->
+    <script>
+        let currentPage = 1;
+        const itemsPerPage = 6;
+
+        function paginateArticles() {
+            const articles = document.querySelectorAll('.case-study-item');
+            let visibleArticles = Array.from(articles);
+
+            visibleArticles.forEach((article, index) => {
+                article.style.display = (index >= (currentPage - 1) * itemsPerPage && index < currentPage * itemsPerPage) ? 'block' : 'none';
+            });
+
+            updatePagination(visibleArticles.length);
+        }
+
+        function changePage(page) {
+            if (page === 'prev') {
+                if (currentPage > 1) currentPage--;
+            } else if (page === 'next') {
+                if (currentPage * itemsPerPage < document.querySelectorAll('.case-study-item').length) currentPage++;
+            } else {
+                currentPage = page;
+            }
+
+            paginateArticles();
+        }
+
+        function updatePagination(totalItems) {
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+            const pagination = document.querySelector('.pagination');
+            pagination.innerHTML = '<button class="page-link" onclick="changePage(\'prev\')">Previous</button>';
+
+            for (let i = 1; i <= totalPages; i++) {
+                pagination.innerHTML += `<button class="page-link" onclick="changePage(${i})">${i}</button>`;
+            }
+
+            pagination.innerHTML += '<button class="page-link" onclick="changePage(\'next\')">Next</button>';
+        }
+
+        window.onload = () => {
+            paginateArticles();
+        };
+    </script>
+    <script src="../../js/jquery-min.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/owl.carousel.js"></script> 
+    <script src="../../js/jquery.mixitup.js"></script>       
+    <script src="../../js/jquery.nav.js"></script>    
+    <script src="../../js/scrolling-nav.js"></script>    
+    <script src="../../js/jquery.easing.min.js"></script>     
+    <script src="../../js/wow.js"></script>   
+    <script src="../../js/jquery.counterup.min.js"></script>     
+    <script src="../../js/nivo-lightbox.js"></script>     
+    <script src="../../js/jquery.magnific-popup.min.js"></script>     
+    <script src="../../js/waypoints.min.js"></script>      
+    <script src="../../js/form-validator.min.js"></script>
+    <script src="../../js/contact-form-script.js"></script>   
+    <script src="../../js/main.js"></script>
+    <script src="../../js/popup.js"></script>
+    <script src="../../js/formValidationAndSubmission.js"></script>
+    <script src="../../js/menuToPopup.js"></script>
+</body>
+</html>
