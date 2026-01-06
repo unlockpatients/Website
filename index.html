@@ -208,26 +208,35 @@
     
     <style>
         /* Fix for iOS Safari extra circle on arrow button */
-        * {
+        *, *::before, *::after {
             -webkit-tap-highlight-color: transparent !important;
-            -webkit-touch-callout: none;
+            -webkit-touch-callout: none !important;
         }
         
-        a, button {
+        a, button, div[class*="framer"] {
             -webkit-tap-highlight-color: transparent !important;
             -webkit-appearance: none !important;
             outline: none !important;
         }
         
-        a:focus, button:focus, a:active, button:active {
+        a:focus, button:focus, a:active, button:active,
+        div:focus, div:active {
             outline: none !important;
             -webkit-tap-highlight-color: transparent !important;
         }
         
-        /* Hide the BAD background element that's showing on iOS */
-        .framer-cyvul8 {
+        /* Hide the BAD background element - multiple selectors for maximum specificity */
+        .framer-cyvul8,
+        div.framer-cyvul8,
+        div[class*="framer-cyvul8"],
+        .framer-78k33s .framer-cyvul8 {
             display: none !important;
+            opacity: 0 !important;
             visibility: hidden !important;
+            pointer-events: none !important;
+            position: absolute !important;
+            width: 0 !important;
+            height: 0 !important;
         }
     </style>
 </head>
