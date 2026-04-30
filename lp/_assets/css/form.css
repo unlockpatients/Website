@@ -1,0 +1,452 @@
+/* ============================================
+   Unlock Patients — Multi-Step Form Styles
+   ============================================ */
+
+/* --- Page Layout --- */
+.form-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-header {
+  background: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-white) 100%);
+  padding: 16px var(--section-px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.form-header__logo img { height: 32px; width: auto; }
+
+.form-main {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px var(--section-px) 60px;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 560px;
+}
+
+/* --- Progress Bar --- */
+.progress-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 48px;
+  gap: 0;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+}
+
+.progress-step__circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  border: 2px solid var(--color-border);
+  color: var(--color-text-secondary);
+  background: var(--color-white);
+  transition: all var(--transition);
+  flex-shrink: 0;
+}
+
+.progress-step.active .progress-step__circle {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: 0 2px 12px rgba(26, 188, 232, 0.35);
+}
+
+.progress-step.completed .progress-step__circle {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.progress-step__line {
+  width: 48px;
+  height: 2px;
+  background: var(--color-border);
+  transition: background var(--transition);
+}
+
+.progress-step.completed + .progress-step .progress-step__line,
+.progress-step.completed .progress-step__line {
+  background: var(--color-accent);
+}
+
+/* --- Step Container --- */
+.form-step {
+  display: none;
+  animation: fadeInUp 0.3s ease;
+}
+
+.form-step.active { display: block; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-step__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-heading);
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.form-step__subtitle {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* --- Form Fields --- */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 18px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  box-shadow: 0 0 0 3px rgba(135, 101, 215, 0.1);
+}
+
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%234C281C' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--color-primary);
+}
+
+.form-group input.error,
+.form-group select.error {
+  border-color: var(--color-error);
+}
+
+.form-group .field-error {
+  display: none;
+  color: var(--color-error);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.form-group .field-error.visible { display: block; }
+
+/* --- Radio Options --- */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.radio-option {
+  position: relative;
+}
+
+.radio-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.radio-option label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 0;
+  box-shadow: 0 1px 3px rgba(180, 156, 197, 0.05);
+}
+
+.radio-option label:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-subtle);
+}
+
+.radio-option input[type="radio"]:checked + label {
+  border-color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  color: var(--color-heading);
+}
+
+.radio-option label::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: all var(--transition);
+}
+
+.radio-option input[type="radio"]:checked + label::before {
+  border-color: var(--color-primary);
+  border-width: 6px;
+}
+
+/* --- Card Grid (Practice Types) --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.card-option {
+  position: relative;
+}
+
+.card-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card-option label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px 16px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all var(--transition);
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 0;
+  min-height: 100px;
+}
+
+.card-option label:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-option input[type="radio"]:checked + label {
+  border-color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  color: var(--color-heading);
+  box-shadow: 0 2px 12px rgba(135, 101, 215, 0.15);
+}
+
+.card-option__icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+/* --- Continue / Next Button --- */
+.form-actions {
+  margin-top: 32px;
+}
+
+.form-actions .btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 17px;
+  border-radius: var(--radius-pill);
+}
+
+.form-actions .btn-next {
+  width: auto;
+  padding: 14px 32px;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #c0c0c0;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  cursor: not-allowed;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.form-actions .btn-next.ready {
+  background: var(--color-btn);
+  border-bottom-color: rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.form-actions .btn-next.ready:hover {
+  background: var(--color-btn-hover);
+  transform: translateY(-1px);
+}
+
+.form-actions .btn-next .arrow {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.form-actions--center {
+  text-align: center;
+}
+
+.form-legal {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.form-legal a {
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+}
+
+.form-legal a:hover {
+  color: var(--color-primary);
+}
+
+.form-actions .btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-top: 12px;
+  transition: color var(--transition);
+}
+
+.form-actions .btn-back:hover { color: var(--color-primary); }
+
+/* --- Cal.com Embed Container --- */
+.cal-embed-wrapper {
+  min-height: 600px;
+  position: relative;
+}
+
+.cal-embed-wrapper .cal-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: var(--color-text-secondary);
+  font-size: 15px;
+}
+
+.cal-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* --- Non-US Message --- */
+.non-us-message {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.non-us-message h3 {
+  font-size: 22px;
+  color: var(--color-heading);
+  margin-bottom: 12px;
+}
+
+.non-us-message p {
+  color: var(--color-text-secondary);
+  font-size: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* --- Form Footer --- */
+.form-footer {
+  padding: 24px var(--section-px);
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  border-top: 1px solid var(--color-border);
+}
+
+.form-footer a { color: var(--color-primary); }
+
+/* --- Responsive --- */
+@media (max-width: 600px) {
+  .form-main { padding: 24px 16px 40px; }
+
+  .form-step__title { font-size: 22px; }
+
+  .progress-step__circle { width: 32px; height: 32px; font-size: 13px; }
+  .progress-step__line { width: 32px; }
+
+  .card-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+
+  .card-option label { padding: 16px 12px; font-size: 13px; min-height: 80px; }
+  .card-option__icon { font-size: 24px; }
+
+  .radio-option label { padding: 14px 16px; font-size: 14px; }
+
+  .progress-bar { margin-bottom: 32px; }
+}

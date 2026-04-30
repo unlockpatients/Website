@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en-US" dir="ltr">
 <head>
+    <!--GA4_HEAD_START--><script>(function(){window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-Z6T87J4ECL');var loaded=false;function load(){if(loaded)return;loaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-Z6T87J4ECL';document.head.appendChild(s);events.forEach(function(e){window.removeEventListener(e,load,opts);});}var events=['scroll','click','keydown','touchstart','mousemove'],opts={passive:true,once:true,capture:true};events.forEach(function(e){window.addEventListener(e,load,opts);});if(document.readyState==='complete')setTimeout(load,3000);else window.addEventListener('load',function(){setTimeout(load,3000);},{once:true});})();</script><!--GA4_HEAD_END-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Privacy Policy | Unlock Patients</title>
@@ -8,174 +9,318 @@
     <link href="https://framerusercontent.com/images/TES7qtU3rUcCevlcX0WHBDi8AdU.png" rel="icon" media="(prefers-color-scheme: light)">
     <link href="https://framerusercontent.com/images/TES7qtU3rUcCevlcX0WHBDi8AdU.png" rel="icon" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" href="https://framerusercontent.com/images/NqB2eTFKSwyHl8VbITKgGwSzEI0.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --purple: rgb(26, 188, 232);
+            --purple-dark: rgb(20, 165, 205);
+            --bg-soft: #effafb;
+            --text: rgba(76, 40, 28, 0.9);
+            --text-muted: rgba(76, 40, 28, 0.55);
+            --heading: rgb(76, 40, 28);
+            --border: rgba(26, 188, 232, 0.12);
         }
-
         body {
-            font-family: 'Figtree', sans-serif;
-            background: rgb(255, 255, 255);
-            color: rgba(76, 40, 28, 0.9);
-            line-height: 1.6;
+            font-family: 'Figtree', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: #fff;
+            color: var(--text);
+            line-height: 1.65;
             -webkit-font-smoothing: antialiased;
+            letter-spacing: -0.01em;
+        }
+        a { color: var(--purple); text-decoration: none; }
+        a:hover { color: var(--purple-dark); }
+
+        /* ── Navbar ── */
+        .up-site-header {
+          position: relative;
+          background: transparent !important;
+          overflow: visible;
+          top: 0;
+          left: 50%;
+          right: auto;
+          z-index: 1000;
+          transform: translateX(-50%);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 24px;
+          width: 100vw;
+          max-width: 1200px;
+          box-sizing: border-box;
+          margin: 0 auto;
+          padding: 10px 40px;
+          border: 0;
+          font-family: Figtree, system-ui, sans-serif;
+        }
+        .up-site-header::before {
+          content: '';
+          position: absolute;
+          top: 0; bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 100vw;
+          background: #fff;
+          z-index: -1;
+          border-bottom: 1px solid var(--border);
+        }
+        .up-site-header__logo {
+          display: inline-flex;
+          align-items: center;
+          flex: 0 0 auto;
+          text-decoration: none;
+        }
+        .up-site-header__logo img {
+          display: block;
+          height: 31px;
+          width: auto;
+        }
+        .up-site-header__nav {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 16px;
+          width: min-content;
+        }
+        .up-site-header__links {
+          display: flex;
+          align-items: center;
+          gap: 2px;
+          width: min-content;
+          padding: 2px 0;
+        }
+        .up-site-header__link {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 34px;
+          padding: 8px 14px;
+          border-radius: 4px;
+          color: rgb(76, 40, 28);
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 1.2;
+          letter-spacing: -0.02em;
+          text-decoration: none;
+          white-space: nowrap;
+        }
+        .up-site-header__link:hover { color: rgb(26, 188, 232); }
+        .up-site-header__actions {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          width: min-content;
+        }
+        .up-site-header__button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 38px;
+          padding: 9px 13px;
+          border-radius: 6px;
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 1.2;
+          letter-spacing: -0.04em;
+          text-align: center;
+          text-decoration: none;
+          white-space: nowrap;
+        }
+        .up-site-header__button--login {
+          color: rgb(76, 40, 28);
+          background: rgba(255, 255, 255, 0.72);
+          border: 1px solid rgba(26, 188, 232, 0.18);
+        }
+        .up-site-header__button--login:hover { color: rgb(26, 188, 232); border-color: rgba(26, 188, 232, 0.35); }
+        .up-site-header__button--primary {
+          color: #fff;
+          background: rgb(26, 188, 232);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0 13px 13px -3px rgba(0, 0, 0, 0.1), 0 30px 30px -4px rgba(0, 0, 0, 0.05);
+        }
+        .up-site-header__button--primary:hover { background: rgb(20, 165, 205); }
+
+        /* ── Hamburger ── */
+        .up-site-header__toggle { display: none; }
+        .up-site-header__hamburger {
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          gap: 5px;
+          width: 28px; height: 28px;
+          cursor: pointer;
+        }
+        .up-site-header__hamburger span {
+          display: block; width: 100%; height: 2px;
+          background: rgb(76, 40, 28);
+          border-radius: 2px;
+          transition: transform 0.25s, opacity 0.25s;
+        }
+        .up-site-header__toggle:checked ~ .up-site-header__nav .up-site-header__hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .up-site-header__toggle:checked ~ .up-site-header__nav .up-site-header__hamburger span:nth-child(2) { opacity: 0; }
+        .up-site-header__toggle:checked ~ .up-site-header__nav .up-site-header__hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .up-site-header__mobile-menu { display: none; }
+        @media (max-width: 809px) {
+          .up-site-header__nav { flex: 1; width: auto; justify-content: center; gap: 12px; }
+          .up-site-header__hamburger { display: flex; position: absolute; right: 20px; }
+          .up-site-header__links { display: none; }
+          .up-site-header__button--login { display: none; }
+          .up-site-header__mobile-menu {
+            display: none;
+            position: absolute; top: 100%; left: 0; right: 0;
+            background: #fff;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            padding: 16px 24px;
+            flex-direction: column; gap: 4px;
+            z-index: 999;
+          }
+          .up-site-header__toggle:checked ~ .up-site-header__mobile-menu { display: flex; }
+          .up-site-header__mobile-menu a {
+            display: block; padding: 12px 8px;
+            color: rgb(76, 40, 28);
+            font-family: Figtree, system-ui, sans-serif;
+            font-size: 15px; font-weight: 500;
+            text-decoration: none; border-radius: 6px;
+          }
+          .up-site-header__mobile-menu a:hover { background: rgba(26, 188, 232, 0.06); color: rgb(26, 188, 232); }
+          .up-site-header__mobile-menu .up-site-header__button--primary { color: #fff; background: rgb(26, 188, 232); text-align: center; margin-top: 8px; }
+        }
+        @media (max-width: 809px) {
+          .up-site-header {
+            position: relative; left: 0; right: 0; transform: none;
+            width: auto; max-width: none;
+            padding: 16px 20px 20px;
+            align-items: center; justify-content: flex-start; gap: 14px;
+          }
+          .up-site-header__logo img { height: 28px; }
+          .up-site-header__actions { gap: 8px; }
+          .up-site-header__button { min-height: 34px; padding: 8px 11px; font-size: 14px; }
         }
 
-        .header {
-            background: rgb(247, 240, 250);
-            padding: 20px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid rgba(135, 101, 215, 0.1);
-        }
-
-        .header a {
-            text-decoration: none;
-            color: rgb(135, 101, 215);
-            font-weight: 600;
-            font-size: 16px;
-            transition: opacity 0.2s;
-        }
-
-        .header a:hover {
-            opacity: 0.7;
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: 700;
-            color: rgb(72, 57, 83);
-        }
-
+        /* ── Content ── */
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 60px 24px 100px;
         }
-
         h1 {
             font-size: 42px;
-            font-weight: 700;
-            color: rgb(72, 57, 83);
+            font-weight: 800;
+            color: var(--heading);
             margin-bottom: 8px;
             letter-spacing: -0.02em;
             line-height: 1.2;
         }
-
         .last-updated {
             font-size: 14px;
-            color: rgba(76, 40, 28, 0.5);
+            color: var(--text-muted);
             margin-bottom: 48px;
         }
-
         h2 {
             font-size: 24px;
             font-weight: 700;
-            color: rgb(72, 57, 83);
+            color: var(--heading);
             margin-top: 40px;
             margin-bottom: 16px;
             letter-spacing: -0.01em;
         }
+        p { margin-bottom: 16px; font-size: 16px; line-height: 1.7; }
+        ul { margin-bottom: 16px; padding-left: 24px; }
+        li { margin-bottom: 8px; font-size: 16px; line-height: 1.7; }
 
-        p {
-            margin-bottom: 16px;
-            font-size: 16px;
-            line-height: 1.7;
-        }
-
-        ul {
-            margin-bottom: 16px;
-            padding-left: 24px;
-        }
-
-        li {
-            margin-bottom: 8px;
-            font-size: 16px;
-            line-height: 1.7;
-        }
-
-        a {
-            color: rgb(135, 101, 215);
-        }
-
+        /* ── Footer ── */
         .footer {
-            background: rgb(247, 240, 250);
+            background: #fff;
             padding: 40px 24px;
             text-align: center;
             font-size: 14px;
-            color: rgba(76, 40, 28, 0.6);
-            border-top: 1px solid rgba(135, 101, 215, 0.1);
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
         }
-
-        .footer a {
-            color: rgb(135, 101, 215);
-            text-decoration: none;
-            margin: 0 12px;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
+        .footer a { color: var(--purple); margin: 0 12px; text-decoration: none; }
+        .footer a:hover { text-decoration: underline; }
 
         @media (max-width: 600px) {
             h1 { font-size: 32px; }
             h2 { font-size: 20px; }
             .container { padding: 40px 20px 80px; }
-            .header { padding: 16px 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">Unlock Patients</div>
-        <a href="/">Back to Home</a>
-    </div>
+    <header class="up-site-header">
+      <a class="up-site-header__logo" href="/" aria-label="Unlock Patients home">
+        <img src="https://framerusercontent.com/images/MK3ZA72VmM2Zcgx78FRA4ESOhk.png?width=489&height=73" alt="Unlock Patients">
+      </a>
+      <input type="checkbox" id="nav-toggle" class="up-site-header__toggle" aria-hidden="true">
+      <nav class="up-site-header__nav" aria-label="Primary navigation">
+        <div class="up-site-header__links">
+          <a class="up-site-header__link" href="/our-story/">Our Story</a>
+      <a class="up-site-header__link" href="/case-studies/">Case Studies</a>
+          <a class="up-site-header__link" href="/team/">Team</a>
+          <a class="up-site-header__link" href="/contact">Contact</a>
+        </div>
+        <div class="up-site-header__actions">
+          <a class="up-site-header__button up-site-header__button--login" href="https://app.unlockpatients.com">Log In</a>
+          <a class="up-site-header__button up-site-header__button--primary" href="/book">See It In Action</a>
+        </div>
+        <label for="nav-toggle" class="up-site-header__hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </label>
+      </nav>
+      <div class="up-site-header__mobile-menu">
+        <a href="/our-story/">Our Story</a>
+    <a href="/case-studies/">Case Studies</a>
+        <a href="/team/">Team</a>
+        <a href="/contact">Contact</a>
+        <a href="https://app.unlockpatients.com">Log In</a>
+        <a class="up-site-header__button--primary" href="/book">See It In Action</a>
+      </div>
+    </header>
 
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last Updated: March 19, 2026</p>
+        <p class="last-updated">Last Updated: April 28, 2026</p>
 
-        <p>Unlock Patients ("we," "us," or "our") operates the website <strong>unlockpatients.com</strong> (the "Site"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our Site, interact with our advertisements on third-party platforms (including Meta/Facebook and Instagram), or otherwise engage with our services.</p>
+        <p>Unlock Prospects LLC, doing business as Unlock Patients ("we," "us," or "our"), operates the website <strong>unlockpatients.com</strong> (the "Site"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our Site, interact with our advertisements on third-party platforms (including Meta/Facebook, Instagram, and Google), or otherwise engage with our services.</p>
 
         <p>Please read this Privacy Policy carefully. By accessing or using our Site, you agree to the terms of this Privacy Policy. If you do not agree with the terms of this Privacy Policy, please do not access the Site.</p>
 
         <h2>1. Information We Collect</h2>
 
-        <p><strong>Personal Information You Provide:</strong> We may collect personally identifiable information that you voluntarily provide when you fill out a form on our Site, book a call, or contact us. This may include:</p>
+        <p><strong>Personal Information You Provide:</strong> We may collect personally identifiable information that you voluntarily provide when you fill out a form on our Site, schedule a demo, or contact us. This may include:</p>
         <ul>
             <li>Name</li>
             <li>Email address</li>
             <li>Phone number</li>
-            <li>Practice name and address</li>
+            <li>Practice name, type, and size</li>
+            <li>Your role at the practice</li>
+            <li>Timeline for getting started</li>
             <li>Any other information you choose to provide</li>
         </ul>
 
-        <p><strong>Information Collected Automatically:</strong> When you visit our Site, we may automatically collect certain information, including:</p>
+        <p><strong>Information Collected Automatically:</strong> When you visit our Site, we automatically collect certain information using our self-hosted analytics system, including:</p>
         <ul>
-            <li>IP address</li>
-            <li>Browser type and version</li>
-            <li>Operating system</li>
+            <li>A randomly generated anonymous identifier (stored in a cookie and localStorage)</li>
+            <li>Browser type and screen size</li>
             <li>Referring URLs</li>
-            <li>Pages viewed and links clicked</li>
+            <li>Pages viewed and actions taken (e.g., form submissions, button clicks)</li>
             <li>Date and time of your visit</li>
-            <li>Device information</li>
+            <li>UTM parameters and advertising click identifiers (gclid, gbraid, wbraid)</li>
         </ul>
+        <p><strong>Important:</strong> Our analytics system is designed with privacy in mind. We do not collect or store your IP address — it is stripped at the server level before any data is written. All tracking data is encrypted at rest using AWS KMS and transmitted over HTTPS.</p>
 
-        <p><strong>Information from Third-Party Platforms:</strong> When you interact with our advertisements on platforms such as Meta (Facebook/Instagram), Google, or other advertising networks, those platforms may provide us with information about your interaction, such as whether you clicked on an ad or completed a form. We may also receive demographic or interest-based data provided by these platforms in aggregate form.</p>
+        <p><strong>Information from Third-Party Platforms:</strong> When you interact with our advertisements on platforms such as Meta (Facebook/Instagram) or Google, those platforms may provide us with information about your interaction, such as whether you clicked on an ad or completed a form. We may also receive demographic or interest-based data provided by these platforms in aggregate form.</p>
 
         <h2>2. How We Use Your Information</h2>
         <p>We use the information we collect for the following purposes:</p>
         <ul>
             <li>To provide, operate, and maintain our Site and services</li>
-            <li>To respond to your inquiries and fulfill your requests (e.g., scheduling a call)</li>
+            <li>To respond to your inquiries and fulfill your requests (e.g., scheduling a demo)</li>
             <li>To send you marketing and promotional communications (with your consent, where required)</li>
-            <li>To personalize your experience and deliver content and advertising relevant to your interests</li>
+            <li>To personalize your experience and pre-fill forms on return visits</li>
             <li>To improve our Site, services, and advertising campaigns</li>
             <li>To analyze usage trends and measure the effectiveness of our advertising</li>
             <li>To comply with applicable laws, regulations, and legal processes</li>
@@ -183,24 +328,30 @@
         </ul>
 
         <h2>3. Cookies and Tracking Technologies</h2>
-        <p>We use cookies, pixel tags, web beacons, and similar tracking technologies to collect information about your browsing activity. These technologies help us:</p>
+        <p>We use cookies and localStorage to collect information about your browsing activity. These technologies help us:</p>
         <ul>
-            <li>Remember your preferences</li>
+            <li>Remember your identity across visits using an anonymous identifier</li>
+            <li>Pre-fill form fields with information you previously provided</li>
+            <li>Preserve UTM parameters and advertising attribution data</li>
             <li>Understand how you interact with our Site</li>
             <li>Measure the performance of our advertising campaigns</li>
-            <li>Deliver targeted advertisements on third-party platforms</li>
         </ul>
 
-        <p><strong>Meta (Facebook) Pixel:</strong> We use the Meta Pixel on our Site to measure the effectiveness of our advertising on Facebook and Instagram, to understand the actions people take on our Site, and to deliver targeted advertisements to you on Meta platforms. The Meta Pixel collects data such as HTTP headers, pixel-specific data, button click data, form field values, and other browsing behavior. For more information about how Meta uses your data, please visit <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Meta's Privacy Policy</a>.</p>
+        <p><strong>Our Analytics System:</strong> We use a self-hosted, first-party analytics system (the "Unlock Patients Tracking Pixel") to track page views, form submissions, and other interactions on our Site. This system sends data exclusively to our own servers at <strong>t.unlockpatients.com</strong>. It is write-only — the tracking pixel can only send data, never read or retrieve it. No data is shared with third-party analytics providers.</p>
 
-        <p><strong>Microsoft Clarity:</strong> We use Microsoft Clarity to understand how users interact with our Site through session recordings and heatmaps. For more information, visit <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener noreferrer">Microsoft's Privacy Statement</a>.</p>
+        <p><strong>Cookies We Set:</strong></p>
+        <ul>
+            <li><strong>up_did:</strong> Anonymous unique identifier. Expires after 10 years.</li>
+            <li><strong>up_fields:</strong> Previously entered form field values for convenience on return visits. Expires after 10 years.</li>
+            <li><strong>UTM cookies</strong> (utm_source, utm_medium, utm_campaign, etc.): Advertising attribution data. Expire after 10 years.</li>
+        </ul>
 
-        <p><strong>Managing Cookies:</strong> You can control cookies through your browser settings. Most browsers allow you to refuse or delete cookies. Please note that disabling cookies may affect the functionality of our Site.</p>
+        <p><strong>Managing Cookies:</strong> You can control cookies through your browser settings. Most browsers allow you to refuse or delete cookies. Please note that disabling cookies may affect the functionality of our Site, such as form pre-fill and analytics.</p>
 
         <h2>4. Sharing of Your Information</h2>
         <p>We may share your information in the following circumstances:</p>
         <ul>
-            <li><strong>Service Providers:</strong> We may share your information with third-party vendors who perform services on our behalf, such as hosting, analytics, email delivery, and advertising.</li>
+            <li><strong>Service Providers:</strong> We may share your information with third-party vendors who perform services on our behalf, such as cloud hosting (Amazon Web Services), email delivery, and scheduling (Cal.com).</li>
             <li><strong>Advertising Partners:</strong> We share data with advertising platforms (such as Meta and Google) to measure ad effectiveness and deliver targeted ads. This may include hashed or anonymized data.</li>
             <li><strong>Legal Requirements:</strong> We may disclose your information if required to do so by law or in response to valid requests by public authorities.</li>
             <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction.</li>
@@ -208,7 +359,7 @@
         <p>We do not sell your personal information to third parties.</p>
 
         <h2>5. Data Retention</h2>
-        <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. When your information is no longer needed, we will securely delete or anonymize it.</p>
+        <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. Cookies and local storage data persist for up to 10 years to enable a seamless experience across visits. When your information is no longer needed, we will securely delete or anonymize it.</p>
 
         <h2>6. Your Rights and Choices</h2>
         <p>Depending on your location, you may have the following rights regarding your personal information:</p>
@@ -228,13 +379,13 @@
         <p>Our Site and services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we learn that we have collected personal information from a child under 18, we will take steps to delete that information promptly. If you believe we may have collected information from a child, please contact us immediately.</p>
 
         <h2>9. Security</h2>
-        <p>We use reasonable administrative, technical, and physical security measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+        <p>We use reasonable administrative, technical, and physical security measures to protect your personal information. This includes encryption at rest (AWS KMS), encryption in transit (HTTPS/TLS), VPC network isolation, and strict access controls. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
 
         <h2>10. Contact Us</h2>
         <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
         <p>
             <strong>Unlock Patients</strong><br>
-            Email: <a href="mailto:alex@unlockpatients.com">alex@unlockpatients.com</a><br>
+            Email: <a href="mailto:info@unlockpatients.com">info@unlockpatients.com</a><br>
             Website: <a href="https://unlockpatients.com">unlockpatients.com</a>
         </p>
 
@@ -242,14 +393,197 @@
         <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last Updated" date at the top of this page. We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information.</p>
     </div>
 
-    <div class="footer">
-        <p>&copy; 2026 Unlock Patients. All rights reserved.</p>
+    <footer class="footer">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Unlock Patients. All rights reserved.</p>
         <p style="margin-top: 8px;">
             <a href="/">Home</a>
-            <a href="/book">Book a Call</a>
-            <a href="/contact">Contact</a>
+            <a href="/our-story/">Our Story</a>
+    <a href="/case-studies/">Case Studies</a>
             <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/team/">Team</a>
+        <a href="/contact">Contact</a>
         </p>
-    </div>
+    </footer>
+
+
+
+<script>
+(function(){
+  var CC='ulp-main',API='https://gt1fes5qxf.execute-api.us-east-1.amazonaws.com/prod';
+  if(new URLSearchParams(location.search).get('preview')==='true')return;
+  function uuid(){return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c){var r=Math.random()*16|0;return(c==='x'?r:(r&0x3|0x8)).toString(16)})}
+  function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|; )'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):null}
+  function setCookie(n,v,d){var e=new Date();e.setTime(e.getTime()+d*864e5);document.cookie=n+'='+encodeURIComponent(v)+';expires='+e.toUTCString()+';path=/;SameSite=Lax'}
+  var sid=sessionStorage.getItem('_up_sid');if(!sid){sid=uuid();sessionStorage.setItem('_up_sid',sid)}
+  var uid=getCookie('_up_uid')||localStorage.getItem('_up_uid')||'';
+  if(!uid){uid=uuid();setCookie('_up_uid',uid,365);localStorage.setItem('_up_uid',uid)}
+  else{setCookie('_up_uid',uid,365)}
+  var params=new URLSearchParams(location.search);
+  var gclid=params.get('gclid')||getCookie('_up_gclid')||localStorage.getItem('_up_gclid')||'';
+  if(params.get('gclid')){setCookie('_up_gclid',gclid,90);localStorage.setItem('_up_gclid',gclid)}
+  var utm={source:params.get('utm_source')||'',medium:params.get('utm_medium')||'',campaign:params.get('utm_campaign')||'',term:params.get('utm_term')||'',content:params.get('utm_content')||''};
+  var _phoneClicked=false,_lastPhoneNumber='';
+  var _formSubmitted=false,_formId='';
+  function send(type,extra){
+    var data=Object.assign({eventType:type,sessionId:sid,visitorId:uid,pageUrl:location.href,referrer:document.referrer,gclid:gclid,utmParams:utm,userAgent:navigator.userAgent},extra||{});
+    var url=API+'/tracking/'+CC+'/event';
+    if(navigator.sendBeacon){navigator.sendBeacon(url,JSON.stringify(data))}else{fetch(url,{method:'POST',body:JSON.stringify(data),keepalive:true}).catch(function(){})}
+  }
+  send('page_view');
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="tel:"]');
+    if(a){
+      var phone=a.href.replace('tel:','');
+      _phoneClicked=true;_lastPhoneNumber=phone;
+      send('phone_click',{phoneNumber:phone});
+      if(gclid){
+        var gurl=API+'/tracking/'+CC+'/gclid';
+        var gdata=JSON.stringify({phoneNumber:phone,gclid:gclid,pageUrl:location.href,sessionId:sid,visitorId:uid});
+        if(navigator.sendBeacon){navigator.sendBeacon(gurl,gdata)}else{fetch(gurl,{method:'POST',body:gdata,keepalive:true}).catch(function(){})}
+      }
+    }
+  });
+  document.addEventListener('submit',function(e){
+    var f=e.target.closest('form');
+    if(f){_formSubmitted=true;_formId=f.id||f.name||'unknown';send('form_submission',{formId:_formId})}
+  });
+  // Mid-funnel signals — fire once per page so they map to a single Google
+  // Ads conversion event each. form_opened: appointment modal becomes visible
+  // OR an inline form scrolls into view. form_started: first focus on any
+  // input/textarea/select inside a form.
+  var _formOpened=false,_formStarted=false;
+  function fireFormOpened(formEl){
+    if(_formOpened)return;
+    _formOpened=true;
+    send('form_opened',{formId:(formEl&&(formEl.id||formEl.name))||''});
+  }
+  function isVisible(el){
+    if(!el)return false;
+    if(el.tagName==='DIALOG')return el.open===true;
+    var ah=el.getAttribute('aria-hidden');
+    if(ah==='false')return true;
+    if(ah==='true')return false;
+    var s=getComputedStyle(el);
+    return s.display!=='none'&&s.visibility!=='hidden';
+  }
+  function watchModalsAndForms(){
+    var modals=document.querySelectorAll('[role="dialog"], dialog, .appointment-modal, #appointment-modal');
+    modals.forEach(function(m){
+      if(isVisible(m)&&m.querySelector('form'))fireFormOpened(m.querySelector('form'));
+      try{
+        new MutationObserver(function(){
+          if(_formOpened)return;
+          if(isVisible(m)){var f=m.querySelector('form');if(f)fireFormOpened(f)}
+        }).observe(m,{attributes:true,attributeFilter:['style','aria-hidden','open','class']});
+      }catch(e){}
+    });
+    var forms=document.querySelectorAll('form');
+    if(forms.length>0&&'IntersectionObserver' in window){
+      try{
+        var io=new IntersectionObserver(function(entries){
+          entries.forEach(function(en){
+            if(en.isIntersecting){var f=en.target;if(f.closest('[role="dialog"], dialog, .appointment-modal'))return;fireFormOpened(f);io.unobserve(f)}
+          });
+        },{threshold:0.3});
+        forms.forEach(function(f){io.observe(f)});
+      }catch(e){}
+    }
+  }
+  document.addEventListener('focusin',function(e){
+    if(_formStarted)return;
+    var t=e.target;
+    if(!t||!t.tagName)return;
+    var tn=t.tagName.toLowerCase();
+    if(tn!=='input'&&tn!=='textarea'&&tn!=='select')return;
+    var f=t.closest('form');
+    if(!f)return;
+    _formStarted=true;
+    send('form_started',{formId:f.id||f.name||''});
+  },true);
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',watchModalsAndForms);else watchModalsAndForms();
+  var _start=Date.now();
+  var _maxScroll=0;
+  function trackScroll(){
+    var h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);
+    var p=Math.round((window.scrollY+window.innerHeight)/h*100);
+    if(p>_maxScroll)_maxScroll=Math.min(p,100);
+  }
+  window.addEventListener('scroll',trackScroll,{passive:true});
+  requestAnimationFrame(trackScroll);
+  var _interactions=[];
+  document.addEventListener('click',function(e){
+    if(e.target.closest('a[href^="tel:"]'))return;
+    var el=e.target;
+    var tag=el.tagName.toLowerCase();
+    var desc=el.id?'#'+el.id:(el.className?'.'+String(el.className).split(' ')[0]:tag);
+    var text=(el.textContent||'').trim().slice(0,50);
+    _interactions.push({tag:tag,desc:desc,text:text,ts:Date.now()-_start});
+    if(_interactions.length>100)_interactions.shift();
+  },true);
+  var _rrEvents=[],_rrSending=false;
+  function loadRRWeb(){
+  var rrScript=document.createElement('script');
+  rrScript.src='/assets/rrweb-all.min.js';
+  rrScript.onload=function(){
+    try{
+      rrweb.record({
+        emit:function(ev){_rrEvents.push(ev)},
+        maskAllInputs:true,
+        maskTextSelector:'.rr-mask',
+        blockSelector:'.rr-block'
+      });
+      setInterval(flushRR,10000);
+    }catch(rrErr){console.error('[UPL] rrweb.record error:',rrErr)}
+  };
+  rrScript.onerror=function(err){console.error('[UPL] rrweb failed to load:',err)};
+  document.head.appendChild(rrScript);
+  }
+  if(true||gclid){if(window.requestIdleCallback){requestIdleCallback(loadRRWeb,{timeout:5000})}else{setTimeout(loadRRWeb,3000)}};
+  function flushRR(){
+    if(_rrEvents.length===0||_rrSending)return;
+    _rrSending=true;
+    var chunk=_rrEvents.splice(0);
+    var payload=JSON.stringify({sessionId:sid,visitorId:uid,pageUrl:location.href,gclid:gclid,utmParams:utm,userAgent:navigator.userAgent,phoneClicked:_phoneClicked,phoneNumber:_lastPhoneNumber,formSubmitted:_formSubmitted,formId:_formId,events:chunk});
+    fetch(API+'/tracking/'+CC+'/recording',{method:'POST',headers:{'Content-Type':'text/plain'},body:payload})
+      .then(function(){})
+      .catch(function(err){console.error('[UPL] recording POST failed:',err);_rrEvents=chunk.concat(_rrEvents)})
+      .finally(function(){_rrSending=false});
+  }
+  function sendLeave(){
+    var secs=Math.round((Date.now()-_start)/1000);
+    if(secs>0)send('page_leave',{timeOnPage:secs,scrollDepth:_maxScroll,isBounce:secs<10,interactions:_interactions});
+    flushRR();
+  }
+  document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')sendLeave()});
+  window.addEventListener('beforeunload',sendLeave);
+  document.querySelectorAll('form[data-upl-form]').forEach(function(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var btn=form.querySelector('[type="submit"]');
+      var origText=btn?btn.textContent:'';
+      if(btn){btn.textContent='Sending...';btn.disabled=true}
+      var fd=new FormData(form);
+      var data={};
+      fd.forEach(function(v,k){data[k]=v});
+      data._visitorId=uid;data._sessionId=sid;data._pageUrl=location.href;data._gclid=gclid;
+      fetch(API+'/forms/'+CC+'/submit',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(data)
+      }).then(function(r){
+        if(r.ok){
+          var msg=form.getAttribute('data-upl-success')||'Thank you! Your message has been sent securely.';
+          form.innerHTML='<div style="padding:20px;text-align:center;color:#16a34a;font-weight:600">'+msg+'</div>';
+        }else{
+          throw new Error('Submit failed');
+        }
+      }).catch(function(){
+        if(btn){btn.textContent=origText;btn.disabled=false}
+        alert('Something went wrong. Please try again or call us directly.');
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>

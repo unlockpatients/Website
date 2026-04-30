@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Our Story | Unlock Patients</title>
+    <meta name="description" content="How Unlock Patients started — from watching my mom's pediatric practice struggle with marketing to building a platform that proves every patient.">
+    <link href="https://framerusercontent.com/images/TES7qtU3rUcCevlcX0WHBDi8AdU.png" rel="icon">
+    <link rel="apple-touch-icon" href="https://framerusercontent.com/images/NqB2eTFKSwyHl8VbITKgGwSzEI0.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Our Story | Unlock Patients">
+    <meta property="og:description" content="How Unlock Patients started — from watching my mom's pediatric practice struggle with marketing to building a platform that proves every patient.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Host+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #fff; font-family: Figtree, system-ui, sans-serif; color: #483953; }
+
+  /* ── Header ── */
+  .up-site-header {
+    position: absolute; top: 0; left: 50%; z-index: 1000;
+    transform: translateX(-50%);
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    width: 100vw; max-width: 1200px;
+    padding: 10px 40px; background: transparent; border: 0;
+    font-family: Figtree, system-ui, sans-serif;
+  }
+  .up-site-header__logo { display: inline-flex; align-items: center; text-decoration: none; }
+  .up-site-header__logo img { display: block; height: 31px; width: auto; }
+  .up-site-header__nav { display: flex; align-items: center; justify-content: flex-end; gap: 16px; width: min-content; }
+  .up-site-header__links { display: flex; align-items: center; gap: 2px; padding: 2px 0; }
+  .up-site-header__link {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 34px; padding: 8px 14px; border-radius: 4px;
+    color: rgb(76, 40, 28); font-size: 14px; font-weight: 500; letter-spacing: -0.02em;
+    text-decoration: none; white-space: nowrap;
+  }
+  .up-site-header__link:hover { color: rgb(26, 188, 232); }
+  .up-site-header__actions { display: flex; align-items: center; gap: 10px; }
+  .up-site-header__button {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 38px; padding: 9px 13px; border-radius: 6px;
+    font-size: 15px; font-weight: 500; letter-spacing: -0.04em;
+    text-decoration: none; white-space: nowrap;
+  }
+  .up-site-header__button--login { color: rgb(76, 40, 28); background: rgba(255,255,255,0.72); border: 1px solid rgba(76,40,28,0.18); }
+  .up-site-header__button--login:hover { color: rgb(26,188,232); border-color: rgba(26,188,232,0.35); }
+  .up-site-header__button--primary {
+    color: #fff; background: rgb(26, 188, 232); border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 14px 14px -3px rgba(0,0,0,0.1), 0 30px 30px -4px rgba(0,0,0,0.05);
+  }
+  .up-site-header__button--primary:hover { background: rgb(20, 165, 205); }
+  .up-site-header__toggle { display: none; }
+  .up-site-header__hamburger {
+    display: none; flex-direction: column; justify-content: center; gap: 5px;
+    width: 28px; height: 28px; cursor: pointer; margin-left: auto;
+  }
+  .up-site-header__hamburger span { display: block; width: 100%; height: 2px; background: rgb(76, 40, 28); border-radius: 2px; transition: transform 0.25s, opacity 0.25s; }
+  .up-site-header__toggle:checked ~ .up-site-header__nav .up-site-header__hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .up-site-header__toggle:checked ~ .up-site-header__nav .up-site-header__hamburger span:nth-child(2) { opacity: 0; }
+  .up-site-header__toggle:checked ~ .up-site-header__nav .up-site-header__hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  .up-site-header__mobile-menu { display: none; }
+  @media (max-width: 809px) {
+    .up-site-header__nav { flex: 1; width: auto; }
+    .up-site-header__hamburger { display: flex; margin-left: auto; margin-right: auto; }
+    .up-site-header__links { display: none; }
+    .up-site-header__button--login { display: none; }
+    .up-site-header__mobile-menu {
+      display: none; position: absolute; top: 100%; left: 0; right: 0;
+      background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      padding: 16px 24px; flex-direction: column; gap: 4px; z-index: 999;
+    }
+    .up-site-header__toggle:checked ~ .up-site-header__mobile-menu { display: flex; }
+    .up-site-header__mobile-menu a {
+      display: block; padding: 12px 8px; color: #483953;
+      font-size: 15px; font-weight: 500; text-decoration: none; border-radius: 6px;
+    }
+    .up-site-header__mobile-menu a:hover { background: rgba(76,40,28,0.06); color: rgb(26,188,232); }
+    .up-site-header__mobile-menu .up-site-header__button--primary { color: #fff; background: rgb(26,188,232); text-align: center; margin-top: 8px; }
+    .up-site-header { position: fixed; left: 0; right: 0; transform: none; width: auto; max-width: none; padding: 16px 20px 20px; gap: 14px; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); }
+    .up-site-header__logo img { height: 28px; }
+    .up-site-header__button { min-height: 34px; padding: 8px 11px; font-size: 14px; }
+  }
+
+  /* ── Hero ── */
+  .up-hero {
+    position: relative;
+    background: linear-gradient(135deg, #effafb 0%, #f7f3fb 50%, #effafb 100%);
+    padding: 160px 40px 100px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .up-hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(26,188,232,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 80%, rgba(135,101,215,0.05) 0%, transparent 50%);
+  }
+  .up-hero__inner {
+    position: relative; z-index: 1;
+    max-width: 680px; margin: 0 auto;
+  }
+  .up-hero__eyebrow {
+    font-size: 13px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.1em; color: rgb(26, 188, 232); margin-bottom: 16px;
+  }
+  .up-hero h1 {
+    font-family: 'Host Grotesk', sans-serif;
+    font-size: 48px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.12;
+    color: #483953; margin: 0 0 20px;
+  }
+  .up-hero__sub {
+    font-size: 18px; line-height: 1.6; color: rgb(87, 62, 105);
+    max-width: 520px; margin: 0 auto;
+  }
+
+  /* ── Content sections ── */
+  .up-section {
+    max-width: 1000px; margin: 0 auto;
+    padding: 80px 40px;
+  }
+  .up-section--split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .up-section--split.up-section--reverse .up-section__img { order: -1; }
+  .up-section__img {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(72,57,83,0.12);
+  }
+  .up-section__img img {
+    display: block; width: 100%; height: auto;
+    object-fit: cover;
+  }
+  .up-section__text h2 {
+    font-family: 'Host Grotesk', sans-serif;
+    font-size: 32px; font-weight: 700; letter-spacing: -0.02em;
+    color: #483953; margin: 0 0 16px; line-height: 1.2;
+  }
+  .up-section__text p {
+    font-size: 17px; line-height: 1.75; color: rgb(87, 62, 105); margin: 0 0 16px;
+  }
+  .up-section__text p:last-child { margin-bottom: 0; }
+
+  /* ── Pull quote ── */
+  .up-pullquote {
+    background: linear-gradient(135deg, #f7f3fb 0%, #effafb 100%);
+    padding: 60px 40px;
+  }
+  .up-pullquote__inner {
+    max-width: 700px; margin: 0 auto; text-align: center;
+  }
+  .up-pullquote blockquote {
+    margin: 0; padding: 0;
+    font-family: 'Host Grotesk', sans-serif;
+    font-size: 26px; font-weight: 600; line-height: 1.5;
+    letter-spacing: -0.01em; color: #483953;
+  }
+  .up-pullquote cite {
+    display: block; margin-top: 16px;
+    font-family: Figtree, sans-serif; font-style: normal;
+    font-size: 15px; font-weight: 500; color: rgb(26, 188, 232);
+  }
+
+  /* ── Centered text section ── */
+  .up-section--centered {
+    max-width: 680px; margin: 0 auto;
+    padding: 60px 40px 80px;
+    text-align: center;
+  }
+  .up-section--centered h2 {
+    font-family: 'Host Grotesk', sans-serif;
+    font-size: 32px; font-weight: 700; letter-spacing: -0.02em;
+    color: #483953; margin: 0 0 16px;
+  }
+  .up-section--centered p {
+    font-size: 17px; line-height: 1.75; color: rgb(87, 62, 105); margin: 0 0 16px;
+  }
+  .up-section--centered p:last-child { margin-bottom: 0; }
+  .up-section--centered .up-cta {
+    display: inline-flex; align-items: center; margin-top: 28px;
+    padding: 14px 28px; border-radius: 8px;
+    background: rgb(26, 188, 232); color: #fff;
+    font-size: 16px; font-weight: 600; text-decoration: none;
+    box-shadow: 0 14px 14px -3px rgba(0,0,0,0.1), 0 30px 30px -4px rgba(0,0,0,0.05);
+    transition: background 0.2s;
+  }
+  .up-section--centered .up-cta:hover { background: rgb(20, 165, 205); }
+
+  /* ── Divider line ── */
+  .up-divider {
+    max-width: 1000px; margin: 0 auto;
+    padding: 0 40px;
+  }
+  .up-divider hr {
+    border: none; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(72,57,83,0.12), transparent);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 809px) {
+    .up-hero { padding: 120px 24px 70px; }
+    .up-hero h1 { font-size: 34px; }
+    .up-hero__sub { font-size: 16px; }
+    .up-section { padding: 50px 24px; }
+    .up-section--split { grid-template-columns: 1fr; gap: 32px; }
+    .up-section--split.up-section--reverse .up-section__img { order: 0; }
+    .up-section__text h2 { font-size: 26px; }
+    .up-pullquote { padding: 40px 24px; }
+    .up-pullquote blockquote { font-size: 21px; }
+    .up-section--centered { padding: 40px 24px 60px; }
+    .up-section--centered h2 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="up-site-header">
+  <a class="up-site-header__logo" href="/" aria-label="Unlock Patients home">
+    <img src="https://framerusercontent.com/images/MK3ZA72VmM2Zcgx78FRA4ESOhk.png?width=489&height=73" alt="Unlock Patients">
+  </a>
+  <input type="checkbox" id="nav-toggle" class="up-site-header__toggle" aria-hidden="true">
+  <nav class="up-site-header__nav" aria-label="Primary navigation">
+    <div class="up-site-header__links">
+      <a class="up-site-header__link" href="/our-story/">Our Story</a>
+      <a class="up-site-header__link" href="/case-studies/">Case Studies</a>
+      <a class="up-site-header__link" href="/team/">Team</a>
+      <a class="up-site-header__link" href="/contact">Contact</a>
+    </div>
+    <div class="up-site-header__actions">
+      <a class="up-site-header__button up-site-header__button--login" href="https://app.unlockpatients.com">Log In</a>
+      <a class="up-site-header__button up-site-header__button--primary" href="/book">See It In Action</a>
+    </div>
+    <label for="nav-toggle" class="up-site-header__hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </label>
+  </nav>
+  <div class="up-site-header__mobile-menu">
+    <a href="/our-story/">Our Story</a>
+    <a href="/case-studies/">Case Studies</a>
+    <a href="/team/">Team</a>
+    <a href="/contact">Contact</a>
+    <a href="https://app.unlockpatients.com">Log In</a>
+    <a class="up-site-header__button--primary" href="/book">See It In Action</a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="up-hero">
+  <div class="up-hero__inner">
+    <div class="up-hero__eyebrow">Our Story</div>
+    <h1>Why I Built Unlock Patients</h1>
+    <p class="up-hero__sub">It started with my mom's pediatric practice in Nashville and one question nobody could answer: where are your patients actually coming from?</p>
+  </div>
+</section>
+
+<!-- Section 1: The problem -->
+<section class="up-section up-section--split">
+  <div class="up-section__text">
+    <h2>Growing Up in a Practice</h2>
+    <p>My mom's a pediatrician. She's been running her own practice in Nashville my entire life. I watched her pour everything into her patients — early mornings, late nights, weekends on call. She's incredible at what she does.</p>
+    <p>But there was one thing she could never crack: getting new families through the door consistently. She tried agencies. They'd send flashy reports full of impressions and clicks, charge a few thousand a month, and when she'd ask "how many new patients did I actually get from this?" — nobody could tell her.</p>
+  </div>
+  <div class="up-section__img">
+    <img src="/our-story/alex-hero.jpeg" alt="Alex Langone" loading="lazy">
+  </div>
+</section>
+
+<!-- Pull quote -->
+<div class="up-pullquote">
+  <div class="up-pullquote__inner">
+    <blockquote>"She was writing checks on faith. I wanted to see if I could actually prove it — not vanity metrics, but this person saw this ad, called this number, and booked an appointment."</blockquote>
+    <cite>Alex Langone, CEO & Founder</cite>
+  </div>
+</div>
+
+<!-- Section 2: Building it -->
+<section class="up-section up-section--split up-section--reverse">
+  <div class="up-section__text">
+    <h2>So I Built It Myself</h2>
+    <p>I started with her practice as the guinea pig. Set up the Google Ads campaigns, built a landing page, wired up call tracking with dedicated phone numbers so we'd know exactly which calls came from which ads.</p>
+    <p>Within a few months, her schedule was filling up. But the real thing was that for the first time, she could see exactly where every new patient came from — which campaign, which keyword, which ad. No one had ever given her that before.</p>
+  </div>
+  <div class="up-section__img">
+    <img src="/our-story/alex-branded.webp" alt="Alex Langone, Unlock Patients" loading="lazy">
+  </div>
+</section>
+
+<div class="up-divider"><hr></div>
+
+<!-- Section 3: Why it matters -->
+<div class="up-section--centered">
+  <h2>Every Practice Has This Problem</h2>
+  <p>My mom isn't unique. Every pediatric practice owner I've talked to has the same story — they're amazing doctors who got into medicine to help kids, not to become digital marketing experts. They're either overpaying agencies that can't prove results, or they're just not doing any marketing at all.</p>
+  <p>So I built the whole system from scratch. The ad campaigns, the landing pages, the call tracking, the real-time dashboard — all on infrastructure we own. No middlemen, no markup, no vanity metrics. When I say a campaign brought in 47 new patients last month, I can show you every single one of them.</p>
+  <p>We're still a small team. Every practice gets the same hands-on attention I gave my mom's practice from day one. That's not changing.</p>
+  <a class="up-cta" href="/book">See How It Works</a>
+</div>
+
+</body>
+</html>
