@@ -266,10 +266,7 @@ a:focus, button:focus, a:active, button:active {
 }
 @media (max-width: 900px){
   .framer-qw7jwr{ gap: 20px !important; }
-  .framer-qw7jwr > *{
-    flex: 0 0 100% !important;
-    max-width: 480px !important;
-  }
+  .framer-qw7jwr > *{ flex: 0 0 100% !important; max-width: 480px !important; }
 }
 </style>
 </head>
@@ -943,12 +940,9 @@ a:focus, button:focus, a:active, button:active {
 (function(){
   var TEAM_LINK_FLAG = 'data-up-team-link';
   function setLeafText(el, text){
-    var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
-    var n = walker.nextNode();
-    while (n){
-      if (n.nodeValue && n.nodeValue.trim()){ n.nodeValue = text; return; }
-      n = walker.nextNode();
-    }
+    var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
+    var n = w.nextNode();
+    while (n){ if (n.nodeValue && n.nodeValue.trim()){ n.nodeValue = text; return; } n = w.nextNode(); }
     el.textContent = text;
   }
   function ensureTeamLink(){
@@ -967,9 +961,7 @@ a:focus, button:focus, a:active, button:active {
       if (!model){
         for (var j=0;j<links.length;j++){
           var cls = (links[j].className||'').toString().toLowerCase();
-          if (cls.indexOf('button')===-1 && cls.indexOf('btn')===-1 && cls.indexOf('primary')===-1 && cls.indexOf('login')===-1){
-            model = links[j]; break;
-          }
+          if (cls.indexOf('button')===-1 && cls.indexOf('btn')===-1 && cls.indexOf('primary')===-1 && cls.indexOf('login')===-1){ model = links[j]; break; }
         }
       }
       if (!model) return;
@@ -981,18 +973,11 @@ a:focus, button:focus, a:active, button:active {
     });
   }
   function tick(){ try { ensureTeamLink(); } catch(e){} }
-  if (document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', tick);
-  } else {
-    tick();
-  }
+  if (document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', tick); } else { tick(); }
   [0,100,300,700,1500,3000,6000].forEach(function(t){ setTimeout(tick, t); });
   if (window.MutationObserver){
     var deb = null;
-    var obs = new MutationObserver(function(){
-      if (deb) return;
-      deb = setTimeout(function(){ deb=null; tick(); }, 80);
-    });
+    var obs = new MutationObserver(function(){ if (deb) return; deb = setTimeout(function(){ deb=null; tick(); }, 80); });
     obs.observe(document.documentElement, {childList:true, subtree:true});
     setTimeout(function(){ obs.disconnect(); }, 12000);
   }
