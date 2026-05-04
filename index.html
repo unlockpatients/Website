@@ -637,7 +637,7 @@ a:focus, button:focus, a:active, button:active {
 <style id="up-cscard-css">
 /* Animation only fires on the FIRST wrap — the static-rendered one carrying the --initial class. Re-injects done by my MutationObserver omit that class, so they appear at the default state with no animation, preventing the double fade-up after framer hydration replaces the wrap mid-flight. */
 .up-cscard-wrap{box-sizing:border-box;width:100%;max-width:880px;margin:0 auto;padding:0;font-family:'Figtree','Figtree Placeholder',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:-0.01em;}
-.up-cscard-wrap.up-cscard-wrap--initial{animation:up-cscard-fade 1.1s cubic-bezier(0.25,0.46,0.45,0.94) 0.6s both;}
+.up-cscard-wrap.up-cscard-wrap--initial{animation:up-cscard-fade 1.1s cubic-bezier(0.25,0.46,0.45,0.94) 0.6s both;will-change:opacity,transform;backface-visibility:hidden;}
 @keyframes up-cscard-fade{from{opacity:0;transform:translateY(60px);}to{opacity:1;transform:translateY(0);}}
 .up-cscard{display:block;position:relative;border:1px solid rgba(26,188,232,0.28);border-radius:16px;overflow:hidden;text-decoration:none;color:#fff;background:#2a1f3a;aspect-ratio:1244/693;background-image:url('https://unlockpatients.com/case-studies/wonderkidz-pediatrics/img/dr-v-storefront.jpg');background-size:cover;background-position:center 35%;box-shadow:0 24px 60px -28px rgba(26,188,232,0.45),0 8px 24px -10px rgba(40,20,60,0.12);transition:transform .25s ease,box-shadow .3s ease,border-color .25s ease;-webkit-tap-highlight-color:transparent;}
 .up-cscard:hover{transform:translateY(-4px);box-shadow:0 36px 90px -28px rgba(26,188,232,0.55),0 10px 28px -10px rgba(40,20,60,0.18);border-color:rgba(26,188,232,0.55);}
@@ -1014,8 +1014,10 @@ section.framer-y4dflj, [data-framer-name="Hero Section"]{ overflow: visible !imp
   if (document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', tick); } else { tick(); }
   [0,100,300,700,1500,3000,6000].forEach(function(t){ setTimeout(tick, t); });
   if (window.MutationObserver){
-    var deb = null;
-    var obs = new MutationObserver(function(){ if (deb) return; deb = setTimeout(function(){ deb=null; tick(); }, 80); });
+    /* Synchronous re-inject — call tick() immediately on every mutation batch.
+       Removing the 80ms debounce closes the visible gap between framer wiping
+       the hero wrap and our re-inject, eliminating the mid-fade flicker. */
+    var obs = new MutationObserver(function(){ tick(); });
     obs.observe(document.documentElement, {childList:true, subtree:true});
     setTimeout(function(){ obs.disconnect(); }, 12000);
   }
