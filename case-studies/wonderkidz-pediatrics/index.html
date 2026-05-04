@@ -585,8 +585,8 @@
         /* ========== TESTIMONIAL ========== */
         .testimonial-section {
             padding: 80px 24px;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1c1c1c 100%);
-            color: #fff;
+            background: linear-gradient(135deg, rgb(220, 244, 252) 0%, rgb(236, 248, 252) 100%);
+            color: var(--text);
             position: relative;
             overflow: hidden;
         }
@@ -615,22 +615,24 @@
             position: relative;
             text-transform: none;
             letter-spacing: -0.005em;
+            color: var(--heading);
         }
         .testimonial-quote::before {
             content: '"';
             position: absolute;
             top: -50px; left: -10px;
             font-size: 180px;
-            opacity: 0.18;
+            opacity: 0.22;
             line-height: 1;
             color: var(--purple);
         }
         .testimonial-attr {
             display: flex; align-items: center; gap: 14px;
             font-size: 15px; line-height: 1.55;
+            color: var(--text);
         }
-        .testimonial-attr strong { color: #fff; font-weight: 700; }
-        .testimonial-attr .meta { opacity: 0.78; }
+        .testimonial-attr strong { color: var(--heading); font-weight: 700; }
+        .testimonial-attr .meta { color: var(--text-muted); }
         .testimonial-bar {
             display: inline-block;
             width: 4px; height: 44px;
