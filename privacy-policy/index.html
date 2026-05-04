@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en-US" dir="ltr">
 <head>
+    <!--GA4_HEAD_START--><script>(function(){window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-Z6T87J4ECL');var loaded=false;function load(){if(loaded)return;loaded=true;var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-Z6T87J4ECL';document.head.appendChild(s);events.forEach(function(e){window.removeEventListener(e,load,opts);});}var events=['scroll','click','keydown','touchstart','mousemove'],opts={passive:true,once:true,capture:true};events.forEach(function(e){window.addEventListener(e,load,opts);});if(document.readyState==='complete')setTimeout(load,3000);else window.addEventListener('load',function(){setTimeout(load,3000);},{once:true});})();</script><!--GA4_HEAD_END-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Privacy Policy | Unlock Patients</title>
@@ -8,9 +9,6 @@
     <link href="https://framerusercontent.com/images/TES7qtU3rUcCevlcX0WHBDi8AdU.png" rel="icon" media="(prefers-color-scheme: light)">
     <link href="https://framerusercontent.com/images/TES7qtU3rUcCevlcX0WHBDi8AdU.png" rel="icon" media="(prefers-color-scheme: dark)">
     <link rel="apple-touch-icon" href="https://framerusercontent.com/images/NqB2eTFKSwyHl8VbITKgGwSzEI0.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -19,7 +17,7 @@
         }
 
         body {
-            font-family: 'Figtree', sans-serif;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
             background: rgb(255, 255, 255);
             color: rgba(76, 40, 28, 0.9);
             line-height: 1.6;
@@ -61,7 +59,7 @@
 
         h1 {
             font-size: 42px;
-            font-weight: 700;
+            font-weight: 800;
             color: rgb(72, 57, 83);
             margin-bottom: 8px;
             letter-spacing: -0.02em;
@@ -134,48 +132,53 @@
 <body>
     <div class="header">
         <div class="logo">Unlock Patients</div>
-        <a href="/">Back to Home</a>
+        <div style="display:flex;align-items:center;gap:16px;">
+            <a href="/">Back to Home</a>
+            <a href="https://app.unlockpatients.com" style="background:rgb(255,255,255);color:rgb(135,101,215);border:1px solid rgba(135,101,215,0.2);border-radius:6px;padding:6px 16px;font-size:14px;font-weight:600;">Log In</a>
+        </div>
     </div>
 
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last Updated: March 19, 2026</p>
+        <p class="last-updated">Last Updated: March 22, 2026</p>
 
-        <p>Unlock Patients ("we," "us," or "our") operates the website <strong>unlockpatients.com</strong> (the "Site"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our Site, interact with our advertisements on third-party platforms (including Meta/Facebook and Instagram), or otherwise engage with our services.</p>
+        <p>Unlock Patients ("we," "us," or "our") operates the website <strong>unlockpatients.com</strong> (the "Site"). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our Site, interact with our advertisements on third-party platforms (including Meta/Facebook, Instagram, and Google), or otherwise engage with our services.</p>
 
         <p>Please read this Privacy Policy carefully. By accessing or using our Site, you agree to the terms of this Privacy Policy. If you do not agree with the terms of this Privacy Policy, please do not access the Site.</p>
 
         <h2>1. Information We Collect</h2>
 
-        <p><strong>Personal Information You Provide:</strong> We may collect personally identifiable information that you voluntarily provide when you fill out a form on our Site, book a call, or contact us. This may include:</p>
+        <p><strong>Personal Information You Provide:</strong> We may collect personally identifiable information that you voluntarily provide when you fill out a form on our Site, schedule a demo, or contact us. This may include:</p>
         <ul>
             <li>Name</li>
             <li>Email address</li>
             <li>Phone number</li>
-            <li>Practice name and address</li>
+            <li>Practice name, type, and size</li>
+            <li>Your role at the practice</li>
+            <li>Timeline for getting started</li>
             <li>Any other information you choose to provide</li>
         </ul>
 
-        <p><strong>Information Collected Automatically:</strong> When you visit our Site, we may automatically collect certain information, including:</p>
+        <p><strong>Information Collected Automatically:</strong> When you visit our Site, we automatically collect certain information using our self-hosted analytics system, including:</p>
         <ul>
-            <li>IP address</li>
-            <li>Browser type and version</li>
-            <li>Operating system</li>
+            <li>A randomly generated anonymous identifier (stored in a cookie and localStorage)</li>
+            <li>Browser type and screen size</li>
             <li>Referring URLs</li>
-            <li>Pages viewed and links clicked</li>
+            <li>Pages viewed and actions taken (e.g., form submissions, button clicks)</li>
             <li>Date and time of your visit</li>
-            <li>Device information</li>
+            <li>UTM parameters and advertising click identifiers (gclid, gbraid, wbraid)</li>
         </ul>
+        <p><strong>Important:</strong> Our analytics system is designed with privacy in mind. We do not collect or store your IP address. It is stripped at the server level before any data is written. All tracking data is encrypted at rest using AWS KMS and transmitted over HTTPS.</p>
 
-        <p><strong>Information from Third-Party Platforms:</strong> When you interact with our advertisements on platforms such as Meta (Facebook/Instagram), Google, or other advertising networks, those platforms may provide us with information about your interaction, such as whether you clicked on an ad or completed a form. We may also receive demographic or interest-based data provided by these platforms in aggregate form.</p>
+        <p><strong>Information from Third-Party Platforms:</strong> When you interact with our advertisements on platforms such as Meta (Facebook/Instagram) or Google, those platforms may provide us with information about your interaction, such as whether you clicked on an ad or completed a form. We may also receive demographic or interest-based data provided by these platforms in aggregate form.</p>
 
         <h2>2. How We Use Your Information</h2>
         <p>We use the information we collect for the following purposes:</p>
         <ul>
             <li>To provide, operate, and maintain our Site and services</li>
-            <li>To respond to your inquiries and fulfill your requests (e.g., scheduling a call)</li>
+            <li>To respond to your inquiries and fulfill your requests (e.g., scheduling a demo)</li>
             <li>To send you marketing and promotional communications (with your consent, where required)</li>
-            <li>To personalize your experience and deliver content and advertising relevant to your interests</li>
+            <li>To personalize your experience and pre-fill forms on return visits</li>
             <li>To improve our Site, services, and advertising campaigns</li>
             <li>To analyze usage trends and measure the effectiveness of our advertising</li>
             <li>To comply with applicable laws, regulations, and legal processes</li>
@@ -183,34 +186,50 @@
         </ul>
 
         <h2>3. Cookies and Tracking Technologies</h2>
-        <p>We use cookies, pixel tags, web beacons, and similar tracking technologies to collect information about your browsing activity. These technologies help us:</p>
+        <p>We use cookies and localStorage to collect information about your browsing activity. These technologies help us:</p>
         <ul>
-            <li>Remember your preferences</li>
+            <li>Remember your identity across visits using an anonymous identifier</li>
+            <li>Pre-fill form fields with information you previously provided</li>
+            <li>Preserve UTM parameters and advertising attribution data</li>
             <li>Understand how you interact with our Site</li>
             <li>Measure the performance of our advertising campaigns</li>
-            <li>Deliver targeted advertisements on third-party platforms</li>
         </ul>
 
-        <p><strong>Meta (Facebook) Pixel:</strong> We use the Meta Pixel on our Site to measure the effectiveness of our advertising on Facebook and Instagram, to understand the actions people take on our Site, and to deliver targeted advertisements to you on Meta platforms. The Meta Pixel collects data such as HTTP headers, pixel-specific data, button click data, form field values, and other browsing behavior. For more information about how Meta uses your data, please visit <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer">Meta's Privacy Policy</a>.</p>
+        <p><strong>Our Analytics System:</strong> We use a self-hosted, first-party analytics system (the "Unlock Patients Tracking Pixel") to track page views, form submissions, and other interactions on our Site. This system sends data exclusively to our own servers at <strong>t.unlockpatients.com</strong>. It is write-only. The tracking pixel can only send data, never read or retrieve it. No data is shared with third-party analytics providers.</p>
 
-        <p><strong>Microsoft Clarity:</strong> We use Microsoft Clarity to understand how users interact with our Site through session recordings and heatmaps. For more information, visit <a href="https://privacy.microsoft.com/en-us/privacystatement" target="_blank" rel="noopener noreferrer">Microsoft's Privacy Statement</a>.</p>
+        <p><strong>Cookies We Set:</strong></p>
+        <ul>
+            <li><strong>up_did:</strong> Anonymous unique identifier. Expires after 10 years.</li>
+            <li><strong>up_fields:</strong> Previously entered form field values for convenience on return visits. Expires after 10 years.</li>
+            <li><strong>UTM cookies</strong> (utm_source, utm_medium, utm_campaign, etc.): Advertising attribution data. Expire after 10 years.</li>
+        </ul>
 
-        <p><strong>Managing Cookies:</strong> You can control cookies through your browser settings. Most browsers allow you to refuse or delete cookies. Please note that disabling cookies may affect the functionality of our Site.</p>
+        <p><strong>Managing Cookies:</strong> You can control cookies through your browser settings. Most browsers allow you to refuse or delete cookies. Please note that disabling cookies may affect the functionality of our Site, such as form pre-fill and analytics.</p>
 
         <h2>4. Sharing of Your Information</h2>
         <p>We may share your information in the following circumstances:</p>
         <ul>
-            <li><strong>Service Providers:</strong> We may share your information with third-party vendors who perform services on our behalf, such as hosting, analytics, email delivery, and advertising.</li>
+            <li><strong>Service Providers:</strong> We may share your information with third-party vendors who perform services on our behalf, such as cloud hosting (Amazon Web Services), email delivery, and scheduling (Cal.com).</li>
             <li><strong>Advertising Partners:</strong> We share data with advertising platforms (such as Meta and Google) to measure ad effectiveness and deliver targeted ads. This may include hashed or anonymized data.</li>
             <li><strong>Legal Requirements:</strong> We may disclose your information if required to do so by law or in response to valid requests by public authorities.</li>
             <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of the transaction.</li>
         </ul>
         <p>We do not sell your personal information to third parties.</p>
 
-        <h2>5. Data Retention</h2>
-        <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. When your information is no longer needed, we will securely delete or anonymize it.</p>
+        <h2>5. HIPAA Compliance</h2>
+        <p>Unlock Patients is committed to protecting sensitive health-related information. We sign a formal Business Associate Agreement (BAA) with every client practice. Our infrastructure implements the following safeguards:</p>
+        <ul>
+            <li>All data is encrypted at rest using AWS Key Management Service (KMS)</li>
+            <li>All data is transmitted over encrypted HTTPS connections</li>
+            <li>IP addresses are stripped at the server level before data is stored</li>
+            <li>Access controls ensure data isolation between client practices</li>
+            <li>Our analytics system is write-only, data can only be submitted, never retrieved through the tracking endpoint</li>
+        </ul>
 
-        <h2>6. Your Rights and Choices</h2>
+        <h2>6. Data Retention</h2>
+        <p>We retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. Cookies and local storage data persist for up to 10 years to enable a seamless experience across visits. When your information is no longer needed, we will securely delete or anonymize it.</p>
+
+        <h2>7. Your Rights and Choices</h2>
         <p>Depending on your location, you may have the following rights regarding your personal information:</p>
         <ul>
             <li><strong>Access:</strong> You can request a copy of the personal information we hold about you.</li>
@@ -219,18 +238,18 @@
             <li><strong>Opt-Out of Marketing:</strong> You can unsubscribe from our marketing emails by clicking the "unsubscribe" link in any email or contacting us directly.</li>
             <li><strong>Opt-Out of Targeted Advertising:</strong> You can opt out of personalized advertising by adjusting your settings on platforms like <a href="https://www.facebook.com/adpreferences" target="_blank" rel="noopener noreferrer">Meta Ad Preferences</a> or by using the <a href="https://optout.aboutads.info/" target="_blank" rel="noopener noreferrer">Digital Advertising Alliance Opt-Out Tool</a>.</li>
         </ul>
-        <p>To exercise any of these rights, please contact us using the information in Section 10 below.</p>
+        <p>To exercise any of these rights, please contact us using the information in Section 11 below.</p>
 
-        <h2>7. California Privacy Rights (CCPA)</h2>
+        <h2>8. California Privacy Rights (CCPA)</h2>
         <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA), including the right to know what personal information we collect, the right to request deletion, and the right to opt out of the sale of personal information. As noted above, we do not sell your personal information. To exercise your rights, please contact us using the information below.</p>
 
-        <h2>8. Children's Privacy</h2>
+        <h2>9. Children's Privacy</h2>
         <p>Our Site and services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we learn that we have collected personal information from a child under 18, we will take steps to delete that information promptly. If you believe we may have collected information from a child, please contact us immediately.</p>
 
-        <h2>9. Security</h2>
-        <p>We use reasonable administrative, technical, and physical security measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+        <h2>10. Security</h2>
+        <p>We use reasonable administrative, technical, and physical security measures to protect your personal information. This includes encryption at rest (AWS KMS), encryption in transit (HTTPS/TLS), VPC network isolation, and strict access controls. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
 
-        <h2>10. Contact Us</h2>
+        <h2>11. Contact Us</h2>
         <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
         <p>
             <strong>Unlock Patients</strong><br>
@@ -238,7 +257,7 @@
             Website: <a href="https://unlockpatients.com">unlockpatients.com</a>
         </p>
 
-        <h2>11. Changes to This Privacy Policy</h2>
+        <h2>12. Changes to This Privacy Policy</h2>
         <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last Updated" date at the top of this page. We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information.</p>
     </div>
 
@@ -246,8 +265,6 @@
         <p>&copy; 2026 Unlock Patients. All rights reserved.</p>
         <p style="margin-top: 8px;">
             <a href="/">Home</a>
-            <a href="/book">Book a Call</a>
-            <a href="/contact">Contact</a>
             <a href="/privacy-policy">Privacy Policy</a>
         </p>
     </div>
