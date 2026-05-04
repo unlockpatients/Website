@@ -635,8 +635,10 @@ a:focus, button:focus, a:active, button:active {
   #main section#how { display: none !important; }
 </style>
 <style id="up-cscard-css">
-.up-cscard-wrap{box-sizing:border-box;width:100%;max-width:880px;margin:0 auto;padding:0;font-family:'Figtree','Figtree Placeholder',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:-0.01em;opacity:0.001;transform:perspective(1200px) translateY(60px);transform-origin:50% 100% 0;animation:up-cscard-appear 1.1s cubic-bezier(0.22,1,0.36,1) 0.2s forwards;}
-@keyframes up-cscard-appear{to{opacity:1;transform:perspective(1200px) translateY(0);}}
+.up-cscard-wrap{box-sizing:border-box;width:100%;max-width:880px;margin:0 auto;padding:0;font-family:'Figtree','Figtree Placeholder',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:-0.01em;}
+/* Hide the whole hero image slot until JS confirms the card is rendered AND Framer hydration has settled. Then reveal with a single fade-up. No flicker because nothing inside is visible during the wipe-and-re-inject race. */
+.framer-ikq6c1{opacity:0;transform:perspective(1200px) translateY(60px);transform-origin:50% 100% 0;transition:opacity 1.1s cubic-bezier(0.22,1,0.36,1),transform 1.1s cubic-bezier(0.22,1,0.36,1);}
+.framer-ikq6c1.up-cscard-ready{opacity:1;transform:perspective(1200px) translateY(0);}
 .up-cscard{display:block;position:relative;border:1px solid rgba(135,101,215,0.22);border-radius:16px;overflow:hidden;text-decoration:none;color:#fff;background:#2a1f3a;aspect-ratio:1244/693;background-image:url('https://unlockpatients.com/case-studies/wonderkidz-pediatrics/img/dr-v-storefront.jpg');background-size:cover;background-position:center 35%;box-shadow:0 24px 60px -28px rgba(135,101,215,0.45),0 8px 24px -10px rgba(40,20,60,0.12);transition:transform .25s ease,box-shadow .3s ease,border-color .25s ease;}
 .up-cscard:hover{transform:translateY(-4px);box-shadow:0 36px 90px -28px rgba(135,101,215,0.55),0 10px 28px -10px rgba(40,20,60,0.18);border-color:rgba(135,101,215,0.45);}
 .up-cscard__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,20,60,0.10) 0%,rgba(40,20,60,0.32) 45%,rgba(40,20,60,0.92) 100%);}
@@ -930,28 +932,48 @@ section.framer-y4dflj, [data-framer-name="Hero Section"]{ overflow: visible !imp
     + '</div>'
     + '</a>'
     + '</div>';
+  function revealHeroSlot(immediate){
+    var ikq = document.querySelector('.framer-ikq6c1');
+    if (!ikq) return;
+    if (immediate){
+      /* Subsequent injection (Framer wiped the wrapper). Snap to final state without re-firing the transition. */
+      var prev = ikq.style.transition;
+      ikq.style.transition = 'none';
+      ikq.classList.add('up-cscard-ready');
+      /* Force reflow so the no-transition takes effect, then restore transition for any future state changes. */
+      void ikq.offsetWidth;
+      ikq.style.transition = prev || '';
+      return;
+    }
+    /* First reveal — wait until Framer hydration is most likely done (~700ms) so any wipe + re-inject happens off-screen behind opacity:0 before we fade in. */
+    setTimeout(function(){
+      var el = document.querySelector('.framer-ikq6c1');
+      if (el) el.classList.add('up-cscard-ready');
+    }, 700);
+  }
   function ensureHeroCard(){
     var path = window.location.pathname.replace(/\/+$/,'');
     if (path !== '' && path !== '/index.html') return;
     var wrap = document.querySelector('[data-framer-name="Image Wrapper"]');
     if (!wrap) return;
     if (wrap.querySelector('.' + INJECTED_CLASS)) {
-      /* Card is already there (static render or earlier injection) — mark animation done so a later
-         re-inject after Framer hydration doesn't trigger a second fade. */
-      window.__upHeroAnimated = true;
+      /* Card already in place (static render or earlier injection). On the first call, schedule the reveal. */
+      if (!window.__upHeroRevealScheduled){
+        window.__upHeroRevealScheduled = true;
+        revealHeroSlot(false);
+      }
       return;
     }
     wrap.innerHTML = HERO_INNER;
     wrap.removeAttribute('style');
-    var inner = wrap.querySelector('.up-cscard-wrap');
-    if (!inner) return;
-    if (window.__upHeroAnimated){
-      /* Already animated once this page load — snap to final state, no re-fade. */
-      inner.style.animation = 'none';
-      inner.style.opacity = '1';
-      inner.style.transform = 'perspective(1200px) translateY(0)';
+    if (window.__upHeroRevealed || window.__upHeroRevealScheduled){
+      /* We already revealed (or scheduled). Re-inject just snaps to final visible state. */
+      revealHeroSlot(true);
+      window.__upHeroRevealed = true;
     } else {
-      window.__upHeroAnimated = true;
+      window.__upHeroRevealScheduled = true;
+      revealHeroSlot(false);
+      setTimeout(function(){ window.__upHeroRevealed = true; }, 750);
     }
   }
   function setLeafText(el, text){
