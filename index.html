@@ -640,7 +640,8 @@ a:focus, button:focus, a:active, button:active {
 @keyframes up-cscard-fade{from{opacity:0;transform:translateY(60px);}to{opacity:1;transform:translateY(0);}}
 .up-cscard{display:block;position:relative;border:1px solid rgba(135,101,215,0.22);border-radius:16px;overflow:hidden;text-decoration:none;color:#fff;background:#2a1f3a;aspect-ratio:1244/693;background-image:url('https://unlockpatients.com/case-studies/wonderkidz-pediatrics/img/dr-v-storefront.jpg');background-size:cover;background-position:center 35%;box-shadow:0 24px 60px -28px rgba(135,101,215,0.45),0 8px 24px -10px rgba(40,20,60,0.12);transition:transform .25s ease,box-shadow .3s ease,border-color .25s ease;-webkit-tap-highlight-color:transparent;}
 .up-cscard:hover{transform:translateY(-4px);box-shadow:0 36px 90px -28px rgba(135,101,215,0.55),0 10px 28px -10px rgba(40,20,60,0.18);border-color:rgba(135,101,215,0.45);}
-.up-cscard:active,.up-cscard:focus,.up-cscard:focus-visible{opacity:1!important;}
+.up-cscard:active,.up-cscard:focus,.up-cscard:focus-visible,.up-cscard:focus-within{opacity:1!important;background-color:#2a1f3a!important;}
+.up-cscard *,.up-cscard:active *,.up-cscard:focus *{opacity:inherit;}
 .up-cscard__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,20,60,0.10) 0%,rgba(40,20,60,0.32) 45%,rgba(40,20,60,0.92) 100%);}
 .up-cscard__top{position:absolute;left:0;right:0;top:0;display:flex;justify-content:space-between;align-items:flex-start;padding:14px 16px 0;}
 .up-cscard__tags{display:flex;flex-wrap:wrap;gap:6px;}
@@ -937,20 +938,12 @@ section.framer-y4dflj, [data-framer-name="Hero Section"]{ overflow: visible !imp
     if (path !== '' && path !== '/index.html') return;
     var wrap = document.querySelector('[data-framer-name="Image Wrapper"]');
     if (!wrap) return;
-    if (wrap.querySelector('.' + INJECTED_CLASS)) {
-      window.__upHeroAnimated = true;
-      return;
-    }
+    if (wrap.querySelector('.' + INJECTED_CLASS)) return;
     wrap.innerHTML = HERO_INNER;
     wrap.removeAttribute('style');
-    var inner = wrap.querySelector('.up-cscard-wrap');
-    if (inner && window.__upHeroAnimated){
-      /* Re-injecting after framer wipe — flag is set, so skip the fade and snap to visible. */
-      inner.style.animation = 'none';
-      inner.style.opacity = '1';
-    } else {
-      window.__upHeroAnimated = true;
-    }
+    /* No JS override of the CSS animation — let the keyframe play on whichever
+       wrap is currently in the DOM. If framer wipes during the 0.55s delay
+       phase, the new wrap inherits the same delay and animates from there. */
   }
   function setLeafText(el, text){
     var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
