@@ -268,6 +268,9 @@ a:focus, button:focus, a:active, button:active {
   .framer-qw7jwr{ gap: 20px !important; }
   .framer-qw7jwr > *{ flex: 0 0 100% !important; max-width: 480px !important; }
 }
+/* Hide framer's duplicate "Meet the team" Demo Section — the hand-coded section below
+   has the same three people with fuller bios + photos. Keeps the page non-repetitive. */
+section#demo[data-framer-name="Demo Section"]{ display: none !important; }
 </style>
 </head>
 <style>

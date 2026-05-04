@@ -147,7 +147,8 @@
         }
 
         .up-site-header--on-dark .up-site-header__logo img {
-          filter: brightness(0) invert(1);
+          /* Logo is already the light-blue variant for this page; don't invert. */
+          filter: none;
         }
         .up-site-header--on-dark .up-site-header__link {
           color: rgba(255, 255, 255, 0.86);
@@ -713,7 +714,7 @@
 <body>
     <header class="up-site-header up-site-header--on-dark">
   <a class="up-site-header__logo" href="/" aria-label="Unlock Patients home">
-    <img src="https://framerusercontent.com/images/MK3ZA72VmM2Zcgx78FRA4ESOhk.png?width=489&amp;height=73" alt="Unlock Patients">
+    <img src="https://unlockpatients.com/assets/up-logo-light.png" alt="Unlock Patients">
   </a>
   <nav class="up-site-header__nav" aria-label="Primary navigation">
     <div class="up-site-header__links">
