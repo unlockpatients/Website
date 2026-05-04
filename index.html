@@ -670,7 +670,8 @@ section.framer-y4dflj, [data-framer-name="Hero Section"]{ overflow: visible !imp
 .up-cscard-wrap{ position: relative; z-index: 5; }
 
 @media (max-width: 740px){
-  .up-cscard{aspect-ratio:4/5;background-position:center 30%;}
+  .up-cscard{aspect-ratio:4/5;background-position:75% 30%;}
+  .up-cscard:active,.up-cscard:focus,.up-cscard:focus-visible,.up-cscard:focus-within{background-position:75% 30%!important;}
   .up-cscard__overlay{background:linear-gradient(180deg,rgba(0,0,0,0.40) 0%,rgba(0,0,0,0.60) 35%,rgba(0,0,0,0.96) 100%);}
   .up-cscard__stats{grid-template-columns:repeat(2,1fr);}
   .up-cscard__stat:nth-child(2){border-right:none;}
