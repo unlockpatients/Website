@@ -645,6 +645,8 @@ a:focus, button:focus, a:active, button:active {
    so the storefront photo survives focus/active/click states. */
 .up-cscard:active,.up-cscard:focus,.up-cscard:focus-visible,.up-cscard:focus-within{opacity:1!important;background-color:#2a1f3a!important;background-image:url('https://unlockpatients.com/case-studies/wonderkidz-pediatrics/img/dr-v-storefront.jpg')!important;background-size:cover!important;background-position:center 35%!important;background-repeat:no-repeat!important;}
 .up-cscard__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,20,60,0.10) 0%,rgba(40,20,60,0.32) 45%,rgba(40,20,60,0.92) 100%);}
+/* Framer's global :active/:focus { background:none !important } also wipes the overlay gradient when a user clicks on it (overlay covers most of the card). Re-declare with !important so the dark gradient stays put on click. */
+.up-cscard__overlay:active,.up-cscard__overlay:focus,.up-cscard__overlay:focus-within,.up-cscard__overlay:hover{background:linear-gradient(180deg,rgba(40,20,60,0.10) 0%,rgba(40,20,60,0.32) 45%,rgba(40,20,60,0.92) 100%)!important;}
 .up-cscard__top{position:absolute;left:0;right:0;top:0;display:flex;justify-content:space-between;align-items:flex-start;padding:14px 16px 0;}
 .up-cscard__tags{display:flex;flex-wrap:wrap;gap:6px;}
 .up-cscard__tag{display:inline-flex;align-items:center;background:rgba(255,255,255,0.18);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 9px;border-radius:999px;border:1px solid rgba(255,255,255,0.22);line-height:1;}
