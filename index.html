@@ -635,7 +635,7 @@ a:focus, button:focus, a:active, button:active {
   #main section#how { display: none !important; }
 </style>
 <style id="up-cscard-css">
-.up-cscard-wrap{box-sizing:border-box;width:100%;max-width:720px;margin:0 auto;padding:0;font-family:'Figtree','Figtree Placeholder',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:-0.01em;transform:translateY(-200px);margin-bottom:-200px;}
+.up-cscard-wrap{box-sizing:border-box;width:100%;max-width:720px;margin:0 auto;padding:0;font-family:'Figtree','Figtree Placeholder',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:-0.01em;transform:translateY(200px);margin-bottom:200px;}
 .up-cscard{display:block;position:relative;border:1px solid rgba(135,101,215,0.22);border-radius:16px;overflow:hidden;text-decoration:none;color:#fff;background:#2a1f3a;aspect-ratio:1244/693;background-image:url('https://unlockpatients.com/case-studies/wonderkidz-pediatrics/img/dr-v-storefront.jpg');background-size:cover;background-position:center 35%;box-shadow:0 24px 60px -28px rgba(135,101,215,0.45),0 8px 24px -10px rgba(40,20,60,0.12);transition:transform .25s ease,box-shadow .3s ease,border-color .25s ease;}
 .up-cscard:hover{transform:translateY(-4px);box-shadow:0 36px 90px -28px rgba(135,101,215,0.55),0 10px 28px -10px rgba(40,20,60,0.18);border-color:rgba(135,101,215,0.45);}
 .up-cscard__overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(40,20,60,0.10) 0%,rgba(40,20,60,0.32) 45%,rgba(40,20,60,0.92) 100%);}
@@ -664,6 +664,22 @@ a:focus, button:focus, a:active, button:active {
   padding: 0 16px !important;
 }
 .framer-ikq6c1, .framer-ikq6c1 *{ overflow: visible !important; }
+[data-framer-name="Hero Section"]::before{
+  content:'';
+  position:absolute;
+  top:560px;
+  left:0;
+  right:0;
+  height:540px;
+  background:linear-gradient(180deg,
+    rgba(247,240,250,0) 0%,
+    rgba(247,240,250,0.85) 25%,
+    rgba(247,240,250,0.85) 60%,
+    rgba(255,255,255,1) 100%);
+  pointer-events:none;
+  z-index:0;
+}
+.up-cscard{ z-index:5 !important; position:relative; }
 section.framer-y4dflj, [data-framer-name="Hero Section"]{ overflow: visible !important; overflow-x: visible !important; overflow-y: visible !important; }
 .up-cscard{ z-index: 5 !important; }
 .up-cscard-wrap{ position: relative; z-index: 5; }
@@ -679,7 +695,7 @@ section.framer-y4dflj, [data-framer-name="Hero Section"]{ overflow: visible !imp
   .up-cscard__stats{grid-template-columns:repeat(2,1fr);}
   .up-cscard__stat:nth-child(2){border-right:none;}
   .up-cscard__stat:nth-child(1),.up-cscard__stat:nth-child(2){border-bottom:1px solid rgba(255,255,255,0.16);}
-  .up-cscard-wrap{transform:translateY(-120px);margin-bottom:-120px;}
+  .up-cscard-wrap{transform:translateY(120px);margin-bottom:120px;}
 }
 </style>
 </head>
