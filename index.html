@@ -957,38 +957,40 @@ section.framer-y4dflj, [data-framer-name="Hero Section"]{ overflow: visible !imp
   function applyHeroState(inner){
     if (!inner) return;
     if (!window.__upHeroStart){
-      inner.classList.remove('up-cscard-wrap--initial');
-      inner.style.opacity = '0';
-      inner.style.transform = 'translate3d(0,60px,0)';
-      inner.style.animation = 'none';
+      /* Pre-trigger: keep hidden, no animation. */
+      if (inner.dataset.upState !== 'hidden'){
+        inner.classList.remove('up-cscard-wrap--initial');
+        inner.style.opacity = '0';
+        inner.style.transform = 'translate3d(0,60px,0)';
+        inner.style.animation = 'none';
+        inner.dataset.upState = 'hidden';
+      }
       return;
     }
+    /* Post-trigger: only configure each wrap ONCE. After it's been set up,
+       leave the CSS animation (or final-state snap) alone — re-applying
+       animation-delay on every tick was restarting the keyframe and causing
+       the visible jump/cancel. The dataset tag tracks per-wrap state. */
+    if (inner.dataset.upState === 'animating' || inner.dataset.upState === 'final') return;
     var elapsed = (Date.now() - window.__upHeroStart) / 1000;
-    var hadInitial = inner.classList.contains('up-cscard-wrap--initial');
-    var hadInlineAnim = !!inner.style.animation;
     if (elapsed >= ANIM_TOTAL){
-      /* Animation should be complete. If THIS wrap ran the keyframe to its end
-         (had --initial and no inline animation override), the CSS `both` fill
-         is already holding the final state — leave it untouched. Setting
-         transform:none here was tearing down the GPU layer and causing a
-         sub-pixel jump on animation-end. */
-      if (hadInitial && !hadInlineAnim) return;
-      /* Fresh wrap (e.g. injected by us after framer wiped post-animation) —
-         snap to final visible state with no animation, using translate3d(0,0,0)
-         not `none` to keep the layer consistent. */
+      /* Past animation window — snap to final state, no fade. translate3d(0,0,0)
+         not `none` so the GPU layer stays consistent. */
       inner.classList.add('up-cscard-wrap--initial');
       inner.style.animation = 'none';
       inner.style.opacity = '1';
       inner.style.transform = 'translate3d(0,0,0)';
+      inner.dataset.upState = 'final';
       return;
     }
-    /* Animation still in progress — apply continuation */
+    /* First-time setup for this wrap — start animation with continuation delay. */
     inner.style.opacity = '';
     inner.style.transform = '';
     inner.style.animation = '';
     inner.classList.add('up-cscard-wrap--initial');
     var newDelay = elapsed < ANIM_DELAY ? (ANIM_DELAY - elapsed) : -(elapsed - ANIM_DELAY);
     inner.style.animationDelay = newDelay + 's';
+    inner.dataset.upState = 'animating';
   }
   function ensureHeroCard(){
     var path = window.location.pathname.replace(/\/+$/,'');
