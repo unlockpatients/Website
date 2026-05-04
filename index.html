@@ -951,18 +951,26 @@ section.framer-y4dflj, [data-framer-name="Hero Section"]{ overflow: visible !imp
     if (path !== '' && path !== '/index.html') return;
     var wrap = document.querySelector('[data-framer-name="Image Wrapper"]');
     if (!wrap) return;
-    /* Schedule the single fade once: 800ms after first sight gives framer
-       hydration time to settle behind the wrap's opacity:0 + translateY(60px)
-       static state. Force a paint at initial state via getComputedStyle +
-       double rAF before adding the class — otherwise a freshly-created wrap
-       may collapse initial+final into one paint and skip the transition. */
+    /* Schedule the single fade once. After a 700ms initial wait (lets framer
+       hydration settle), poll every 100ms until .up-cscard-wrap is present in
+       the DOM (it may not be at the moment the timer fires if framer just
+       wiped and we haven't re-injected yet). Once it's there, force an
+       initial-state paint via offsetHeight + double rAF, then add the class
+       to trigger the transition. */
     if (!window.__upHeroRevealScheduled){
       window.__upHeroRevealScheduled = true;
-      setTimeout(function(){
+      var attempts = 0;
+      function tryReveal(){
+        attempts++;
         var inner = document.querySelector('.up-cscard-wrap');
-        if (!inner) return;
-        /* Force initial-state paint */
-        getComputedStyle(inner).opacity;
+        if (!inner){
+          if (attempts < 30) setTimeout(tryReveal, 100);
+          return;
+        }
+        if (inner.classList.contains('up-cscard-wrap--in')){
+          window.__upHeroRevealed = true;
+          return;
+        }
         void inner.offsetHeight;
         requestAnimationFrame(function(){
           requestAnimationFrame(function(){
@@ -971,7 +979,8 @@ section.framer-y4dflj, [data-framer-name="Hero Section"]{ overflow: visible !imp
             window.__upHeroRevealed = true;
           });
         });
-      }, 800);
+      }
+      setTimeout(tryReveal, 700);
     }
     if (!wrap.querySelector('.' + INJECTED_CLASS)){
       wrap.innerHTML = HERO_INNER;
