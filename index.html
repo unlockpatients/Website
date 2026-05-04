@@ -635,9 +635,9 @@ a:focus, button:focus, a:active, button:active {
   #main section#how { display: none !important; }
 </style>
 <style id="up-cscard-css">
-/* Fade applied to the inner card wrapper (not framer-ikq6c1) — animating opacity on framer-ikq6c1 created a stacking context that re-ordered the card behind sibling Top Section, hiding the overflow. The wrap is inside framer-ikq6c1, so its stacking context is nested and doesn't disturb the section-overlap geometry. The 0.7s delay holds the wrap invisible during framer hydration's wipe-and-rerender; the JS flag prevents any later re-injection from re-firing the fade. */
-.up-cscard-wrap{box-sizing:border-box;width:100%;max-width:880px;margin:0 auto;padding:0;font-family:'Figtree','Figtree Placeholder',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:-0.01em;animation:up-cscard-fade 0.9s cubic-bezier(0.16,1,0.3,1) 0.55s both;}
-@keyframes up-cscard-fade{from{opacity:0;transform:translateY(60px);}to{opacity:1;transform:translateY(0);}}
+/* Wrap starts hidden and translated; JS adds .up-cscard-wrap--in once after framer hydration settles, triggering a single transition. No CSS animation, so re-injects don't replay the fade. */
+.up-cscard-wrap{box-sizing:border-box;width:100%;max-width:880px;margin:0 auto;padding:0;font-family:'Figtree','Figtree Placeholder',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;letter-spacing:-0.01em;opacity:0;transform:translateY(60px);transition:opacity 0.9s cubic-bezier(0.16,1,0.3,1),transform 0.9s cubic-bezier(0.16,1,0.3,1);}
+.up-cscard-wrap.up-cscard-wrap--in{opacity:1;transform:translateY(0);}
 .up-cscard{display:block;position:relative;border:1px solid rgba(135,101,215,0.22);border-radius:16px;overflow:hidden;text-decoration:none;color:#fff;background:#2a1f3a;aspect-ratio:1244/693;background-image:url('https://unlockpatients.com/case-studies/wonderkidz-pediatrics/img/dr-v-storefront.jpg');background-size:cover;background-position:center 35%;box-shadow:0 24px 60px -28px rgba(135,101,215,0.45),0 8px 24px -10px rgba(40,20,60,0.12);transition:transform .25s ease,box-shadow .3s ease,border-color .25s ease;-webkit-tap-highlight-color:transparent;}
 .up-cscard:hover{transform:translateY(-4px);box-shadow:0 36px 90px -28px rgba(135,101,215,0.55),0 10px 28px -10px rgba(40,20,60,0.18);border-color:rgba(135,101,215,0.45);}
 .up-cscard:active,.up-cscard:focus,.up-cscard:focus-visible,.up-cscard:focus-within{opacity:1!important;background-color:#2a1f3a!important;}
@@ -933,17 +933,37 @@ section.framer-y4dflj, [data-framer-name="Hero Section"]{ overflow: visible !imp
     + '</div>'
     + '</a>'
     + '</div>';
+  function snapInnerIn(){
+    var inner = document.querySelector('.up-cscard-wrap');
+    if (!inner || inner.classList.contains('up-cscard-wrap--in')) return;
+    inner.style.transition = 'none';
+    inner.classList.add('up-cscard-wrap--in');
+    void inner.offsetWidth;
+    inner.style.transition = '';
+  }
   function ensureHeroCard(){
     var path = window.location.pathname.replace(/\/+$/,'');
     if (path !== '' && path !== '/index.html') return;
     var wrap = document.querySelector('[data-framer-name="Image Wrapper"]');
     if (!wrap) return;
-    if (wrap.querySelector('.' + INJECTED_CLASS)) return;
-    wrap.innerHTML = HERO_INNER;
-    wrap.removeAttribute('style');
-    /* No JS override of the CSS animation — let the keyframe play on whichever
-       wrap is currently in the DOM. If framer wipes during the 0.55s delay
-       phase, the new wrap inherits the same delay and animates from there. */
+    /* Schedule the single fade once: 700ms after first sight gives framer
+       hydration time to settle behind the wrap's opacity:0 + translateY(60px)
+       static state. */
+    if (!window.__upHeroRevealScheduled){
+      window.__upHeroRevealScheduled = true;
+      setTimeout(function(){
+        var inner = document.querySelector('.up-cscard-wrap');
+        if (inner) inner.classList.add('up-cscard-wrap--in'); /* triggers transition */
+        window.__upHeroRevealed = true;
+      }, 700);
+    }
+    if (!wrap.querySelector('.' + INJECTED_CLASS)){
+      wrap.innerHTML = HERO_INNER;
+      wrap.removeAttribute('style');
+    }
+    /* If reveal already happened and a new wrap got injected (framer wipe after reveal),
+       snap it straight to final state with no transition so the fade doesn't replay. */
+    if (window.__upHeroRevealed) snapInnerIn();
   }
   function setLeafText(el, text){
     var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
