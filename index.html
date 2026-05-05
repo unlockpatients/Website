@@ -670,11 +670,12 @@ a:focus, button:focus, a:active, button:active {
 .up-cscard__stat .label{display:block;font-size:9.5px;color:rgba(255,255,255,0.78);font-weight:500;letter-spacing:0.04em;text-transform:uppercase;line-height:1.25;}
 /* Match the original Framer dashboard image positioning: keep wrapper's native 180px aspect-ratio:6.44 with place-content:flex-end + overflow:visible. Card overflows UP from wrapper bottom, exactly as the dashboard image did. */
 .framer-ikq6c1, .framer-ikq6c1 *{ overflow: visible !important; }
-/* Bigger card on desktop overflows further up than the original 880px version did,
-   which crept into the CTA area. Push the wrapper down so the upward-extending card
-   lands clear of the buttons + trust pills. Mobile uses portrait 4/5, no shift needed. */
+/* Push only the HERO image-wrapper down on desktop (not every .framer-ikq6c1 — that
+   class also appears on Features/Comparison/etc sections and a global margin would
+   break their layout). The bigger card's upward overflow needs clearance from the
+   CTAs and trust pills, so shift the hero wrapper down. Mobile is untouched. */
 @media (min-width: 741px){
-  .framer-ikq6c1{ margin-top: 110px !important; }
+  section#hero .framer-ikq6c1[data-framer-name="Image Wrapper"]{ margin-top: 110px !important; }
 }
 section.framer-y4dflj, [data-framer-name="Hero Section"]{ overflow: visible !important; overflow-x: visible !important; overflow-y: visible !important; }
 .up-cscard{ z-index: 5 !important; }
