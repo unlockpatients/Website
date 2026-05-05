@@ -1013,33 +1013,35 @@ section.framer-y4dflj, [data-framer-name="Hero Section"]{ overflow: visible !imp
     wrap.removeAttribute('style');
     applyHeroState(wrap.querySelector('.up-cscard-wrap'));
   }
+  /* Persistent IntersectionObserver. Attaches to whichever .up-cscard element is
+     currently in the DOM. Each tick re-observes the current card so framer
+     wipe+re-inject doesn't leave us watching a detached element. The observer
+     only fires meaningfully once (when __upHeroStart isn't set yet); after that
+     it's disconnected. */
   function startHeroObserver(){
-    if (window.__upHeroObsInited) return;
-    window.__upHeroObsInited = true;
+    if (window.__upHeroStart) return;
     if (!window.IntersectionObserver){
-      /* Fallback: trigger immediately */
       window.__upHeroStart = Date.now();
       ensureHeroCard();
       return;
     }
-    var io = new IntersectionObserver(function(entries){
-      if (entries.some(function(e){ return e.isIntersecting; }) && !window.__upHeroStart){
-        window.__upHeroStart = Date.now();
-        ensureHeroCard();
-        io.disconnect();
-      }
-    }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
-    /* Observe the card itself, not the framer-ikq6c1 wrapper — the card extends
-       up via overflow:visible while the wrapper is a short 180px box that may sit
-       below the fold. Watching the card means IO sees the full visual extent. */
-    function attach(){
-      var card = document.querySelector('.up-cscard') || document.querySelector('.up-cscard-wrap');
-      var wrap = document.querySelector('[data-framer-name="Image Wrapper"]');
-      var target = card || wrap;
-      if (target) io.observe(target);
-      else if (!window.__upHeroStart) setTimeout(attach, 100);
+    if (!window.__upHeroIO){
+      window.__upHeroIO = new IntersectionObserver(function(entries){
+        if (window.__upHeroStart) return;
+        for (var i = 0; i < entries.length; i++){
+          if (entries[i].isIntersecting){
+            window.__upHeroStart = Date.now();
+            ensureHeroCard();
+            try { window.__upHeroIO.disconnect(); } catch(e){}
+            return;
+          }
+        }
+      }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
     }
-    attach();
+    var card = document.querySelector('.up-cscard') || document.querySelector('.up-cscard-wrap');
+    var wrap = document.querySelector('[data-framer-name="Image Wrapper"]');
+    var target = card || wrap;
+    if (target) window.__upHeroIO.observe(target);
   }
   function setLeafText(el, text){
     var w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null);
