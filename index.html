@@ -1029,11 +1029,14 @@ section.framer-y4dflj, [data-framer-name="Hero Section"]{ overflow: visible !imp
         io.disconnect();
       }
     }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
-    /* Observe whichever wrap is currently in the DOM. Re-attach if framer
-       replaces it before viewport entry. */
+    /* Observe the card itself, not the framer-ikq6c1 wrapper — the card extends
+       up via overflow:visible while the wrapper is a short 180px box that may sit
+       below the fold. Watching the card means IO sees the full visual extent. */
     function attach(){
+      var card = document.querySelector('.up-cscard') || document.querySelector('.up-cscard-wrap');
       var wrap = document.querySelector('[data-framer-name="Image Wrapper"]');
-      if (wrap) io.observe(wrap);
+      var target = card || wrap;
+      if (target) io.observe(target);
       else if (!window.__upHeroStart) setTimeout(attach, 100);
     }
     attach();
