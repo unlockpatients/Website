@@ -1083,6 +1083,186 @@ section.framer-y4dflj, [data-framer-name="Hero Section"]{ overflow: visible !imp
   }
 })();
 </script>
+
+<script>
+(function(){
+  var CC='ulp-main',API='https://gt1fes5qxf.execute-api.us-east-1.amazonaws.com/prod';
+  if(new URLSearchParams(location.search).get('preview')==='true')return;
+  function uuid(){return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,function(c){var r=Math.random()*16|0;return(c==='x'?r:(r&0x3|0x8)).toString(16)})}
+  function getCookie(n){var m=document.cookie.match(new RegExp('(?:^|; )'+n+'=([^;]*)'));return m?decodeURIComponent(m[1]):null}
+  function setCookie(n,v,d){var e=new Date();e.setTime(e.getTime()+d*864e5);document.cookie=n+'='+encodeURIComponent(v)+';expires='+e.toUTCString()+';path=/;SameSite=Lax'}
+  var sid=sessionStorage.getItem('_up_sid');if(!sid){sid=uuid();sessionStorage.setItem('_up_sid',sid)}
+  var uid=getCookie('_up_uid')||localStorage.getItem('_up_uid')||'';
+  if(!uid){uid=uuid();setCookie('_up_uid',uid,365);localStorage.setItem('_up_uid',uid)}
+  else{setCookie('_up_uid',uid,365)}
+  var params=new URLSearchParams(location.search);
+  var gclid=params.get('gclid')||getCookie('_up_gclid')||localStorage.getItem('_up_gclid')||'';
+  if(params.get('gclid')){setCookie('_up_gclid',gclid,90);localStorage.setItem('_up_gclid',gclid)}
+  var utm={source:params.get('utm_source')||'',medium:params.get('utm_medium')||'',campaign:params.get('utm_campaign')||'',term:params.get('utm_term')||'',content:params.get('utm_content')||''};
+  var _phoneClicked=false,_lastPhoneNumber='';
+  var _formSubmitted=false,_formId='';
+  function send(type,extra){
+    var data=Object.assign({eventType:type,sessionId:sid,visitorId:uid,pageUrl:location.href,referrer:document.referrer,gclid:gclid,utmParams:utm,userAgent:navigator.userAgent},extra||{});
+    var url=API+'/tracking/'+CC+'/event';
+    if(navigator.sendBeacon){navigator.sendBeacon(url,JSON.stringify(data))}else{fetch(url,{method:'POST',body:JSON.stringify(data),keepalive:true}).catch(function(){})}
+  }
+  send('page_view');
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="tel:"]');
+    if(a){
+      var phone=a.href.replace('tel:','');
+      _phoneClicked=true;_lastPhoneNumber=phone;
+      send('phone_click',{phoneNumber:phone});
+      if(gclid){
+        var gurl=API+'/tracking/'+CC+'/gclid';
+        var gdata=JSON.stringify({phoneNumber:phone,gclid:gclid,pageUrl:location.href,sessionId:sid,visitorId:uid});
+        if(navigator.sendBeacon){navigator.sendBeacon(gurl,gdata)}else{fetch(gurl,{method:'POST',body:gdata,keepalive:true}).catch(function(){})}
+      }
+    }
+  });
+  document.addEventListener('submit',function(e){
+    var f=e.target.closest('form');
+    if(f){_formSubmitted=true;_formId=f.id||f.name||'unknown';send('form_submission',{formId:_formId})}
+  });
+  // Mid-funnel signals — fire once per page so they map to a single Google
+  // Ads conversion event each. form_opened: appointment modal becomes visible
+  // OR an inline form scrolls into view. form_started: first focus on any
+  // input/textarea/select inside a form.
+  var _formOpened=false,_formStarted=false;
+  function fireFormOpened(formEl){
+    if(_formOpened)return;
+    _formOpened=true;
+    send('form_opened',{formId:(formEl&&(formEl.id||formEl.name))||''});
+  }
+  function isVisible(el){
+    if(!el)return false;
+    if(el.tagName==='DIALOG')return el.open===true;
+    var ah=el.getAttribute('aria-hidden');
+    if(ah==='false')return true;
+    if(ah==='true')return false;
+    var s=getComputedStyle(el);
+    return s.display!=='none'&&s.visibility!=='hidden';
+  }
+  function watchModalsAndForms(){
+    var modals=document.querySelectorAll('[role="dialog"], dialog, .appointment-modal, #appointment-modal');
+    modals.forEach(function(m){
+      if(isVisible(m)&&m.querySelector('form'))fireFormOpened(m.querySelector('form'));
+      try{
+        new MutationObserver(function(){
+          if(_formOpened)return;
+          if(isVisible(m)){var f=m.querySelector('form');if(f)fireFormOpened(f)}
+        }).observe(m,{attributes:true,attributeFilter:['style','aria-hidden','open','class']});
+      }catch(e){}
+    });
+    var forms=document.querySelectorAll('form');
+    if(forms.length>0&&'IntersectionObserver' in window){
+      try{
+        var io=new IntersectionObserver(function(entries){
+          entries.forEach(function(en){
+            if(en.isIntersecting){var f=en.target;if(f.closest('[role="dialog"], dialog, .appointment-modal'))return;fireFormOpened(f);io.unobserve(f)}
+          });
+        },{threshold:0.3});
+        forms.forEach(function(f){io.observe(f)});
+      }catch(e){}
+    }
+  }
+  document.addEventListener('focusin',function(e){
+    if(_formStarted)return;
+    var t=e.target;
+    if(!t||!t.tagName)return;
+    var tn=t.tagName.toLowerCase();
+    if(tn!=='input'&&tn!=='textarea'&&tn!=='select')return;
+    var f=t.closest('form');
+    if(!f)return;
+    _formStarted=true;
+    send('form_started',{formId:f.id||f.name||''});
+  },true);
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',watchModalsAndForms);else watchModalsAndForms();
+  var _start=Date.now();
+  var _maxScroll=0;
+  function trackScroll(){
+    var h=Math.max(document.body.scrollHeight,document.documentElement.scrollHeight);
+    var p=Math.round((window.scrollY+window.innerHeight)/h*100);
+    if(p>_maxScroll)_maxScroll=Math.min(p,100);
+  }
+  window.addEventListener('scroll',trackScroll,{passive:true});
+  requestAnimationFrame(trackScroll);
+  var _interactions=[];
+  document.addEventListener('click',function(e){
+    if(e.target.closest('a[href^="tel:"]'))return;
+    var el=e.target;
+    var tag=el.tagName.toLowerCase();
+    var desc=el.id?'#'+el.id:(el.className?'.'+String(el.className).split(' ')[0]:tag);
+    var text=(el.textContent||'').trim().slice(0,50);
+    _interactions.push({tag:tag,desc:desc,text:text,ts:Date.now()-_start});
+    if(_interactions.length>100)_interactions.shift();
+  },true);
+  var _rrEvents=[],_rrSending=false;
+  function loadRRWeb(){
+  var rrScript=document.createElement('script');
+  rrScript.src='/assets/rrweb-all.min.js';
+  rrScript.onload=function(){
+    try{
+      rrweb.record({
+        emit:function(ev){_rrEvents.push(ev)},
+        maskAllInputs:true,
+        maskTextSelector:'.rr-mask',
+        blockSelector:'.rr-block'
+      });
+      setInterval(flushRR,10000);
+    }catch(rrErr){console.error('[UPL] rrweb.record error:',rrErr)}
+  };
+  rrScript.onerror=function(err){console.error('[UPL] rrweb failed to load:',err)};
+  document.head.appendChild(rrScript);
+  }
+  if(true||gclid){if(window.requestIdleCallback){requestIdleCallback(loadRRWeb,{timeout:5000})}else{setTimeout(loadRRWeb,3000)}};
+  function flushRR(){
+    if(_rrEvents.length===0||_rrSending)return;
+    _rrSending=true;
+    var chunk=_rrEvents.splice(0);
+    var payload=JSON.stringify({sessionId:sid,visitorId:uid,pageUrl:location.href,gclid:gclid,utmParams:utm,userAgent:navigator.userAgent,phoneClicked:_phoneClicked,phoneNumber:_lastPhoneNumber,formSubmitted:_formSubmitted,formId:_formId,events:chunk});
+    fetch(API+'/tracking/'+CC+'/recording',{method:'POST',headers:{'Content-Type':'text/plain'},body:payload})
+      .then(function(){})
+      .catch(function(err){console.error('[UPL] recording POST failed:',err);_rrEvents=chunk.concat(_rrEvents)})
+      .finally(function(){_rrSending=false});
+  }
+  function sendLeave(){
+    var secs=Math.round((Date.now()-_start)/1000);
+    if(secs>0)send('page_leave',{timeOnPage:secs,scrollDepth:_maxScroll,isBounce:secs<10,interactions:_interactions});
+    flushRR();
+  }
+  document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')sendLeave()});
+  window.addEventListener('beforeunload',sendLeave);
+  document.querySelectorAll('form[data-upl-form]').forEach(function(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var btn=form.querySelector('[type="submit"]');
+      var origText=btn?btn.textContent:'';
+      if(btn){btn.textContent='Sending...';btn.disabled=true}
+      var fd=new FormData(form);
+      var data={};
+      fd.forEach(function(v,k){data[k]=v});
+      data._visitorId=uid;data._sessionId=sid;data._pageUrl=location.href;data._gclid=gclid;
+      fetch(API+'/forms/'+CC+'/submit',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(data)
+      }).then(function(r){
+        if(r.ok){
+          var msg=form.getAttribute('data-upl-success')||'Thank you! Your message has been sent securely.';
+          form.innerHTML='<div style="padding:20px;text-align:center;color:#16a34a;font-weight:600">'+msg+'</div>';
+        }else{
+          throw new Error('Submit failed');
+        }
+      }).catch(function(){
+        if(btn){btn.textContent=origText;btn.disabled=false}
+        alert('Something went wrong. Please try again or call us directly.');
+      });
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
 <script data-up-blog-link>
