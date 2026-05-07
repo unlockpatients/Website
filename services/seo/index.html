@@ -38,6 +38,16 @@
 
   /* Services dropdown */
   .up-site-header__services { position: relative; }
+  .up-site-header__services::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 18px;
+    pointer-events: auto;
+  }
   .up-site-header__services-trigger { gap: 4px; }
   .up-site-header__services-trigger.is-active { color: rgb(26, 188, 232); }
   .up-site-header__caret { transition: transform 0.2s ease; }

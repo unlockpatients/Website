@@ -142,6 +142,16 @@
 
   /* ── Services dropdown ── */
   .up-site-header__services { position: relative; }
+  .up-site-header__services::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 18px;
+    pointer-events: auto;
+  }
   .up-site-header__services-trigger { gap: 4px; background: none; border: 0; cursor: pointer; font-family: inherit; }
   .up-site-header__caret { transition: transform 0.2s ease; }
   .up-site-header__services:hover .up-site-header__caret,
