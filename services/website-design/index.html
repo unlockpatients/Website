@@ -169,6 +169,45 @@
     .up-compare__col { padding: 24px 22px; }
   }
 
+  /* Stats strip */
+  .up-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .up-stat { background: #fff; border: 1px solid rgba(76,40,28,0.10); border-radius: 16px; padding: 32px 26px 26px; text-align: center; box-shadow: 0 8px 22px -10px rgba(20,80,110,0.08); }
+  .up-stat__num { font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(48px, 5vw, 64px); line-height: 1; color: rgb(26, 188, 232); margin: 0 0 12px; letter-spacing: -0.01em; }
+  .up-stat__label { font-size: 15px; line-height: 1.45; color: rgba(76,40,28,0.85); margin: 0 0 16px; }
+  .up-stat__source { display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(76,40,28,0.5); padding-top: 14px; border-top: 1px solid rgba(76,40,28,0.06); }
+  @media (max-width: 800px) { .up-stats { grid-template-columns: 1fr; } }
+
+  /* Traffic sources mock (Website Design page) */
+  .up-traffic { background: #fff; border: 1px solid rgba(76,40,28,0.10); border-radius: 16px; padding: 32px 36px; box-shadow: 0 12px 30px -14px rgba(20,80,110,0.14); max-width: 760px; margin: 0 auto; }
+  .up-traffic__heading { font-family: Figtree, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(76,40,28,0.55); margin: 0 0 22px; }
+  .up-traffic__row { display: grid; grid-template-columns: 220px 1fr 60px; gap: 16px; align-items: center; padding: 14px 0; }
+  .up-traffic__row + .up-traffic__row { border-top: 1px solid rgba(76,40,28,0.06); }
+  .up-traffic__label { font-size: 14px; color: rgba(76,40,28,0.9); font-weight: 500; }
+  .up-traffic__bar { background: rgba(26,188,232,0.10); border-radius: 999px; height: 10px; overflow: hidden; }
+  .up-traffic__fill { display: block; height: 100%; background: rgb(26,188,232); border-radius: 999px; }
+  .up-traffic__num { font-family: Anton, sans-serif; font-size: 24px; color: rgb(40,22,14); text-align: right; line-height: 1; }
+  @media (max-width: 600px) {
+    .up-traffic { padding: 24px 22px; }
+    .up-traffic__row { grid-template-columns: 1fr 50px; gap: 6px 12px; }
+    .up-traffic__label { grid-column: 1 / -1; margin-bottom: 4px; }
+    .up-traffic__bar { grid-column: 1 / 2; }
+  }
+
+  /* Map Pack mock (SEO page) */
+  .up-mappack { max-width: 600px; margin: 0 auto; }
+  .up-mappack__searchbar { display: flex; align-items: center; gap: 12px; padding: 14px 20px; background: #fff; border: 1px solid rgba(76,40,28,0.12); border-radius: 999px; box-shadow: 0 8px 22px -10px rgba(20,80,110,0.08); margin-bottom: 16px; }
+  .up-mappack__searchbar svg { color: rgba(76,40,28,0.5); flex-shrink: 0; }
+  .up-mappack__query { font-size: 16px; color: rgba(76,40,28,0.9); font-family: Arial, system-ui, sans-serif; }
+  .up-mappack__results { background: #fff; border: 1px solid rgba(76,40,28,0.10); border-radius: 16px; overflow: hidden; box-shadow: 0 12px 30px -14px rgba(20,80,110,0.14); }
+  .up-mappack__result { display: grid; grid-template-columns: 50px 1fr; gap: 14px; padding: 18px 22px; align-items: start; }
+  .up-mappack__result + .up-mappack__result { border-top: 1px solid rgba(76,40,28,0.08); }
+  .up-mappack__result.is-yours { background: rgba(26,188,232,0.06); }
+  .up-mappack__rank { font-family: Anton, sans-serif; font-size: 30px; color: rgba(76,40,28,0.4); line-height: 1; text-align: center; padding-top: 4px; }
+  .up-mappack__result.is-yours .up-mappack__rank { color: rgb(26,188,232); }
+  .up-mappack__name { font-family: Figtree, sans-serif; font-weight: 700; font-size: 16px; color: rgb(40,22,14); margin: 0 0 4px; }
+  .up-mappack__result.is-yours .up-mappack__name { color: rgb(20,165,205); }
+  .up-mappack__meta { font-size: 13px; color: rgba(76,40,28,0.65); line-height: 1.4; }
+
   /* CTA band */
   .up-cta-band { padding: 80px 40px; background: linear-gradient(135deg, rgba(26,188,232,0.08) 0%, rgba(26,188,232,0.16) 100%); text-align: center; }
   .up-cta-band__inner { max-width: 760px; margin: 0 auto; }
@@ -343,6 +382,64 @@
         <div class="up-step">
           <h3>Launch and care</h3>
           <p>Migration, redirects, post launch fixes. Ongoing care.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="up-section up-section--alt">
+    <div class="up-section__inner">
+      <div class="up-section__head">
+        <span class="up-section__eyebrow">Why your website matters</span>
+        <h2>Parents judge your practice in eight seconds.</h2>
+      </div>
+      <div class="up-stats">
+        <div class="up-stat">
+          <div class="up-stat__num">75%</div>
+          <p class="up-stat__label">of users judge a practice's credibility by its website.</p>
+          <span class="up-stat__source">Stanford Web Credibility Project</span>
+        </div>
+        <div class="up-stat">
+          <div class="up-stat__num">53%</div>
+          <p class="up-stat__label">of mobile users leave sites that take more than 3 seconds to load.</p>
+          <span class="up-stat__source">Google</span>
+        </div>
+        <div class="up-stat">
+          <div class="up-stat__num">70%+</div>
+          <p class="up-stat__label">of pediatric practice site traffic is on mobile.</p>
+          <span class="up-stat__source">Industry data</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="up-section">
+    <div class="up-section__inner">
+      <div class="up-section__head up-section__head--center" style="text-align:center;margin-left:auto;margin-right:auto;">
+        <span class="up-section__eyebrow">What you see</span>
+        <h2>Every visitor traced. Every booking sourced.</h2>
+      </div>
+      <div class="up-traffic">
+        <div class="up-traffic__heading">Where your patients come from</div>
+        <div class="up-traffic__row">
+          <span class="up-traffic__label">Google Search (organic)</span>
+          <span class="up-traffic__bar"><span class="up-traffic__fill" style="width:47%"></span></span>
+          <span class="up-traffic__num">47%</span>
+        </div>
+        <div class="up-traffic__row">
+          <span class="up-traffic__label">Google Ads</span>
+          <span class="up-traffic__bar"><span class="up-traffic__fill" style="width:26%"></span></span>
+          <span class="up-traffic__num">26%</span>
+        </div>
+        <div class="up-traffic__row">
+          <span class="up-traffic__label">Meta Ads</span>
+          <span class="up-traffic__bar"><span class="up-traffic__fill" style="width:18%"></span></span>
+          <span class="up-traffic__num">18%</span>
+        </div>
+        <div class="up-traffic__row">
+          <span class="up-traffic__label">Direct &amp; Referral</span>
+          <span class="up-traffic__bar"><span class="up-traffic__fill" style="width:9%"></span></span>
+          <span class="up-traffic__num">9%</span>
         </div>
       </div>
     </div>

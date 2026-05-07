@@ -5,18 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Social Media for Pediatric Practices | Unlock Patients</title>
-    <meta name="description" content="Organic social that books real patients. Posts, DMs, and community engagement, measured against bookings.">
+    <meta name="description" content="Stay top of mind with parents in your area. We post consistently in your branding, in your voice, so you do not have to find time you do not have.">
     <link rel="canonical" href="https://unlockpatients.com/services/social-media/">
     <link href="https://framerusercontent.com/images/TES7qtU3rUcCevlcX0WHBDi8AdU.png" rel="icon">
     <link rel="apple-touch-icon" href="https://framerusercontent.com/images/NqB2eTFKSwyHl8VbITKgGwSzEI0.png">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Social Media for Pediatric Practices | Unlock Patients">
-    <meta property="og:description" content="Organic social that books real patients. Posts, DMs, and community engagement, measured against bookings.">
+    <meta property="og:description" content="Stay top of mind with parents in your area. We post consistently in your branding, in your voice, so you do not have to find time you do not have.">
     <meta property="og:url" content="https://unlockpatients.com/services/social-media/">
     <meta property="og:image" content="https://unlockpatients.com/services/social-media/hero.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Social Media for Pediatric Practices | Unlock Patients">
-    <meta name="twitter:description" content="Organic social that books real patients. Posts, DMs, and community engagement, measured against bookings.">
+    <meta name="twitter:description" content="Stay top of mind with parents in your area. We post consistently in your branding, in your voice, so you do not have to find time you do not have.">
     <meta name="twitter:image" content="https://unlockpatients.com/services/social-media/hero.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -169,6 +169,45 @@
     .up-compare__col { padding: 24px 22px; }
   }
 
+  /* Stats strip */
+  .up-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .up-stat { background: #fff; border: 1px solid rgba(76,40,28,0.10); border-radius: 16px; padding: 32px 26px 26px; text-align: center; box-shadow: 0 8px 22px -10px rgba(20,80,110,0.08); }
+  .up-stat__num { font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(48px, 5vw, 64px); line-height: 1; color: rgb(26, 188, 232); margin: 0 0 12px; letter-spacing: -0.01em; }
+  .up-stat__label { font-size: 15px; line-height: 1.45; color: rgba(76,40,28,0.85); margin: 0 0 16px; }
+  .up-stat__source { display: block; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(76,40,28,0.5); padding-top: 14px; border-top: 1px solid rgba(76,40,28,0.06); }
+  @media (max-width: 800px) { .up-stats { grid-template-columns: 1fr; } }
+
+  /* Traffic sources mock (Website Design page) */
+  .up-traffic { background: #fff; border: 1px solid rgba(76,40,28,0.10); border-radius: 16px; padding: 32px 36px; box-shadow: 0 12px 30px -14px rgba(20,80,110,0.14); max-width: 760px; margin: 0 auto; }
+  .up-traffic__heading { font-family: Figtree, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(76,40,28,0.55); margin: 0 0 22px; }
+  .up-traffic__row { display: grid; grid-template-columns: 220px 1fr 60px; gap: 16px; align-items: center; padding: 14px 0; }
+  .up-traffic__row + .up-traffic__row { border-top: 1px solid rgba(76,40,28,0.06); }
+  .up-traffic__label { font-size: 14px; color: rgba(76,40,28,0.9); font-weight: 500; }
+  .up-traffic__bar { background: rgba(26,188,232,0.10); border-radius: 999px; height: 10px; overflow: hidden; }
+  .up-traffic__fill { display: block; height: 100%; background: rgb(26,188,232); border-radius: 999px; }
+  .up-traffic__num { font-family: Anton, sans-serif; font-size: 24px; color: rgb(40,22,14); text-align: right; line-height: 1; }
+  @media (max-width: 600px) {
+    .up-traffic { padding: 24px 22px; }
+    .up-traffic__row { grid-template-columns: 1fr 50px; gap: 6px 12px; }
+    .up-traffic__label { grid-column: 1 / -1; margin-bottom: 4px; }
+    .up-traffic__bar { grid-column: 1 / 2; }
+  }
+
+  /* Map Pack mock (SEO page) */
+  .up-mappack { max-width: 600px; margin: 0 auto; }
+  .up-mappack__searchbar { display: flex; align-items: center; gap: 12px; padding: 14px 20px; background: #fff; border: 1px solid rgba(76,40,28,0.12); border-radius: 999px; box-shadow: 0 8px 22px -10px rgba(20,80,110,0.08); margin-bottom: 16px; }
+  .up-mappack__searchbar svg { color: rgba(76,40,28,0.5); flex-shrink: 0; }
+  .up-mappack__query { font-size: 16px; color: rgba(76,40,28,0.9); font-family: Arial, system-ui, sans-serif; }
+  .up-mappack__results { background: #fff; border: 1px solid rgba(76,40,28,0.10); border-radius: 16px; overflow: hidden; box-shadow: 0 12px 30px -14px rgba(20,80,110,0.14); }
+  .up-mappack__result { display: grid; grid-template-columns: 50px 1fr; gap: 14px; padding: 18px 22px; align-items: start; }
+  .up-mappack__result + .up-mappack__result { border-top: 1px solid rgba(76,40,28,0.08); }
+  .up-mappack__result.is-yours { background: rgba(26,188,232,0.06); }
+  .up-mappack__rank { font-family: Anton, sans-serif; font-size: 30px; color: rgba(76,40,28,0.4); line-height: 1; text-align: center; padding-top: 4px; }
+  .up-mappack__result.is-yours .up-mappack__rank { color: rgb(26,188,232); }
+  .up-mappack__name { font-family: Figtree, sans-serif; font-weight: 700; font-size: 16px; color: rgb(40,22,14); margin: 0 0 4px; }
+  .up-mappack__result.is-yours .up-mappack__name { color: rgb(20,165,205); }
+  .up-mappack__meta { font-size: 13px; color: rgba(76,40,28,0.65); line-height: 1.4; }
+
   /* CTA band */
   .up-cta-band { padding: 80px 40px; background: linear-gradient(135deg, rgba(26,188,232,0.08) 0%, rgba(26,188,232,0.16) 100%); text-align: center; }
   .up-cta-band__inner { max-width: 760px; margin: 0 auto; }
@@ -245,8 +284,8 @@
     <div class="up-hero__inner">
       <div class="up-hero__copy">
         <span class="up-eyebrow">Social Media</span>
-        <h1>Social media that books real patients.</h1>
-        <p class="up-hero__sub">Posts, DMs, and engagement tuned for parents booking appointments.</p>
+        <h1>Top of mind. Not on your to-do list.</h1>
+        <p class="up-hero__sub">Parents research your practice before they book. We show up for them every day in your branding, without your team spending an hour a week on it.</p>
         <div class="up-hero__ctas">
           <a class="up-cta up-cta--primary" href="/book">See It In Action</a>
         </div>
@@ -266,15 +305,15 @@
       <div class="up-compare">
         <div class="up-compare__col up-compare__col--old">
           <h3 class="up-compare__heading">Most agencies</h3>
-          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Track follower count</span></div>
-          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Generic stock content</span></div>
-          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>No one watching the DMs</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Post when you find a spare hour</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Generic content that does not sound like you</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>No one watching the DMs and comments</span></div>
         </div>
         <div class="up-compare__col up-compare__col--new">
           <h3 class="up-compare__heading">Unlock Patients</h3>
-          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Track new patient bookings</span></div>
-          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Content shot in your practice</span></div>
-          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Daily DM and comment monitoring</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Consistent posts approved by you in batches</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Content shot in your practice, in your voice</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Daily DM and comment monitoring during business hours</span></div>
         </div>
       </div>
     </div>
@@ -284,23 +323,28 @@
     <div class="up-section__inner">
       <div class="up-section__head">
         <span class="up-section__eyebrow">What's included</span>
-        <h2>A full content engine, in your voice, measured against bookings.</h2>
+        <h2>A full content engine in your branding. Done while you see patients.</h2>
       </div>
       <div class="up-cards">
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-          <h3>Content calendar</h3>
-          <p>Twelve to twenty posts a month, approved by you in batches.</p>
+          <h3>Always on calendar</h3>
+          <p>Twelve to twenty posts a month. Approved by you in batches. Scheduled by us.</p>
+        </div>
+        <div class="up-card">
+          <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div>
+          <h3>Your branding</h3>
+          <p>Color, voice, and templates pinned to your practice. Not generic stock vibes.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></div>
           <h3>Reels and shorts</h3>
-          <p>Short pediatric video. Practice tours, FAQ, team intros.</p>
+          <p>Short pediatric video. Practice tours, FAQ, team intros, parent tips.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
           <h3>Community engagement</h3>
-          <p>We watch local mom groups and route real questions to your front desk.</p>
+          <p>We watch local mom groups and route real new patient questions to your front desk.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
@@ -308,14 +352,9 @@
           <p>Daily monitoring during business hours. Real leads routed to you.</p>
         </div>
         <div class="up-card">
-          <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
-          <h3>On brand visuals</h3>
-          <p>Photo direction, templates, design tuned to your practice.</p>
-        </div>
-        <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
-          <h3>Real reporting</h3>
-          <p>Reach is fine. Bookings are better. We focus on the second.</p>
+          <h3>Bookings, not reach</h3>
+          <p>We report patients booked from social, not vanity reach numbers.</p>
         </div>
       </div>
     </div>
@@ -334,7 +373,7 @@
         </div>
         <div class="up-step">
           <h3>First content batch</h3>
-          <p>Month of posts in one approval shot. We schedule the rest.</p>
+          <p>A month of posts in one approval shot. We schedule the rest.</p>
         </div>
         <div class="up-step">
           <h3>Always on engagement</h3>
@@ -348,10 +387,38 @@
     </div>
   </section>
 
+  <section class="up-section up-section--alt">
+    <div class="up-section__inner">
+      <div class="up-section__head">
+        <span class="up-section__eyebrow">Why social matters</span>
+        <h2>Parents check your social before they book.</h2>
+      </div>
+      <div class="up-stats">
+        <div class="up-stat">
+          <div class="up-stat__num">41%</div>
+          <p class="up-stat__label">of patients say social media affects their choice of healthcare provider.</p>
+          <span class="up-stat__source">PwC Health Research Institute</span>
+        </div>
+        <div class="up-stat">
+          <div class="up-stat__num">77%</div>
+          <p class="up-stat__label">of consumers research online before scheduling healthcare.</p>
+          <span class="up-stat__source">Pew Research</span>
+        </div>
+        <div class="up-stat">
+          <div class="up-stat__num">84%</div>
+          <p class="up-stat__label">trust online reviews as much as a personal recommendation.</p>
+          <span class="up-stat__source">BrightLocal</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
   <section class="up-cta-band">
     <div class="up-cta-band__inner">
-      <h2>Hand off social. Get bookings, not reach.</h2>
-      <p>Book a thirty minute walkthrough. See what we run for other pediatric practices.</p>
+      <h2>Stay top of mind. Without the time sink.</h2>
+      <p>Book a thirty minute walkthrough. See how we keep pediatric practices posting consistently while their team focuses on patients.</p>
       <a class="up-cta up-cta--primary" href="/book">Book a Walkthrough</a>
     </div>
   </section>
