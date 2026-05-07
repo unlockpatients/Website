@@ -5,18 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Google Ads for Pediatric Practices | Unlock Patients</title>
-    <meta name="description" content="Google Ads built for pediatric practices — call-tracked, conversion-aware, and tied to the patients we actually delivered.">
+    <meta name="description" content="Google Ads measured in booked patients, not clicks. Lower cost per real patient, higher ROI, every dollar tied back to a visit.">
     <link rel="canonical" href="https://unlockpatients.com/services/google-ads/">
     <link href="https://framerusercontent.com/images/TES7qtU3rUcCevlcX0WHBDi8AdU.png" rel="icon">
     <link rel="apple-touch-icon" href="https://framerusercontent.com/images/NqB2eTFKSwyHl8VbITKgGwSzEI0.png">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Google Ads for Pediatric Practices | Unlock Patients">
-    <meta property="og:description" content="Google Ads built for pediatric practices — call-tracked, conversion-aware, and tied to the patients we actually delivered.">
+    <meta property="og:description" content="Google Ads measured in booked patients, not clicks. Lower cost per real patient, higher ROI, every dollar tied back to a visit.">
     <meta property="og:url" content="https://unlockpatients.com/services/google-ads/">
     <meta property="og:image" content="https://unlockpatients.com/services/google-ads/hero.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Google Ads for Pediatric Practices | Unlock Patients">
-    <meta name="twitter:description" content="Google Ads built for pediatric practices — call-tracked, conversion-aware, and tied to the patients we actually delivered.">
+    <meta name="twitter:description" content="Google Ads measured in booked patients, not clicks. Lower cost per real patient, higher ROI, every dollar tied back to a visit.">
     <meta name="twitter:image" content="https://unlockpatients.com/services/google-ads/hero.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
 
   *, *::before, *::after { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
-  body { background: #fff; font-family: Figtree, system-ui, sans-serif; color: #483953; }
+  body { background: #fff; font-family: Figtree, system-ui, sans-serif; color: rgba(76, 40, 28, 0.92); }
 
   /* ── Header ── */
   .up-site-header { position: absolute; top: 0; left: 50%; z-index: 1000; transform: translateX(-50%); display: flex; align-items: center; justify-content: space-between; gap: 24px; width: 100vw; max-width: 1200px; padding: 10px 40px; background: transparent; border: 0; font-family: Figtree, system-ui, sans-serif; }
@@ -38,16 +38,7 @@
 
   /* Services dropdown */
   .up-site-header__services { position: relative; }
-  .up-site-header__services::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 18px;
-    pointer-events: auto;
-  }
+  .up-site-header__services::after { content: ''; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); width: 300px; height: 18px; pointer-events: auto; }
   .up-site-header__services-trigger { gap: 4px; }
   .up-site-header__services-trigger.is-active { color: rgb(26, 188, 232); }
   .up-site-header__caret { transition: transform 0.2s ease; }
@@ -57,7 +48,7 @@
     position: absolute; top: calc(100% + 6px); left: 50%; transform: translateX(-50%) translateY(-4px);
     min-width: 220px; padding: 8px;
     background: #fff; border: 1px solid rgba(76, 40, 28, 0.08); border-radius: 12px;
-    box-shadow: 0 18px 40px -12px rgba(40, 20, 60, 0.18), 0 4px 12px -4px rgba(40, 20, 60, 0.08);
+    box-shadow: 0 18px 40px -12px rgba(20, 80, 110, 0.18), 0 4px 12px -4px rgba(20, 80, 110, 0.08);
     display: flex; flex-direction: column; gap: 2px;
     opacity: 0; visibility: hidden; pointer-events: none;
     transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
@@ -68,11 +59,7 @@
     opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0);
     transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0s;
   }
-  .up-site-header__dd-link {
-    display: block; padding: 9px 12px; border-radius: 6px;
-    color: rgb(76, 40, 28); font-size: 14px; font-weight: 500; letter-spacing: -0.01em;
-    text-decoration: none; white-space: nowrap;
-  }
+  .up-site-header__dd-link { display: block; padding: 9px 12px; border-radius: 6px; color: rgb(76, 40, 28); font-size: 14px; font-weight: 500; letter-spacing: -0.01em; text-decoration: none; white-space: nowrap; }
   .up-site-header__dd-link:hover { background: rgba(26,188,232,0.08); color: rgb(26,188,232); }
   .up-site-header__dd-link.is-current { color: rgb(26,188,232); background: rgba(26,188,232,0.06); }
 
@@ -91,7 +78,7 @@
   .up-site-header__toggle:checked ~ .up-site-header__nav .up-site-header__hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .up-site-header__mobile-menu { display: none; }
 
-  .up-site-header__m-services { padding: 4px 0 4px 0; border-top: 1px solid rgba(76,40,28,0.08); border-bottom: 1px solid rgba(76,40,28,0.08); margin: 4px 0; }
+  .up-site-header__m-services { padding: 4px 0; border-top: 1px solid rgba(76,40,28,0.08); border-bottom: 1px solid rgba(76,40,28,0.08); margin: 4px 0; }
   .up-site-header__m-services-label { padding: 8px 8px 4px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(76,40,28,0.55); }
   .up-site-header__m-services-link { display: block; padding: 10px 16px; color: rgb(76,40,28); font-size: 15px; font-weight: 500; text-decoration: none; border-radius: 6px; }
   .up-site-header__m-services-link:hover { background: rgba(76,40,28,0.06); color: rgb(26,188,232); }
@@ -104,7 +91,7 @@
     .up-site-header__button--login { display: none; }
     .up-site-header__mobile-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; box-shadow: 0 8px 24px rgba(0,0,0,0.12); padding: 16px 24px; flex-direction: column; gap: 4px; z-index: 999; }
     .up-site-header__toggle:checked ~ .up-site-header__mobile-menu { display: flex; }
-    .up-site-header__mobile-menu > a { display: block; padding: 12px 8px; color: #483953; font-size: 15px; font-weight: 500; text-decoration: none; border-radius: 6px; }
+    .up-site-header__mobile-menu > a { display: block; padding: 12px 8px; color: rgb(76,40,28); font-size: 15px; font-weight: 500; text-decoration: none; border-radius: 6px; }
     .up-site-header__mobile-menu > a:hover { background: rgba(76,40,28,0.06); color: rgb(26,188,232); }
     .up-site-header__mobile-menu .up-site-header__button--primary { color: #fff; background: rgb(26,188,232); text-align: center; margin-top: 8px; }
     .up-site-header { position: fixed; left: 0; right: 0; transform: none; width: auto; max-width: none; padding: 16px 20px 20px; gap: 14px; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); }
@@ -114,11 +101,11 @@
 
 
   /* ── Hero ── */
-  .up-hero { position: relative; background: linear-gradient(135deg, #effafb 0%, #f7f3fb 50%, #effafb 100%); padding: 160px 40px 100px; overflow: hidden; }
-  .up-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 20%, rgba(26,188,232,0.08) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(135,101,215,0.05) 0%, transparent 50%); pointer-events: none; }
+  .up-hero { position: relative; background: linear-gradient(135deg, #effafb 0%, #e8f7fa 50%, #effafb 100%); padding: 160px 40px 100px; overflow: hidden; }
+  .up-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 20%, rgba(26,188,232,0.10) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(26,188,232,0.06) 0%, transparent 50%); pointer-events: none; }
   .up-hero__inner { position: relative; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
   .up-eyebrow { display: inline-block; padding: 6px 14px; border-radius: 999px; background: rgba(26,188,232,0.12); color: rgb(20,165,205); font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 16px; }
-  .up-hero h1 { font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(40px, 6vw, 76px); line-height: 0.98; letter-spacing: -0.01em; color: rgb(72, 57, 83); margin: 0 0 22px; }
+  .up-hero h1 { font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(40px, 6vw, 76px); line-height: 0.98; letter-spacing: -0.01em; color: rgb(40, 22, 14); margin: 0 0 22px; }
   .up-hero__sub { font-size: clamp(17px, 1.5vw, 20px); line-height: 1.55; color: rgba(76, 40, 28, 0.85); max-width: 560px; margin: 0 0 28px; }
   .up-hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; }
   .up-cta { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 22px; border-radius: 8px; font-size: 16px; font-weight: 600; letter-spacing: -0.02em; text-decoration: none; white-space: nowrap; transition: transform 0.2s, box-shadow 0.2s; }
@@ -127,7 +114,7 @@
   .up-cta--ghost { color: rgb(76,40,28); background: rgba(255,255,255,0.6); border: 1px solid rgba(76,40,28,0.18); }
   .up-cta--ghost:hover { color: rgb(26,188,232); border-color: rgba(26,188,232,0.35); }
   .up-hero__visual { position: relative; }
-  .up-hero__visual img { display: block; width: 100%; height: auto; border-radius: 18px; box-shadow: 0 30px 60px -24px rgba(40,20,60,0.18), 0 8px 18px -6px rgba(40,20,60,0.08); border: 1px solid rgba(76,40,28,0.06); background: #fff; }
+  .up-hero__visual img { display: block; width: 100%; height: auto; border-radius: 18px; box-shadow: 0 30px 60px -24px rgba(20, 80, 110, 0.18), 0 8px 18px -6px rgba(20, 80, 110, 0.08); border: 1px solid rgba(76,40,28,0.06); background: #fff; }
 
   @media (max-width: 900px) {
     .up-hero { padding: 130px 24px 70px; }
@@ -138,33 +125,34 @@
   /* ── Sections ── */
   .up-section { padding: 90px 40px; }
   .up-section__inner { max-width: 1100px; margin: 0 auto; }
-  .up-section--alt { background: linear-gradient(180deg, #fff 0%, #faf6fb 100%); }
-  .up-section__eyebrow { display: block; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(135, 101, 215); margin-bottom: 12px; }
-  .up-section h2 { font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(34px, 4.5vw, 56px); line-height: 1.0; letter-spacing: -0.01em; color: rgb(72,57,83); margin: 0 0 20px; }
-  .up-section__lead { font-size: clamp(17px, 1.4vw, 19px); line-height: 1.6; color: rgba(76,40,28,0.85); max-width: 760px; margin: 0 0 40px; }
+  .up-section--alt { background: linear-gradient(180deg, #fff 0%, #f3fafc 100%); }
+  .up-section__eyebrow { display: block; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgb(26, 188, 232); margin-bottom: 12px; }
+  .up-section h2 { font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(34px, 4.5vw, 56px); line-height: 1.0; letter-spacing: -0.01em; color: rgb(40, 22, 14); margin: 0 0 20px; }
+  .up-section__lead { font-size: clamp(17px, 1.4vw, 19px); line-height: 1.6; color: rgba(76,40,28,0.85); max-width: 760px; margin: 0 0 28px; }
 
-  /* "What's included" cards */
+  /* Cards */
   .up-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-  .up-card { background: #fff; border: 1px solid rgba(76,40,28,0.08); border-radius: 14px; padding: 28px; box-shadow: 0 8px 22px -10px rgba(40,20,60,0.08); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
-  .up-card:hover { transform: translateY(-2px); box-shadow: 0 18px 36px -16px rgba(40,20,60,0.16); border-color: rgba(26,188,232,0.35); }
-  .up-card__icon { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 10px; background: rgba(26,188,232,0.12); color: rgb(20,165,205); margin-bottom: 14px; font-size: 22px; }
-  .up-card h3 { font-family: Figtree, sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: rgb(72,57,83); margin: 0 0 8px; }
+  .up-card { background: #fff; border: 1px solid rgba(76,40,28,0.08); border-radius: 14px; padding: 28px; box-shadow: 0 8px 22px -10px rgba(20, 80, 110, 0.08); transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s; }
+  .up-card:hover { transform: translateY(-2px); box-shadow: 0 18px 36px -16px rgba(20, 80, 110, 0.18); border-color: rgba(26,188,232,0.35); }
+  .up-card__icon { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 10px; background: rgba(26,188,232,0.12); color: rgb(20,165,205); margin-bottom: 14px; }
+  .up-card__icon svg { display: block; }
+  .up-card h3 { font-family: Figtree, sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; color: rgb(40, 22, 14); margin: 0 0 8px; }
   .up-card p { font-size: 15px; line-height: 1.55; color: rgba(76,40,28,0.78); margin: 0; }
   @media (max-width: 800px) { .up-cards { grid-template-columns: 1fr; } }
 
   /* Steps */
   .up-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; counter-reset: step; }
   .up-step { position: relative; padding: 28px 24px 24px; background: #fff; border: 1px solid rgba(76,40,28,0.08); border-radius: 14px; counter-increment: step; }
-  .up-step::before { content: counter(step, decimal-leading-zero); position: absolute; top: 14px; right: 16px; font-family: Anton, sans-serif; font-size: 28px; color: rgba(135,101,215,0.35); letter-spacing: 0.02em; }
-  .up-step h3 { font-family: Figtree, sans-serif; font-weight: 700; font-size: 16px; color: rgb(72,57,83); margin: 0 0 8px; max-width: 80%; }
+  .up-step::before { content: counter(step, decimal-leading-zero); position: absolute; top: 14px; right: 16px; font-family: Anton, sans-serif; font-size: 28px; color: rgba(26, 188, 232, 0.5); letter-spacing: 0.02em; }
+  .up-step h3 { font-family: Figtree, sans-serif; font-weight: 700; font-size: 16px; color: rgb(40, 22, 14); margin: 0 0 8px; max-width: 80%; }
   .up-step p { font-size: 14px; line-height: 1.55; color: rgba(76,40,28,0.78); margin: 0; }
   @media (max-width: 900px) { .up-steps { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 520px) { .up-steps { grid-template-columns: 1fr; } }
 
   /* CTA band */
-  .up-cta-band { padding: 80px 40px; background: linear-gradient(135deg, rgba(26,188,232,0.10) 0%, rgba(135,101,215,0.10) 100%); text-align: center; }
+  .up-cta-band { padding: 80px 40px; background: linear-gradient(135deg, rgba(26,188,232,0.08) 0%, rgba(26,188,232,0.16) 100%); text-align: center; }
   .up-cta-band__inner { max-width: 760px; margin: 0 auto; }
-  .up-cta-band h2 { font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(32px, 4vw, 48px); line-height: 1.05; color: rgb(72,57,83); margin: 0 0 14px; }
+  .up-cta-band h2 { font-family: Anton, sans-serif; font-weight: 400; font-size: clamp(32px, 4vw, 48px); line-height: 1.05; color: rgb(40, 22, 14); margin: 0 0 14px; }
   .up-cta-band p { font-size: 17px; line-height: 1.55; color: rgba(76,40,28,0.85); margin: 0 0 26px; }
 
   /* Footer */
@@ -173,9 +161,7 @@
   .up-footer a:hover { color: rgb(26,188,232); }
   .up-footer__row { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; margin-bottom: 14px; }
 
-  /* Section heading row with eyebrow + lead */
   .up-section__head { max-width: 760px; margin: 0 0 40px; }
-  .up-section__head--center { margin-left: auto; margin-right: auto; text-align: center; }
 
     </style>
 </head>
@@ -237,10 +223,10 @@
     <div class="up-hero__inner">
       <div class="up-hero__copy">
         <span class="up-eyebrow">Google Ads</span>
-        <h1>Google Ads, built around the calls.</h1>
-        <p class="up-hero__sub">Search campaigns, dedicated tracking numbers, and conversion-aware bidding — so every click ties back to a real call, not a vanity score.</p>
+        <h1>Google Ads measured in booked patients.</h1>
+        <p class="up-hero__sub">Lower cost per real patient. Higher ROI. Every click tied to a call, every call tied to a booking. We optimize for the patients who walked in, not the impressions you paid for.</p>
         <div class="up-hero__ctas">
-          <a class="up-cta up-cta--primary" href="/book">See It In Action →</a>
+          <a class="up-cta up-cta--primary" href="/book">See It In Action</a>
           <a class="up-cta up-cta--ghost" href="/case-studies/">Read a case study</a>
         </div>
       </div>
@@ -254,10 +240,10 @@
     <div class="up-section__inner">
       <div class="up-section__head">
         <span class="up-section__eyebrow">The problem</span>
-        <h2>Most agencies bid on clicks. We bid on calls.</h2>
+        <h2>Most agencies bid on clicks. We bid on patients.</h2>
       </div>
-      <p class="up-section__lead">Pediatric search intent is high — parents looking for a pediatrician are ready to call. The hard part is making sure the agency running your account knows which click answered the phone, which one booked, and which one wasted your money.</p>
-      <p class="up-section__lead">We use dynamic number insertion (DNI) on the landing page, push call conversions back to Google's bidding model, and sit with the data weekly to keep CPL trending the right direction.</p>
+      <p class="up-section__lead">Pediatric search intent is high. Parents looking for a pediatrician are ready to call. The hard part is making sure the agency running your account knows which click answered the phone, which call became a booked patient, and which dollar got wasted.</p>
+      <p class="up-section__lead">We use dynamic number insertion on the landing page, push call and booking conversions back to Google's bidding model, and sit with the data weekly to drive cost per booked patient down month over month.</p>
     </div>
   </section>
 
@@ -265,38 +251,38 @@
     <div class="up-section__inner">
       <div class="up-section__head">
         <span class="up-section__eyebrow">What's included</span>
-        <h2>Hands-on management. No black box.</h2>
+        <h2>Hands on management. No black box.</h2>
       </div>
       <div class="up-cards">
         <div class="up-card">
-          <div class="up-card__icon" aria-hidden="true">🎯</div>
+          <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
           <h3>Search campaigns</h3>
           <p>Pediatric service keywords, location targeting tuned to your serving area, negatives kept tight.</p>
         </div>
         <div class="up-card">
-          <div class="up-card__icon" aria-hidden="true">📞</div>
+          <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
           <h3>DNI call tracking</h3>
           <p>Every visitor gets a unique tracking number. Calls are recorded, transcribed, and tied back to the keyword.</p>
         </div>
         <div class="up-card">
-          <div class="up-card__icon" aria-hidden="true">🤖</div>
+          <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="14" x2="22" y2="14"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="14" x2="4" y2="14"/></svg></div>
           <h3>Conversion bidding</h3>
-          <p>Calls and form fills are pushed to Google Ads as conversions so Smart Bidding optimizes for real outcomes.</p>
+          <p>Calls and form fills are pushed to Google Ads as conversions, so Smart Bidding optimizes for real outcomes.</p>
         </div>
         <div class="up-card">
-          <div class="up-card__icon" aria-hidden="true">🧪</div>
-          <h3>Landing page A/B</h3>
-          <p>We run the page, not just the ad. Headlines, hero, and CTAs get tested against booked-patient outcomes.</p>
+          <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2h6"/><path d="M10 2v6L4 18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2L14 8V2"/></svg></div>
+          <h3>Landing page testing</h3>
+          <p>We run the page, not just the ad. Headlines, hero, and CTAs get tested against booked patient outcomes.</p>
         </div>
         <div class="up-card">
-          <div class="up-card__icon" aria-hidden="true">👀</div>
+          <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
           <h3>Weekly review</h3>
           <p>Our team listens to representative calls every week and adjusts copy, keywords, and budget accordingly.</p>
         </div>
         <div class="up-card">
-          <div class="up-card__icon" aria-hidden="true">📊</div>
+          <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
           <h3>Owner dashboard</h3>
-          <p>See spend, calls, bookings, CPL, and ROI per campaign in one place — the same view our account managers use.</p>
+          <p>See spend, calls, bookings, cost per lead, and ROI per campaign in one place. The same view our account managers use.</p>
         </div>
       </div>
     </div>
@@ -310,12 +296,12 @@
       </div>
       <div class="up-steps">
         <div class="up-step">
-          <h3>Audit & strategy</h3>
-          <p>Geo, services, current spend, and competitor landscape. We tell you the realistic CPL before you commit.</p>
+          <h3>Audit and strategy</h3>
+          <p>Geo, services, current spend, and competitor landscape. We tell you the realistic cost per lead before you commit.</p>
         </div>
         <div class="up-step">
-          <h3>Build & launch</h3>
-          <p>Campaign structure, ad copy, landing page, DNI numbers, conversion uploads — usually live in a week.</p>
+          <h3>Build and launch</h3>
+          <p>Campaign structure, ad copy, landing page, DNI numbers, conversion uploads. Usually live in a week.</p>
         </div>
         <div class="up-step">
           <h3>Tune weekly</h3>
@@ -331,9 +317,9 @@
 
   <section class="up-cta-band">
     <div class="up-cta-band__inner">
-      <h2>Run your Google Ads on call data.</h2>
-      <p>Book a 30-min walkthrough — we open the live dashboard for one of our pediatric practices and show you what your account would look like.</p>
-      <a class="up-cta up-cta--primary" href="/book">Book a Walkthrough →</a>
+      <h2>Run Google Ads on booked patients, not clicks.</h2>
+      <p>Book a thirty minute walkthrough. We open the live dashboard for one of our pediatric practices and show you the actual cost per patient.</p>
+      <a class="up-cta up-cta--primary" href="/book">Book a Walkthrough</a>
     </div>
   </section>
 
@@ -346,7 +332,7 @@
       <a href="/contact">Contact</a>
       <a href="/privacy-policy/">Privacy</a>
     </div>
-    <div>© 2026 Unlock Prospects LLC d/b/a Unlock Patients</div>
+    <div>&copy; 2026 Unlock Prospects LLC d/b/a Unlock Patients</div>
   </footer>
 </main>
 
