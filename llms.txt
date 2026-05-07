@@ -1,0 +1,47 @@
+# Unlock Patients
+
+> HIPAA-compliant digital advertising for pediatric practices. We manage Google Ads, track calls with AI, and verify actual patient bookings.
+
+Unlock Patients (Unlock Prospects LLC d/b/a Unlock Patients) is a healthcare marketing technology company focused exclusively on pediatric medical practices. We provide done-for-you advertising with real-time ROI tracking that connects every ad dollar to actual patient bookings.
+
+## Services
+
+- Google Ads campaign management for pediatric practices
+- HIPAA-compliant call tracking with AI-powered call analysis
+- Verified patient booking tracking (not vanity metrics like clicks or impressions)
+- Real-time ROI dashboard
+- Custom landing pages optimized for patient conversion
+- Location exclusivity (no competing practices in the same area)
+
+## Key Links
+
+- Homepage: https://unlockpatients.com
+- Services overview (Get New Patients): https://unlockpatients.com/services/get-new-patients/
+- Google Ads service: https://unlockpatients.com/services/google-ads/
+- Social Media service: https://unlockpatients.com/services/social-media/
+- Local SEO service: https://unlockpatients.com/services/seo/
+- Website Design service: https://unlockpatients.com/services/website-design/
+- Case Studies: https://unlockpatients.com/case-studies/
+- Our Story: https://unlockpatients.com/our-story/
+- Team: https://unlockpatients.com/team/
+- Contact: https://unlockpatients.com/contact/
+- Blog: https://unlockpatients.com/blog/
+- Dashboard Login: https://app.unlockpatients.com
+
+## Blog Posts
+
+- [What's a Good Website Conversion Rate for Pediatric Practices?](https://unlockpatients.com/blog/pediatric-practice-website-conversion-rate/): Learn the benchmark conversion rates for pediatric practice websites and proven strategies to turn more visitors into scheduled appointments. [Patient Conversion]
+- [How to Rank Higher on Google Maps for Your Pediatric Practice](https://unlockpatients.com/blog/local-seo-pediatric-practice-google-maps/): Master local SEO strategies to dominate Google Maps rankings and attract more local families searching for pediatricians near them. [Local SEO]
+- [Your Front Desk Is Losing You Patients: How to Fix Phone Conversions](https://unlockpatients.com/blog/front-desk-phone-training-convert-patients/): How front desk phone handling affects ad ROI, call-to-book rates, missed-call recovery, and new patient conversion for pediatric practices. [Patient Conversion]
+- [The Complete Guide to Patient Acquisition for Pediatric Practices](https://unlockpatients.com/blog/patient-acquisition-guide-pediatricians/): Comprehensive guide covering digital advertising, referral programs, community outreach, and ROI tracking for pediatric patient acquisition. [Patient Acquisition]
+- [How Much Do Google Ads Cost for Pediatric Practices in 2026?](https://unlockpatients.com/blog/google-ads-cost-pediatric-practices/): Breakdown of Google Ads costs for pediatric practices including CPC benchmarks, budget recommendations, and ROI expectations. [Google Ads]
+- [HIPAA-Compliant Marketing for Medical Practices](https://unlockpatients.com/blog/hipaa-compliant-marketing-medical-practices/): Guide to running digital marketing campaigns that comply with HIPAA regulations, covering call tracking, forms, and analytics. [HIPAA & Compliance]
+- [How to Track New Patient ROI from Digital Advertising](https://unlockpatients.com/blog/track-new-patient-roi-digital-advertising/): Methods for connecting ad spend to actual patient bookings, moving beyond vanity metrics to verified ROI tracking. [ROI & Analytics]
+- [Why Most Pediatric Practices Waste Money on Marketing](https://unlockpatients.com/blog/pediatric-practices-waste-money-marketing/): Common marketing mistakes pediatric practices make and how to fix them, from wrong channels to poor tracking. [Marketing Strategy]
+- [Google Ads vs Social Media for Pediatric Practices](https://unlockpatients.com/blog/google-ads-vs-social-media-pediatric-practices/): Head-to-head comparison of Google Ads and social media advertising for pediatric practices, with data on cost, intent, and conversion rates. [Marketing Strategy]
+- [Google Ads for Pediatric Practices: The Complete Guide](https://unlockpatients.com/blog/google-ads-for-pediatric-practices/): The complete guide to Google Ads strategy for pediatric practices for pediatric practices — strategies, benchmarks, and what actually works. [Google Ads]
+- [Local SEO for Pediatric Practices: Rank in Google Maps](https://unlockpatients.com/blog/local-seo-pediatric-practices-guide/): The complete guide to Local SEO and Google Business Profile for pediatric practices — strategies, benchmarks, and what actually works. [Local SEO]
+- [Front Desk & Phone Conversion for Pediatric Practices](https://unlockpatients.com/blog/front-desk-conversion-pediatric-practices/): The complete guide to Phone training, missed-call recovery, call scripts, booking conversion, front-desk workflow optimization for pediatric practices — strat [Patient Conversion]
+- [Patient Acquisition ROI & Tracking for Pediatric Practices](https://unlockpatients.com/blog/patient-acquisition-roi-tracking-guide/): The complete guide to Cost per patient, attribution, call tracking, conversion tracking, dashboards, marketing ROI measurement for pediatric practices — strat [ROI & Analytics]
+- [HIPAA-Compliant Marketing for Medical Practices](https://unlockpatients.com/blog/hipaa-compliant-marketing-guide/): The complete guide to HIPAA-compliant analytics, call tracking, ads, forms, retargeting, server-side conversions, BAAs with marketing vendors — strategies, be [HIPAA & Compliance]
+- [Best Google Ads Keywords for Pediatric Practices](https://unlockpatients.com/blog/google-ads-keywords-pediatric-practices/): Learn which high-converting keywords to target in your pediatric Google Ads campaigns, including search volumes, costs, and match types. [Google Ads]

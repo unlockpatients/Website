@@ -378,6 +378,39 @@ section#demo[data-framer-name="Demo Section"]{ display: none !important; }
   .up-site-header__button--primary:hover {
     background: rgb(20, 165, 205);
   }
+
+  /* ── Services dropdown ── */
+  .up-site-header__services { position: relative; }
+  .up-site-header__services-trigger { gap: 4px; background: none; border: 0; cursor: pointer; font-family: inherit; }
+  .up-site-header__caret { transition: transform 0.2s ease; }
+  .up-site-header__services:hover .up-site-header__caret,
+  .up-site-header__services:focus-within .up-site-header__caret { transform: rotate(180deg); }
+  .up-site-header__dropdown {
+    position: absolute; top: calc(100% + 6px); left: 50%; transform: translateX(-50%) translateY(-4px);
+    min-width: 220px; padding: 8px;
+    background: #fff; border: 1px solid rgba(76, 40, 28, 0.08); border-radius: 12px;
+    box-shadow: 0 18px 40px -12px rgba(40, 20, 60, 0.18), 0 4px 12px -4px rgba(40, 20, 60, 0.08);
+    display: flex; flex-direction: column; gap: 2px;
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0.18s;
+    z-index: 1100;
+  }
+  .up-site-header__services:hover .up-site-header__dropdown,
+  .up-site-header__services:focus-within .up-site-header__dropdown {
+    opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0);
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0s linear 0s;
+  }
+  .up-site-header__dd-link {
+    display: block; padding: 9px 12px; border-radius: 6px;
+    color: rgb(76, 40, 28); font-size: 14px; font-weight: 500; letter-spacing: -0.01em;
+    text-decoration: none; white-space: nowrap;
+  }
+  .up-site-header__dd-link:hover { background: rgba(26,188,232,0.08); color: rgb(26,188,232); }
+  .up-site-header__m-services { padding: 4px 0; border-top: 1px solid rgba(76,40,28,0.08); border-bottom: 1px solid rgba(76,40,28,0.08); margin: 4px 0; }
+  .up-site-header__m-services-label { padding: 8px 8px 4px; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(76,40,28,0.55); }
+  .up-site-header__m-services-link { display: block; padding: 10px 16px; color: rgb(76,40,28); font-size: 15px; font-weight: 500; text-decoration: none; border-radius: 6px; }
+  .up-site-header__m-services-link:hover { background: rgba(76,40,28,0.06); color: rgb(26,188,232); }
+
   .up-site-header__toggle { display: none; }
   .up-site-header__hamburger {
     display: none;
@@ -517,6 +550,19 @@ section#demo[data-framer-name="Demo Section"]{ display: none !important; }
   <nav class="up-site-header__nav" aria-label="Primary navigation">
     <div class="up-site-header__links">
       <a class="up-site-header__link" href="/our-story/">Our Story</a>
+      <div class="up-site-header__services">
+        <button class="up-site-header__link up-site-header__services-trigger" type="button" aria-haspopup="true" aria-expanded="false">
+          Services
+          <svg class="up-site-header__caret" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="up-site-header__dropdown" role="menu">
+          <a class="up-site-header__dd-link" href="/services/google-ads/">Google Ads</a>
+          <a class="up-site-header__dd-link" href="/services/get-new-patients/">Get New Patients</a>
+          <a class="up-site-header__dd-link" href="/services/social-media/">Social Media</a>
+          <a class="up-site-header__dd-link" href="/services/seo/">SEO</a>
+          <a class="up-site-header__dd-link" href="/services/website-design/">Website Design</a>
+        </div>
+      </div>
       <a class="up-site-header__link" href="/case-studies/">Case Studies</a>
       <a class="up-site-header__link" href="/team/">Team</a>
       <a class="up-site-header__link" href="/contact">Contact</a>
@@ -531,6 +577,14 @@ section#demo[data-framer-name="Demo Section"]{ display: none !important; }
   </nav>
   <div class="up-site-header__mobile-menu">
     <a href="/our-story/">Our Story</a>
+    <div class="up-site-header__m-services">
+      <div class="up-site-header__m-services-label">Services</div>
+      <a class="up-site-header__m-services-link" href="/services/google-ads/">Google Ads</a>
+      <a class="up-site-header__m-services-link" href="/services/get-new-patients/">Get New Patients</a>
+      <a class="up-site-header__m-services-link" href="/services/social-media/">Social Media</a>
+      <a class="up-site-header__m-services-link" href="/services/seo/">SEO</a>
+      <a class="up-site-header__m-services-link" href="/services/website-design/">Website Design</a>
+    </div>
     <a href="/case-studies/">Case Studies</a>
     <a href="/team/">Team</a>
     <a href="/contact">Contact</a>
