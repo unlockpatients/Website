@@ -5,18 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Local SEO for Pediatric Practices | Unlock Patients</title>
-    <meta name="description" content="Local SEO that books real patients. Google Business Profile, citations, on page, and schema. Lower cost per patient than paid, compounding every month.">
+    <meta name="description" content="Local SEO that books real patients. GBP, citations, on page, schema. Lower cost per patient than paid, compounding monthly.">
     <link rel="canonical" href="https://unlockpatients.com/services/seo/">
     <link href="https://framerusercontent.com/images/TES7qtU3rUcCevlcX0WHBDi8AdU.png" rel="icon">
     <link rel="apple-touch-icon" href="https://framerusercontent.com/images/NqB2eTFKSwyHl8VbITKgGwSzEI0.png">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Local SEO for Pediatric Practices | Unlock Patients">
-    <meta property="og:description" content="Local SEO that books real patients. Google Business Profile, citations, on page, and schema. Lower cost per patient than paid, compounding every month.">
+    <meta property="og:description" content="Local SEO that books real patients. GBP, citations, on page, schema. Lower cost per patient than paid, compounding monthly.">
     <meta property="og:url" content="https://unlockpatients.com/services/seo/">
     <meta property="og:image" content="https://unlockpatients.com/services/seo/hero.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Local SEO for Pediatric Practices | Unlock Patients">
-    <meta name="twitter:description" content="Local SEO that books real patients. Google Business Profile, citations, on page, and schema. Lower cost per patient than paid, compounding every month.">
+    <meta name="twitter:description" content="Local SEO that books real patients. GBP, citations, on page, schema. Lower cost per patient than paid, compounding monthly.">
     <meta name="twitter:image" content="https://unlockpatients.com/services/seo/hero.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,6 +149,26 @@
   @media (max-width: 900px) { .up-steps { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 520px) { .up-steps { grid-template-columns: 1fr; } }
 
+  /* Old vs New comparison */
+  .up-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid rgba(76,40,28,0.10); border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 8px 22px -10px rgba(20, 80, 110, 0.08); }
+  .up-compare__col { padding: 30px 28px; }
+  .up-compare__col--old { background: rgba(76,40,28,0.03); border-right: 1px solid rgba(76,40,28,0.10); }
+  .up-compare__col--new { background: rgba(26,188,232,0.05); }
+  .up-compare__heading { font-family: Figtree, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 18px; color: rgba(76,40,28,0.55); }
+  .up-compare__col--new .up-compare__heading { color: rgb(20,165,205); }
+  .up-compare__row { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; font-size: 16px; line-height: 1.45; }
+  .up-compare__row:not(:last-child) { border-bottom: 1px solid rgba(76,40,28,0.06); }
+  .up-compare__row svg { flex: 0 0 22px; margin-top: 1px; }
+  .up-compare__col--old .up-compare__row { color: rgba(76,40,28,0.65); }
+  .up-compare__col--old .up-compare__row svg { color: rgba(76,40,28,0.45); }
+  .up-compare__col--new .up-compare__row { color: rgb(40,22,14); font-weight: 500; }
+  .up-compare__col--new .up-compare__row svg { color: rgb(26,188,232); }
+  @media (max-width: 720px) {
+    .up-compare { grid-template-columns: 1fr; }
+    .up-compare__col--old { border-right: 0; border-bottom: 1px solid rgba(76,40,28,0.10); }
+    .up-compare__col { padding: 24px 22px; }
+  }
+
   /* CTA band */
   .up-cta-band { padding: 80px 40px; background: linear-gradient(135deg, rgba(26,188,232,0.08) 0%, rgba(26,188,232,0.16) 100%); text-align: center; }
   .up-cta-band__inner { max-width: 760px; margin: 0 auto; }
@@ -181,9 +201,9 @@
           <svg class="up-site-header__caret" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="up-site-header__dropdown" role="menu">
+        <a class="up-site-header__dd-link" href="/services/get-new-patients/">Get New Patients</a>
         <a class="up-site-header__dd-link" href="/services/google-ads/">Google Ads</a>
         <a class="up-site-header__dd-link" href="/services/meta-ads/">Meta Ads</a>
-        <a class="up-site-header__dd-link" href="/services/get-new-patients/">Get New Patients</a>
         <a class="up-site-header__dd-link" href="/services/social-media/">Social Media</a>
         <a class="up-site-header__dd-link is-current" href="/services/seo/">SEO</a>
         <a class="up-site-header__dd-link" href="/services/website-design/">Website Design</a>
@@ -205,9 +225,9 @@
     <a href="/our-story/">Our Story</a>
     <div class="up-site-header__m-services">
       <div class="up-site-header__m-services-label">Services</div>
+      <a class="up-site-header__m-services-link" href="/services/get-new-patients/">Get New Patients</a>
       <a class="up-site-header__m-services-link" href="/services/google-ads/">Google Ads</a>
       <a class="up-site-header__m-services-link" href="/services/meta-ads/">Meta Ads</a>
-      <a class="up-site-header__m-services-link" href="/services/get-new-patients/">Get New Patients</a>
       <a class="up-site-header__m-services-link" href="/services/social-media/">Social Media</a>
       <a class="up-site-header__m-services-link is-current" href="/services/seo/">SEO</a>
       <a class="up-site-header__m-services-link" href="/services/website-design/">Website Design</a>
@@ -226,7 +246,7 @@
       <div class="up-hero__copy">
         <span class="up-eyebrow">Local SEO</span>
         <h1>Local SEO that books real patients.</h1>
-        <p class="up-hero__sub">Show up for parents searching pediatrician near me. Convert the visit into a booked appointment. Save money compared to paid ads, with patients that compound every month.</p>
+        <p class="up-hero__sub">Show up for pediatrician near me. Convert the visit into a booking.</p>
         <div class="up-hero__ctas">
           <a class="up-cta up-cta--primary" href="/book">See It In Action</a>
         </div>
@@ -240,11 +260,23 @@
   <section class="up-section">
     <div class="up-section__inner">
       <div class="up-section__head">
-        <span class="up-section__eyebrow">The problem</span>
-        <h2>Rankings are not the goal. Booked patients are.</h2>
+        <span class="up-section__eyebrow">The difference</span>
+        <h2>How most agencies work, vs how we work.</h2>
       </div>
-      <p class="up-section__lead">Roughly half of new pediatric patients start with a Google search. Half of those clicks go to the Map Pack, three local results above the fold. If you are not in that pack, you are invisible to a huge slice of demand and you are buying every patient with paid ads instead.</p>
-      <p class="up-section__lead">We work the levers that move the pack and turn that traffic into booked appointments. GBP completeness, review velocity, citation cleanup, fast on page, proper LocalBusiness schema, and conversion optimized location pages. Slow and steady, but every patient earned this way costs less than paid forever.</p>
+      <div class="up-compare">
+        <div class="up-compare__col up-compare__col--old">
+          <h3 class="up-compare__heading">Most agencies</h3>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Track keyword rankings</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>GBP set and forgotten</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>No reviews flywheel</span></div>
+        </div>
+        <div class="up-compare__col up-compare__col--new">
+          <h3 class="up-compare__heading">Unlock Patients</h3>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Track booked patients from organic</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>GBP optimized monthly</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Reviews requested after every visit</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -252,38 +284,38 @@
     <div class="up-section__inner">
       <div class="up-section__head">
         <span class="up-section__eyebrow">What's included</span>
-        <h2>The full local SEO playbook. Done with you, not handed off.</h2>
+        <h2>The full local SEO playbook. Built to compound.</h2>
       </div>
       <div class="up-cards">
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
           <h3>Google Business Profile</h3>
-          <p>Categories, services, hours, photos, posts. Optimized monthly. Q and A monitored. Spam edits flagged.</p>
+          <p>Categories, services, hours, photos, posts. Optimized monthly.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
           <h3>Review velocity</h3>
-          <p>Friction free review requests after appointments, follow ups for the parents who did not leave one yet.</p>
+          <p>Friction free review requests after appointments. Follow ups for the rest.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
           <h3>Citation cleanup</h3>
-          <p>Name, address, phone consistency across the directories that still matter. The bad ones removed, the good ones kept current.</p>
+          <p>Name, address, phone consistent across every directory that matters.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
           <h3>On page and speed</h3>
-          <p>Service pages, location pages, fast Core Web Vitals. Everything a parent (and Google) needs to choose you.</p>
+          <p>Service pages, location pages, fast Core Web Vitals.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
           <h3>Schema markup</h3>
-          <p>LocalBusiness, MedicalBusiness, FAQPage, and Review schema, so search engines understand the practice.</p>
+          <p>LocalBusiness, MedicalBusiness, FAQPage, Review schema.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
           <h3>Map Pack tracking</h3>
-          <p>Weekly rank tracking by keyword and grid location, plus phone call attribution from organic traffic.</p>
+          <p>Weekly grid rank tracking. Calls attributed to organic.</p>
         </div>
       </div>
     </div>
@@ -298,19 +330,19 @@
       <div class="up-steps">
         <div class="up-step">
           <h3>Audit</h3>
-          <p>GBP, citations, on page, schema, speed, and a competitor scan of the practices ranking above you.</p>
+          <p>GBP, citations, on page, schema, speed, competitors.</p>
         </div>
         <div class="up-step">
           <h3>Foundations</h3>
-          <p>Fix the obvious blockers fast. GBP polish, top priority pages, schema, review process.</p>
+          <p>GBP polish, priority pages, schema, review process.</p>
         </div>
         <div class="up-step">
           <h3>Compound</h3>
-          <p>New service and location pages, ongoing review velocity, content for local intent.</p>
+          <p>New service and location pages, content for local intent.</p>
         </div>
         <div class="up-step">
           <h3>Track and defend</h3>
-          <p>Map Pack rank, organic calls, and ranking grid each week. Defend gains, attack the next keyword.</p>
+          <p>Map Pack rank, organic calls, ranking grid each week.</p>
         </div>
       </div>
     </div>
@@ -319,7 +351,7 @@
   <section class="up-cta-band">
     <div class="up-cta-band__inner">
       <h2>Trade ad spend for organic patients.</h2>
-      <p>Book a thirty minute walkthrough. We grade your current local SEO live and show you the three changes that would book the most new patients fastest.</p>
+      <p>Book a thirty minute walkthrough. We grade your local SEO live and show you the three highest leverage moves.</p>
       <a class="up-cta up-cta--primary" href="/book">Book a Walkthrough</a>
     </div>
   </section>

@@ -5,18 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pediatric Practice Website Design | Unlock Patients</title>
-    <meta name="description" content="Pediatric websites built to book real patients. Every design decision measured against bookings per visitor, not aesthetics.">
+    <meta name="description" content="Pediatric websites built to book real patients. Every design decision measured against bookings per visitor.">
     <link rel="canonical" href="https://unlockpatients.com/services/website-design/">
     <link href="https://framerusercontent.com/images/TES7qtU3rUcCevlcX0WHBDi8AdU.png" rel="icon">
     <link rel="apple-touch-icon" href="https://framerusercontent.com/images/NqB2eTFKSwyHl8VbITKgGwSzEI0.png">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Pediatric Practice Website Design | Unlock Patients">
-    <meta property="og:description" content="Pediatric websites built to book real patients. Every design decision measured against bookings per visitor, not aesthetics.">
+    <meta property="og:description" content="Pediatric websites built to book real patients. Every design decision measured against bookings per visitor.">
     <meta property="og:url" content="https://unlockpatients.com/services/website-design/">
     <meta property="og:image" content="https://unlockpatients.com/services/website-design/hero.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Pediatric Practice Website Design | Unlock Patients">
-    <meta name="twitter:description" content="Pediatric websites built to book real patients. Every design decision measured against bookings per visitor, not aesthetics.">
+    <meta name="twitter:description" content="Pediatric websites built to book real patients. Every design decision measured against bookings per visitor.">
     <meta name="twitter:image" content="https://unlockpatients.com/services/website-design/hero.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,6 +149,26 @@
   @media (max-width: 900px) { .up-steps { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 520px) { .up-steps { grid-template-columns: 1fr; } }
 
+  /* Old vs New comparison */
+  .up-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid rgba(76,40,28,0.10); border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 8px 22px -10px rgba(20, 80, 110, 0.08); }
+  .up-compare__col { padding: 30px 28px; }
+  .up-compare__col--old { background: rgba(76,40,28,0.03); border-right: 1px solid rgba(76,40,28,0.10); }
+  .up-compare__col--new { background: rgba(26,188,232,0.05); }
+  .up-compare__heading { font-family: Figtree, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 18px; color: rgba(76,40,28,0.55); }
+  .up-compare__col--new .up-compare__heading { color: rgb(20,165,205); }
+  .up-compare__row { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; font-size: 16px; line-height: 1.45; }
+  .up-compare__row:not(:last-child) { border-bottom: 1px solid rgba(76,40,28,0.06); }
+  .up-compare__row svg { flex: 0 0 22px; margin-top: 1px; }
+  .up-compare__col--old .up-compare__row { color: rgba(76,40,28,0.65); }
+  .up-compare__col--old .up-compare__row svg { color: rgba(76,40,28,0.45); }
+  .up-compare__col--new .up-compare__row { color: rgb(40,22,14); font-weight: 500; }
+  .up-compare__col--new .up-compare__row svg { color: rgb(26,188,232); }
+  @media (max-width: 720px) {
+    .up-compare { grid-template-columns: 1fr; }
+    .up-compare__col--old { border-right: 0; border-bottom: 1px solid rgba(76,40,28,0.10); }
+    .up-compare__col { padding: 24px 22px; }
+  }
+
   /* CTA band */
   .up-cta-band { padding: 80px 40px; background: linear-gradient(135deg, rgba(26,188,232,0.08) 0%, rgba(26,188,232,0.16) 100%); text-align: center; }
   .up-cta-band__inner { max-width: 760px; margin: 0 auto; }
@@ -181,9 +201,9 @@
           <svg class="up-site-header__caret" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="up-site-header__dropdown" role="menu">
+        <a class="up-site-header__dd-link" href="/services/get-new-patients/">Get New Patients</a>
         <a class="up-site-header__dd-link" href="/services/google-ads/">Google Ads</a>
         <a class="up-site-header__dd-link" href="/services/meta-ads/">Meta Ads</a>
-        <a class="up-site-header__dd-link" href="/services/get-new-patients/">Get New Patients</a>
         <a class="up-site-header__dd-link" href="/services/social-media/">Social Media</a>
         <a class="up-site-header__dd-link" href="/services/seo/">SEO</a>
         <a class="up-site-header__dd-link is-current" href="/services/website-design/">Website Design</a>
@@ -205,9 +225,9 @@
     <a href="/our-story/">Our Story</a>
     <div class="up-site-header__m-services">
       <div class="up-site-header__m-services-label">Services</div>
+      <a class="up-site-header__m-services-link" href="/services/get-new-patients/">Get New Patients</a>
       <a class="up-site-header__m-services-link" href="/services/google-ads/">Google Ads</a>
       <a class="up-site-header__m-services-link" href="/services/meta-ads/">Meta Ads</a>
-      <a class="up-site-header__m-services-link" href="/services/get-new-patients/">Get New Patients</a>
       <a class="up-site-header__m-services-link" href="/services/social-media/">Social Media</a>
       <a class="up-site-header__m-services-link" href="/services/seo/">SEO</a>
       <a class="up-site-header__m-services-link is-current" href="/services/website-design/">Website Design</a>
@@ -226,7 +246,7 @@
       <div class="up-hero__copy">
         <span class="up-eyebrow">Website Design</span>
         <h1>Pediatric websites built to book patients.</h1>
-        <p class="up-hero__sub">Every design decision measured against one number: bookings per visitor. Lower cost per patient. Higher ROI on every visit. Real patients walking in, not pretty pages.</p>
+        <p class="up-hero__sub">Every design decision measured against one number: bookings per visitor.</p>
         <div class="up-hero__ctas">
           <a class="up-cta up-cta--primary" href="/book">See It In Action</a>
         </div>
@@ -240,11 +260,23 @@
   <section class="up-section">
     <div class="up-section__inner">
       <div class="up-section__head">
-        <span class="up-section__eyebrow">The problem</span>
-        <h2>A pretty site that does not book patients is the most expensive site you can own.</h2>
+        <span class="up-section__eyebrow">The difference</span>
+        <h2>How most agencies work, vs how we work.</h2>
       </div>
-      <p class="up-section__lead">Most pediatric websites we audit are pretty, slow, and pointless. Stock photos of strangers' kids. A six tab navigation. A phone number hidden three clicks deep. By the time a parent finds the booking button, they have already called a competitor. Every dollar you spent on that site is a dollar wasted.</p>
-      <p class="up-section__lead">We design backwards from the booking. Big phone number above the fold. New patient form on every page. Clear answers to the four questions every parent has before they call. Every page exists to put a real patient on your schedule.</p>
+      <div class="up-compare">
+        <div class="up-compare__col up-compare__col--old">
+          <h3 class="up-compare__heading">Most agencies</h3>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Stock photos of strangers kids</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Phone number buried three clicks deep</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Six tab navigation</span></div>
+        </div>
+        <div class="up-compare__col up-compare__col--new">
+          <h3 class="up-compare__heading">Unlock Patients</h3>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Real photos from your practice</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Big phone number above the fold</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Booking form on every page</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -258,32 +290,32 @@
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
           <h3>Mobile first</h3>
-          <p>Seventy percent or more of pediatric site traffic is mobile. The phone view is the design. Desktop is a polished afterthought.</p>
+          <p>Seventy percent of pediatric traffic is mobile. The phone view is the design.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
           <h3>Fast Core Web Vitals</h3>
-          <p>Sub two second loads, optimized images, and a CDN. Both because parents are impatient and because Google cares.</p>
+          <p>Sub two second loads, optimized images, CDN. Parents are impatient.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
           <h3>Call tracking baked in</h3>
-          <p>Every visitor gets a tracked number tied to their source. Same DNI engine our ads use.</p>
+          <p>Every visitor gets a tracked number tied to their source.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
           <h3>New patient forms</h3>
-          <p>Forms on every page that route directly into your front desk's workflow. Not a sales inbox we forget about.</p>
+          <p>Forms on every page, routed directly into your front desk workflow.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div>
           <h3>Pediatric tuned brand</h3>
-          <p>Bright but not childish. Trustworthy but warm. We tune palette, illustration, and tone to your practice.</p>
+          <p>Bright but not childish. Trustworthy but warm. Tuned to your practice.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
           <h3>Owner dashboard</h3>
-          <p>Website visits, calls, and form fills feed the same dashboard as your ads. One place to see everything.</p>
+          <p>Visits, calls, and form fills feed the same dashboard as your ads.</p>
         </div>
       </div>
     </div>
@@ -298,19 +330,19 @@
       <div class="up-steps">
         <div class="up-step">
           <h3>Discovery</h3>
-          <p>Locations, services, providers, voice, photos. We learn the practice, not just the brief.</p>
+          <p>Locations, services, providers, voice, photos.</p>
         </div>
         <div class="up-step">
           <h3>Design and copy</h3>
-          <p>A clickable design plus copy you approve before a line of production code is written.</p>
+          <p>Clickable design plus copy you approve before any code.</p>
         </div>
         <div class="up-step">
           <h3>Build and instrument</h3>
-          <p>Production build, mobile QA, call tracking and form routing wired in, page speed pass.</p>
+          <p>Production build, mobile QA, tracking and forms wired in.</p>
         </div>
         <div class="up-step">
           <h3>Launch and care</h3>
-          <p>Migration, redirects, post launch fixes. Plus ongoing care so the site does not go stale.</p>
+          <p>Migration, redirects, post launch fixes. Ongoing care.</p>
         </div>
       </div>
     </div>
@@ -319,7 +351,7 @@
   <section class="up-cta-band">
     <div class="up-cta-band__inner">
       <h2>Get a website that books real patients.</h2>
-      <p>Book a thirty minute walkthrough. We show you the actual booking rate of sites we have shipped and what yours would book.</p>
+      <p>Book a thirty minute walkthrough. See the actual booking rate of sites we ship.</p>
       <a class="up-cta up-cta--primary" href="/book">Book a Walkthrough</a>
     </div>
   </section>

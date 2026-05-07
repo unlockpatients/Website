@@ -5,18 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Google Ads for Pediatric Practices | Unlock Patients</title>
-    <meta name="description" content="Google Ads measured in booked patients, not clicks. Lower cost per real patient, higher ROI, every dollar tied back to a visit.">
+    <meta name="description" content="Google Ads measured in booked patients, not clicks. Lower cost per real patient, every dollar tied to a visit.">
     <link rel="canonical" href="https://unlockpatients.com/services/google-ads/">
     <link href="https://framerusercontent.com/images/TES7qtU3rUcCevlcX0WHBDi8AdU.png" rel="icon">
     <link rel="apple-touch-icon" href="https://framerusercontent.com/images/NqB2eTFKSwyHl8VbITKgGwSzEI0.png">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Google Ads for Pediatric Practices | Unlock Patients">
-    <meta property="og:description" content="Google Ads measured in booked patients, not clicks. Lower cost per real patient, higher ROI, every dollar tied back to a visit.">
+    <meta property="og:description" content="Google Ads measured in booked patients, not clicks. Lower cost per real patient, every dollar tied to a visit.">
     <meta property="og:url" content="https://unlockpatients.com/services/google-ads/">
     <meta property="og:image" content="https://unlockpatients.com/services/google-ads/hero.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Google Ads for Pediatric Practices | Unlock Patients">
-    <meta name="twitter:description" content="Google Ads measured in booked patients, not clicks. Lower cost per real patient, higher ROI, every dollar tied back to a visit.">
+    <meta name="twitter:description" content="Google Ads measured in booked patients, not clicks. Lower cost per real patient, every dollar tied to a visit.">
     <meta name="twitter:image" content="https://unlockpatients.com/services/google-ads/hero.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,6 +149,26 @@
   @media (max-width: 900px) { .up-steps { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 520px) { .up-steps { grid-template-columns: 1fr; } }
 
+  /* Old vs New comparison */
+  .up-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid rgba(76,40,28,0.10); border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 8px 22px -10px rgba(20, 80, 110, 0.08); }
+  .up-compare__col { padding: 30px 28px; }
+  .up-compare__col--old { background: rgba(76,40,28,0.03); border-right: 1px solid rgba(76,40,28,0.10); }
+  .up-compare__col--new { background: rgba(26,188,232,0.05); }
+  .up-compare__heading { font-family: Figtree, sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin: 0 0 18px; color: rgba(76,40,28,0.55); }
+  .up-compare__col--new .up-compare__heading { color: rgb(20,165,205); }
+  .up-compare__row { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; font-size: 16px; line-height: 1.45; }
+  .up-compare__row:not(:last-child) { border-bottom: 1px solid rgba(76,40,28,0.06); }
+  .up-compare__row svg { flex: 0 0 22px; margin-top: 1px; }
+  .up-compare__col--old .up-compare__row { color: rgba(76,40,28,0.65); }
+  .up-compare__col--old .up-compare__row svg { color: rgba(76,40,28,0.45); }
+  .up-compare__col--new .up-compare__row { color: rgb(40,22,14); font-weight: 500; }
+  .up-compare__col--new .up-compare__row svg { color: rgb(26,188,232); }
+  @media (max-width: 720px) {
+    .up-compare { grid-template-columns: 1fr; }
+    .up-compare__col--old { border-right: 0; border-bottom: 1px solid rgba(76,40,28,0.10); }
+    .up-compare__col { padding: 24px 22px; }
+  }
+
   /* CTA band */
   .up-cta-band { padding: 80px 40px; background: linear-gradient(135deg, rgba(26,188,232,0.08) 0%, rgba(26,188,232,0.16) 100%); text-align: center; }
   .up-cta-band__inner { max-width: 760px; margin: 0 auto; }
@@ -181,9 +201,9 @@
           <svg class="up-site-header__caret" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="up-site-header__dropdown" role="menu">
+        <a class="up-site-header__dd-link" href="/services/get-new-patients/">Get New Patients</a>
         <a class="up-site-header__dd-link is-current" href="/services/google-ads/">Google Ads</a>
         <a class="up-site-header__dd-link" href="/services/meta-ads/">Meta Ads</a>
-        <a class="up-site-header__dd-link" href="/services/get-new-patients/">Get New Patients</a>
         <a class="up-site-header__dd-link" href="/services/social-media/">Social Media</a>
         <a class="up-site-header__dd-link" href="/services/seo/">SEO</a>
         <a class="up-site-header__dd-link" href="/services/website-design/">Website Design</a>
@@ -205,9 +225,9 @@
     <a href="/our-story/">Our Story</a>
     <div class="up-site-header__m-services">
       <div class="up-site-header__m-services-label">Services</div>
+      <a class="up-site-header__m-services-link" href="/services/get-new-patients/">Get New Patients</a>
       <a class="up-site-header__m-services-link is-current" href="/services/google-ads/">Google Ads</a>
       <a class="up-site-header__m-services-link" href="/services/meta-ads/">Meta Ads</a>
-      <a class="up-site-header__m-services-link" href="/services/get-new-patients/">Get New Patients</a>
       <a class="up-site-header__m-services-link" href="/services/social-media/">Social Media</a>
       <a class="up-site-header__m-services-link" href="/services/seo/">SEO</a>
       <a class="up-site-header__m-services-link" href="/services/website-design/">Website Design</a>
@@ -226,7 +246,7 @@
       <div class="up-hero__copy">
         <span class="up-eyebrow">Google Ads</span>
         <h1>Google Ads measured in booked patients.</h1>
-        <p class="up-hero__sub">Lower cost per real patient. Higher ROI. Every click tied to a call, every call tied to a booking. We optimize for the patients who walked in, not the impressions you paid for.</p>
+        <p class="up-hero__sub">Every click tied to a call. Every call tied to a booking.</p>
         <div class="up-hero__ctas">
           <a class="up-cta up-cta--primary" href="/book">See It In Action</a>
           <a class="up-cta up-cta--ghost" href="/case-studies/">Read a case study</a>
@@ -241,11 +261,23 @@
   <section class="up-section">
     <div class="up-section__inner">
       <div class="up-section__head">
-        <span class="up-section__eyebrow">The problem</span>
-        <h2>Most agencies bid on clicks. We bid on patients.</h2>
+        <span class="up-section__eyebrow">The difference</span>
+        <h2>How most agencies work, vs how we work.</h2>
       </div>
-      <p class="up-section__lead">Pediatric search intent is high. Parents looking for a pediatrician are ready to call. The hard part is making sure the agency running your account knows which click answered the phone, which call became a booked patient, and which dollar got wasted.</p>
-      <p class="up-section__lead">We use dynamic number insertion on the landing page, push call and booking conversions back to Google's bidding model, and sit with the data weekly to drive cost per booked patient down month over month.</p>
+      <div class="up-compare">
+        <div class="up-compare__col up-compare__col--old">
+          <h3 class="up-compare__heading">Most agencies</h3>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Bid on clicks and impressions</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Static phone number on the page</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Reports built on impressions</span></div>
+        </div>
+        <div class="up-compare__col up-compare__col--new">
+          <h3 class="up-compare__heading">Unlock Patients</h3>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Bid on booked patients</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Dynamic numbers tied to every keyword</span></div>
+          <div class="up-compare__row"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Reports built on cost per patient</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -259,32 +291,32 @@
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
           <h3>Search campaigns</h3>
-          <p>Pediatric service keywords, location targeting tuned to your serving area, negatives kept tight.</p>
+          <p>Pediatric service keywords, tight negatives, location tuned to your radius.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
           <h3>DNI call tracking</h3>
-          <p>Every visitor gets a unique tracking number. Calls are recorded, transcribed, and tied back to the keyword.</p>
+          <p>Every visitor gets a unique number. Calls tagged to keyword.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/><line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="14" x2="22" y2="14"/><line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="14" x2="4" y2="14"/></svg></div>
           <h3>Conversion bidding</h3>
-          <p>Calls and form fills are pushed to Google Ads as conversions, so Smart Bidding optimizes for real outcomes.</p>
+          <p>Calls and bookings pushed to Google so Smart Bidding learns who books.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 2h6"/><path d="M10 2v6L4 18a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2L14 8V2"/></svg></div>
           <h3>Landing page testing</h3>
-          <p>We run the page, not just the ad. Headlines, hero, and CTAs get tested against booked patient outcomes.</p>
+          <p>Headlines, hero, and CTAs tested against booked patients.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <h3>Weekly review</h3>
-          <p>Our team listens to representative calls every week and adjusts copy, keywords, and budget accordingly.</p>
+          <h3>Weekly call review</h3>
+          <p>Our team listens to real calls and tunes the account against them.</p>
         </div>
         <div class="up-card">
           <div class="up-card__icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div>
           <h3>Owner dashboard</h3>
-          <p>See spend, calls, bookings, cost per lead, and ROI per campaign in one place. The same view our account managers use.</p>
+          <p>Spend, calls, bookings, cost per real patient. One place.</p>
         </div>
       </div>
     </div>
@@ -299,19 +331,19 @@
       <div class="up-steps">
         <div class="up-step">
           <h3>Audit and strategy</h3>
-          <p>Geo, services, current spend, and competitor landscape. We tell you the realistic cost per lead before you commit.</p>
+          <p>Geo, services, current spend, competitors. Realistic CPL before you commit.</p>
         </div>
         <div class="up-step">
           <h3>Build and launch</h3>
-          <p>Campaign structure, ad copy, landing page, DNI numbers, conversion uploads. Usually live in a week.</p>
+          <p>Campaigns, ads, landing page, tracking, conversions. Live in a week.</p>
         </div>
         <div class="up-step">
           <h3>Tune weekly</h3>
-          <p>Negatives, bids, ad copy, and landing page tests run weekly against call data, not click data.</p>
+          <p>Negatives, bids, ad copy, page tests. Driven by call data.</p>
         </div>
         <div class="up-step">
           <h3>Report what matters</h3>
-          <p>Monthly reviews focused on patients booked and dollars returned, not impressions and clicks.</p>
+          <p>Patients booked. Dollars returned. Not impressions and clicks.</p>
         </div>
       </div>
     </div>
@@ -320,7 +352,7 @@
   <section class="up-cta-band">
     <div class="up-cta-band__inner">
       <h2>Run Google Ads on booked patients, not clicks.</h2>
-      <p>Book a thirty minute walkthrough. We open the live dashboard for one of our pediatric practices and show you the actual cost per patient.</p>
+      <p>Book a thirty minute walkthrough. We open the live dashboard and show you the actual cost per patient.</p>
       <a class="up-cta up-cta--primary" href="/book">Book a Walkthrough</a>
     </div>
   </section>
