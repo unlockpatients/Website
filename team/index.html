@@ -1052,5 +1052,102 @@ section#demo[data-framer-name="Demo Section"]{ display: none !important; }
   }
 })();
 </script>
+
+<script data-up-medical-rebrand="2026-05-17">
+/* Runtime copy rebrand: Framer's client runtime re-renders the Framer
+   project's canonical content (still pediatric) over our corrected static
+   HTML on hydration ("framer wipe"). Same survival pattern as the
+   STORY_VERSION / patchPage injectors above: re-apply on every mutation.
+   Rules are scoped to PLURAL / CAPITALISED / specific generic phrases only,
+   so real-client proof and the founder story are never altered:
+     KEEP: "WonderKidz Pediatrics", "Nurture Pediatrics",
+           "Pediatrician & Owner at ...", "busy pediatric practice owner",
+           "busy pediatrician and mother", "For any pediatric practice
+           looking", "understands pediatrics", "Alex's mom's Nashville
+           pediatric practice". None of the rule keys below occur inside
+           those strings. */
+(function(){
+  if (window.__upMedicalRebrand) return;
+  window.__upMedicalRebrand = true;
+  // Order matters: longer / more-specific keys first.
+  var RULES = [
+    ["100% Pediatric Practice Exclusive", "100% Medical Practice Focused"],
+    ["pediatric medical practices", "medical practices"],
+    ["HIPAA-compliant pediatric advertising", "HIPAA-compliant advertising"],
+    ["pediatric advertising strategies", "advertising strategies"],
+    ["Pediatric Patients", "Patients"],
+    ["pediatric patients", "patients"],
+    ["Pediatric Practices", "Medical Practices"],
+    ["pediatric practices", "medical practices"],
+    ["Pediatric Practice", "Medical Practice"],
+    ["Pediatric Providers", "Medical Providers"],
+    ["Pediatric Growth", "Patient Growth"],
+    ["TRUSTED BY PEDIATRICIANS", "TRUSTED BY DOCTORS"],
+    ["looking for a pediatrician", "looking for a doctor"],
+    /* standalone plural forms — Framer can split a phrase across word-level
+       text nodes, so the full-phrase rules above won't always match. Plural
+       "pediatricians" is generic-only; keeps use singular "Pediatrician &
+       Owner" / "busy pediatrician and mother" and are never matched. */
+    ["PEDIATRICIANS", "DOCTORS"],
+    ["Pediatricians", "Doctors"],
+    ["pediatricians", "doctors"]
+  ];
+  function applyAll(s){
+    for (var i=0;i<RULES.length;i++){
+      if (s.indexOf(RULES[i][0]) !== -1){ s = s.split(RULES[i][0]).join(RULES[i][1]); }
+    }
+    return s;
+  }
+  function patchTitle(){
+    var t = applyAll(document.title);
+    if (t !== document.title) document.title = t;
+  }
+  var DETECT = /ediatric/i;
+  function patchMeta(){
+    var m = document.querySelectorAll('meta[name="description"],meta[property^="og:"],meta[name^="twitter:"]');
+    for (var i=0;i<m.length;i++){
+      var c = m[i].getAttribute('content');
+      if (c && DETECT.test(c)){
+        var nc = applyAll(c);
+        if (nc !== c) m[i].setAttribute('content', nc);
+      }
+    }
+  }
+  var SKIP = {SCRIPT:1, STYLE:1, NOSCRIPT:1, TEXTAREA:1};
+  function patchText(){
+    if (!document.body) return;
+    var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode: function(n){
+        if (!n.nodeValue || !DETECT.test(n.nodeValue)) return NodeFilter.FILTER_REJECT;
+        var p = n.parentNode;
+        if (p && SKIP[p.nodeName]) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var n, batch=[];
+    while ((n = w.nextNode())) batch.push(n);
+    for (var i=0;i<batch.length;i++){
+      var v = batch[i].nodeValue, nv = applyAll(v);
+      if (nv !== v) batch[i].nodeValue = nv;
+    }
+  }
+  var pending=false;
+  function patch(){ pending=false; patchTitle(); patchMeta(); patchText(); }
+  function schedule(){ if(pending) return; pending=true; setTimeout(patch, 50); }
+  function boot(){
+    patch();
+    if (window.requestAnimationFrame) requestAnimationFrame(patch);
+    [0,120,300,600,1200,2500,5000,9000].forEach(function(ms){ setTimeout(patch, ms); });
+    try {
+      var obs = new MutationObserver(schedule);
+      obs.observe(document.documentElement, {childList:true, subtree:true, characterData:true});
+    } catch(e){}
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot, {once:true});
+  else boot();
+})();
+</script>
+
+
 </body>
 </html>
