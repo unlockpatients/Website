@@ -1,12 +1,12 @@
 # Unlock Patients
 
-> HIPAA-compliant digital advertising for pediatric practices. We manage Google Ads, track calls with AI, and verify actual patient bookings.
+> HIPAA-compliant digital advertising for medical practices. We manage Google Ads, track calls with AI, and verify actual patient bookings.
 
-Unlock Patients (Unlock Prospects LLC d/b/a Unlock Patients) is a healthcare marketing technology company focused exclusively on pediatric medical practices. We provide done-for-you advertising with real-time ROI tracking that connects every ad dollar to actual patient bookings.
+Unlock Patients (Unlock Prospects LLC d/b/a Unlock Patients) is a healthcare marketing technology company focused on medical practices. We provide done-for-you advertising with real-time ROI tracking that connects every ad dollar to actual patient bookings.
 
 ## Services
 
-- Google Ads campaign management for pediatric practices
+- Google Ads campaign management for medical practices
 - HIPAA-compliant call tracking with AI-powered call analysis
 - Verified patient booking tracking (not vanity metrics like clicks or impressions)
 - Real-time ROI dashboard
